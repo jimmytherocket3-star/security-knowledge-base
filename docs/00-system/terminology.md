@@ -2,11 +2,11 @@
 
 **Document ID:** KB-SYS-003  
 **Title:** Canonical Terminology  
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Active  
 **Owner:** KB Owner  
 **Primary AI Operator:** ChatGPT  
-**Effective Date:** 2026-08-16  
+**Effective Date:** 2026-08-17  
 
 ---
 
@@ -26,6 +26,7 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 | **SOC** | Security Operation Center | ทีมที่คอยบริหารจัดการเหตุด้าน Security ผ่าน CCTV |
 | **FCC** | Fire Command Center | ทีม Fire Command Center ประกอบด้วยทีม รปภ. และ Fireman ที่อยู่ตามพื้นที่ Retail |
 | **EOT** | Emergency Operation Team | ทีมสำหรับเผชิญเหตุฉุกเฉินที่เกี่ยวข้องกับ Security |
+| **DCC** | District Command Centre | District Command Centre |
 | **Code M** | Medical Emergency | เหตุฉุกเฉินทางการแพทย์ |
 | **Emergency Channel** | — | ช่องวิทยุสื่อสารสำหรับเหตุฉุกเฉิน โดยใช้ตัวย่อ **EMER1** |
 | **EMER1** | Emergency Channel | ช่องวิทยุสื่อสารที่ใช้สำหรับเหตุฉุกเฉิน |
@@ -52,15 +53,19 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 
 เมื่อพบคำว่า **EOT** ให้ตีความว่า **Emergency Operation Team** ซึ่งเป็นทีมสำหรับเผชิญเหตุฉุกเฉินที่เกี่ยวข้องกับ Security
 
-### 3.5 Code M
+### 3.5 DCC
+
+เมื่อพบคำว่า **DCC** ให้ตีความว่า **District Command Centre**
+
+### 3.6 Code M
 
 เมื่อพบคำว่า **Code M** ให้ตีความว่า **Medical Emergency / เหตุฉุกเฉินทางการแพทย์**
 
-### 3.6 Emergency Channel / EMER1
+### 3.7 Emergency Channel / EMER1
 
 คำว่า **Emergency Channel** และ **EMER1** ให้ถือว่าอ้างถึงช่องวิทยุสื่อสารสำหรับเหตุฉุกเฉินตามคำจำกัดความของ KB
 
-### 3.7 Incident / Case
+### 3.8 Incident / Case
 
 - **Incident** = เหตุ
 - **Case** = กรณี
@@ -90,3 +95,4 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 | Version | Date | Change | Approved By |
 |---|---|---|---|
 | 1.0 | 2026-08-16 | Initial canonical terminology based on KB Owner definitions | KB Owner |
+| 1.1 | 2026-08-17 | Added DCC — District Command Centre | KB Owner |
