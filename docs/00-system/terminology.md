@@ -2,11 +2,11 @@
 
 **Document ID:** KB-SYS-003  
 **Title:** Canonical Terminology  
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** Active  
 **Owner:** KB Owner  
 **Primary AI Operator:** ChatGPT  
-**Effective Date:** 2026-08-17  
+**Effective Date:** 2026-08-18  
 
 ---
 
@@ -27,6 +27,7 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 | **FCC** | Fire Command Center | ทีม Fire Command Center ประกอบด้วยทีม รปภ. และ Fireman ที่อยู่ตามพื้นที่ Retail |
 | **EOT** | Emergency Operation Team | ทีมสำหรับเผชิญเหตุฉุกเฉินที่เกี่ยวข้องกับ Security |
 | **DCC** | District Command Centre | District Command Centre |
+| **Mozart** | — | ระบบที่ใช้สำหรับจัดการ Case และบันทึก/อัปเดตเหตุการณ์ของ SOC; เมื่อเป็นการแจ้งเตือนผ่านอุปกรณ์ ระบบ Mozart จะสร้าง Case โดยอัตโนมัติ |
 | **Code M** | Medical Emergency | เหตุฉุกเฉินทางการแพทย์ |
 | **Emergency Channel** | — | ช่องวิทยุสื่อสารสำหรับเหตุฉุกเฉิน โดยใช้ตัวย่อ **EMER1** |
 | **EMER1** | Emergency Channel | ช่องวิทยุสื่อสารที่ใช้สำหรับเหตุฉุกเฉิน |
@@ -57,15 +58,19 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 
 เมื่อพบคำว่า **DCC** ให้ตีความว่า **District Command Centre**
 
-### 3.6 Code M
+### 3.6 Mozart
+
+เมื่อพบคำว่า **Mozart** ให้ตีความว่าเป็นระบบที่ SOC ใช้สำหรับจัดการ Case และบันทึก/อัปเดตเหตุการณ์ โดยในกรณีการแจ้งเตือนผ่านอุปกรณ์ ระบบ Mozart สามารถสร้าง Case ขึ้นโดยอัตโนมัติ
+
+### 3.7 Code M
 
 เมื่อพบคำว่า **Code M** ให้ตีความว่า **Medical Emergency / เหตุฉุกเฉินทางการแพทย์**
 
-### 3.7 Emergency Channel / EMER1
+### 3.8 Emergency Channel / EMER1
 
 คำว่า **Emergency Channel** และ **EMER1** ให้ถือว่าอ้างถึงช่องวิทยุสื่อสารสำหรับเหตุฉุกเฉินตามคำจำกัดความของ KB
 
-### 3.8 Incident / Case
+### 3.9 Incident / Case
 
 - **Incident** = เหตุ
 - **Case** = กรณี
@@ -96,3 +101,4 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 |---|---|---|---|
 | 1.0 | 2026-08-16 | Initial canonical terminology based on KB Owner definitions | KB Owner |
 | 1.1 | 2026-08-17 | Added DCC — District Command Centre | KB Owner |
+| 1.2 | 2026-08-18 | Added Mozart Case management, automatic device-alert Case creation, and SOC event recording definition | KB Owner |
