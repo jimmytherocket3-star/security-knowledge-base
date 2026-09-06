@@ -1,16 +1,28 @@
 ---
 document_id: SEC-SYSTEM-CONTACT-001
 title: One Bangkok Emergency Contact Directory
-version: 1.0
+version: 1.1
 status: Active
 owner: KB Owner
-source: User-provided One Bangkok contact list image
+source: User-provided One Bangkok contact list image and approved telephone-directory documentation
 updated: 2026-09-06
 ---
 
 # One Bangkok Emergency Contact Directory
 
 > Approved reference directory for internal and external emergency coordination. Contact numbers are maintained separately from emergency SOPs so procedures can reference one canonical directory.
+
+## Directory Structure Metadata
+
+The approved telephone-directory documentation describes the full One Bangkok Telephone Directory as containing **42 contact entries**, organized into five categories:
+
+1. BMO & Operations
+2. Facility Management & Support
+3. Hotels & Residences
+4. First Aid Rooms
+5. Emergency & Public Services
+
+The directory design reference also identifies 19 internal lines and 29 external lines. These are directory-level summary counts from the approved source documentation; they do not authorize inventing or filling contact details that are absent from the confirmed contact source.
 
 ## Internal / Building Contacts
 
@@ -90,11 +102,13 @@ For an Active Shooter / Code Sierra incident at Parade, the approved contact dir
 ## AI Guardrails
 
 1. Use only contact numbers explicitly recorded in this directory; do not guess missing numbers.
-2. A blank contact field means the number is not confirmed in the supplied source.
-3. This directory supplies contact information only; it does not change Declaration Authority, command structure, or SOP workflow.
-4. For Code Sierra, use the approved Code Sierra procedure together with this directory; do not substitute Fire Code procedures.
-5. Any future contact-number change requires KB Owner review and approval before updating this file.
+2. A blank contact field means the number is not confirmed in the supplied contact source.
+3. Directory-level counts and category descriptions do not by themselves supply missing individual contact details.
+4. This directory supplies contact information only; it does not change Declaration Authority, command structure, or SOP workflow.
+5. For Code Sierra, use the approved Code Sierra procedure together with this directory; do not substitute Fire Code procedures.
+6. Any future contact-number change requires KB Owner review and approval before updating this file.
 
 ## Change Log
 
 - v1.0 — 2026-09-06 — Created from user-provided One Bangkok contact list and approved by KB Owner.
+- v1.1 — 2026-09-06 — Added approved One Bangkok Telephone Directory structure, category classification, and summary counts from the supplied directory documentation.
