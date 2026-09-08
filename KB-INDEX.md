@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Security Knowledge Base Retrieval Index
-version: 1.0
+version: 1.1
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -26,6 +26,16 @@ When answering a question from this KB, use this index to identify the most rele
 6. Declare a Knowledge Gap only after the relevant routed source has been checked and does not support the requested fact.
 7. Never invent internal facts or silently replace missing internal KB information with external information.
 8. KB create/edit/delete operations require explicit KB Owner approval before modification.
+
+## Answer Source Status Labels
+
+Every factual answer using this Knowledge Base must clearly display the source status to the user.
+
+- **✅ KB APPROVED** — Use when the answer is supported by information retrieved and verified from the GitHub KB. The answer must follow the status, scope, version, and guardrails of the source document.
+- **⚠️ KNOWLEDGE GAP — ไม่พบข้อมูลใน KB** — Use when the relevant routed KB source has been checked and the requested information is absent or unsupported. Do not guess.
+- **🌐 EXTERNAL — ข้อมูลภายนอก KB** — Use when information comes from outside the GitHub KB. Keep external information clearly separated from KB-derived information.
+
+If an answer combines KB-derived and external information, label the respective portions separately. A GitHub repository search miss alone is not sufficient to use the Knowledge Gap label; the relevant routed source must be checked directly first.
 
 ## Routing Table
 
@@ -73,4 +83,5 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 
 ## Change Log
 
+- v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
 - v1.0 — 2026-09-08 — Created as the central AI retrieval/router index to reduce false Knowledge Gaps caused by repository search misses.
