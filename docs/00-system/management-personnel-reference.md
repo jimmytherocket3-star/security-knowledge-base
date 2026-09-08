@@ -1,12 +1,12 @@
 ---
 document_id: SEC-SYSTEM-PERSONNEL-001
 title: One Bangkok Management Personnel Reference
-version: 1.0
+version: 1.1
 status: Reference / Internal Personnel
 owner: KB Owner
 scope: One Bangkok
-source: User-provided OBK management image
-updated: 2026-09-06
+source: User-provided OBK management image and KB Owner correction
+updated: 2026-09-08
 ---
 
 # One Bangkok Management Personnel Reference
@@ -24,7 +24,7 @@ This document is a personnel-identification reference only. It does not assign e
 | One00 | ฐาปน สิริวัฒนภักดี (คุณหนุ่ม) | วันศูนย์ศูนย์ |
 | One01 | ปณต สิริวัฒนภักดี (คุณยอด) | วันศูนย์หนึ่ง |
 | One02 | ลิม หัวเทียง | วันศูนย์สอง |
-| One03 | วรวรรต ศรีสอ้าน (คุณริน) | วันศูนย์สาม |
+| One03 | วรวรรต ศรีสอ้าน (คุณธ้น) | วันศูนย์สาม |
 | One04 | เจเรมี (คุณเจวาย) | วันศูนย์สี่ |
 | One05 | (คุณดิว) | วันศูนย์ห้า |
 
@@ -46,4 +46,5 @@ This document is a personnel-identification reference only. It does not assign e
 
 ## Change Log
 
+- v1.1 — 2026-09-08 — Corrected One03 nickname from `คุณริน` to `คุณธ้น` per KB Owner approval.
 - v1.0 — 2026-09-06 — Created from the approved user-provided OBK management personnel image with One00–One05 code mappings and authority guardrails.
