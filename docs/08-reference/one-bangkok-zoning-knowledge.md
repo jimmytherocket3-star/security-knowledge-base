@@ -2,45 +2,39 @@
 
 > Source: Zoning Knowledge reference image provided and approved by KB Owner.
 
-## Zone Color Palette
-ONE Bangkok uses five zone colors in the supplied zoning map:
-- Blue (สีฟ้า)
-- Yellow (สีเหลือง)
-- Orange (สีส้ม)
-- Red (สีแดง)
-- Green (สีเขียว)
+## Zone Mapping
+- Zone 1 = Blue (สีฟ้า)
+- Zone 2 = Yellow (สีเหลือง)
+- Zone 3 = Orange (สีส้ม)
+- Zone 4 = Red (สีแดง)
+- Zone 5 = Green (สีเขียว)
 
-## Blue Zone — Parade
-พื้นที่ที่แสดงอยู่ใน Zone สีฟ้า:
+## Zone 1 — Blue (สีฟ้า) — Parade
 - Parade
 - One Bangkok Tower 2
 - One Bangkok Tower 3
 - Frasers Suites
 - Parade Park
 
-## Yellow Zone
-พื้นที่ที่แสดงอยู่ใน Zone สีเหลือง:
+## Zone 2 — Yellow (สีเหลือง)
 - The Storeys
 - Andaz One Bangkok
 - Pathom House
 - One Bangkok Tower 4
 - Wireless Park
 
-## Orange Zone
-พื้นที่ที่แสดงอยู่ใน Zone สีส้ม:
+## Zone 3 — Orange (สีส้ม)
 - Post 1928
 - One89 Wireless
 - Eighteen Seven
 - One Bangkok Tower 5
 - Wireless Park (ส่วนที่แสดงในโซนสีส้ม)
 
-## Red Zone
-พื้นที่ที่แสดงอยู่ใน Zone สีแดง:
+## Zone 4 — Red (สีแดง)
 - Forum
 - One Bangkok Tower & H4
 
-## Green Zone
-พื้นที่ที่แสดงอยู่ใน Zone สีเขียว:
+## Zone 5 — Green (สีเขียว)
 - One Bangkok Park
 
 ## Other map references
@@ -59,3 +53,4 @@ ONE Bangkok uses five zone colors in the supplied zoning map:
 - Status: Approved
 - KB Owner: Sittipong
 - Approval date: 2026-09-08
+- Zone number mapping approved: 2026-09-08
