@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Security Knowledge Base Retrieval Index
-version: 1.1
+version: 1.2
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -43,9 +43,11 @@ If an answer combines KB-derived and external information, label the respective 
 |---|---|---|
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. Do not rely on search alone. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
+| จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
+| จุดจอดรถดับเพลิง, Fire Truck Parking, รถดับเพลิงจอดที่ไหน, จุดจอดรถดับเพลิงของอาคาร | `docs/00-system/fire-truck-parking-reference.md` | Fetch directly for building-specific fire truck parking questions. Numbers 1–5 are fire truck parking points, not Assembly Points. |
 | Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. |
 | MOD duty schedule for May 2026 | `docs/00-system/mod-duty-schedule/2026-05.md` | Time-bound reference only; do not treat as permanent contact data. |
-| Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point | `docs/00-system/terminology.md` | Use canonical terminology definitions. |
+| Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For Assembly Point locations, route to assembly-point-reference.md. |
 | Canonical Code 1, Code 2, Code 3 definitions | `docs/01-emergency-codes/code-definitions.md` | Use as primary source for code definitions. |
 | Code 1 detailed workflow/reference | `docs/01-emergency-codes/code-1/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 2 detailed workflow/reference | `docs/01-emergency-codes/code-2/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
@@ -61,6 +63,11 @@ If an answer combines KB-derived and external information, label the respective 
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `Loading 5 เป็นของอาคารอะไร` → fetch `docs/00-system/location-building-directory.md`
 - `Zone 3 มีอาคารอะไรบ้าง` → fetch `docs/00-system/location-building-directory.md`
+- `จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
+- `Assembly Point อยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
+- `Tower 5 จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`; if no approved Building → Assembly Point mapping exists, return Knowledge Gap rather than infer from map position
+- `Tower 5 รถดับเพลิงจอดที่ไหน` → fetch `docs/00-system/fire-truck-parking-reference.md`
+- `จุดจอดรถดับเพลิง Tower 3` → fetch `docs/00-system/fire-truck-parking-reference.md`
 - `เบอร์ SOC` → fetch `docs/00-system/emergency-contact-directory.md`
 - `Code 3 คืออะไร` → fetch `docs/01-emergency-codes/code-definitions.md`, then `docs/01-emergency-codes/code-3/overview.md` if procedural detail is requested
 - `Code Sierra` → fetch `docs/01-emergency-codes/code-sierra/overview.md`
@@ -79,9 +86,12 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - Do not infer emergency authority from personnel/location/contact reference files.
 - Do not normalize source spellings or aliases unless explicitly approved.
 - Do not generalize drill-specific procedures into Core SOP.
+- Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
+- Fire Truck Parking Points 1–5 must never be interpreted as Assembly Point numbers.
 - Do not modify this index or any routed KB file without explicit KB Owner approval.
 
 ## Change Log
 
+- v1.2 — 2026-09-08 — Added direct routing for Assembly Point and Fire Truck Parking references and query examples.
 - v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
 - v1.0 — 2026-09-08 — Created as the central AI retrieval/router index to reduce false Knowledge Gaps caused by repository search misses.
