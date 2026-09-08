@@ -1,11 +1,11 @@
 ---
 document_id: SEC-SYSTEM-LOCATION-001
 title: One Bangkok Location & Building Directory
-version: 0.6
+version: 0.7
 status: Reference
 owner: KB Owner
 scope: One Bangkok
-source: User-provided location/building references, approved location-name image, loading-point image, Zoning Knowledge image, and KB Owner-approved Parade ambulance pickup detail
+source: User-provided location/building references, approved location-name image, loading-point image, Zoning Knowledge image, KB Owner-approved Parade ambulance pickup detail, and KB Owner-approved Zone color mapping
 updated: 2026-09-08
 ---
 
@@ -69,6 +69,21 @@ The approved Zoning Knowledge source explicitly groups the following names by fu
 
 - One 89
 - Eighteen Seven
+
+## Approved Zone Color Mapping
+
+KB Owner approved the following Zone ↔ color mapping on 2026-09-08:
+
+| Zone | Approved Color / Area |
+|---|---|
+| **Zone 1** | สีฟ้า |
+| **Zone 2** | สีเหลือง |
+| **Zone 3** | สีส้ม |
+| **Zone 4** | สีแดง |
+| **Zone 5** | ทางด่วน |
+| **Zone 6** | สีเขียว |
+
+This mapping may be used together with the approved Zoning Knowledge schematic to answer Zone/color questions. Building-to-Zone identification may be made only where the building/area is explicitly shown within the corresponding colored area on the approved schematic; do not infer boundaries not shown by the source.
 
 ## Zoning Map — Confirmed Spatial Labels
 
@@ -134,19 +149,19 @@ When an incident or operational report identifies only a Loading Point, AI may u
 
 ## Intended KB Usage
 
-Emergency procedures, incident reports, SOC case records, training materials, and contact references may use this document to identify an approved location name, its source-confirmed functional zoning, an approved Loading Point relationship, and approved incident-specific location details where explicitly documented. Preserve incident-specific floor, zone, common-area, Loading Point, or other location detail supplied with the event.
+Emergency procedures, incident reports, SOC case records, training materials, and contact references may use this document to identify an approved location name, its source-confirmed functional zoning, approved Zone/color mapping, an approved Loading Point relationship, and approved incident-specific location details where explicitly documented. Preserve incident-specific floor, zone, common-area, Loading Point, or other location detail supplied with the event.
 
 ## AI Guardrails
 
 1. Preserve approved spelling and source terminology unless the KB Owner approves normalization or correction.
 2. Do not invent pronunciations where the source does not provide one.
 3. Do not silently merge source variants such as `One 89`, `ONE89 wireless`, `One 89 Wiress`, `Eighteen Seven`, and `EI8HTEEN SEVEN`; treat them as source variants pending explicit alias normalization.
-4. Zoning classification may be used only where explicitly shown by the approved Zoning Knowledge source.
-5. The schematic map may support broad site context, but not precise navigation or emergency routing except where separately confirmed by approved operational data such as the Parade ambulance/patient pickup reference.
-6. Do not invent additional buildings, check-in points, Loading Point mappings, aliases, pronunciation mappings, or spatial relationships.
+4. Zoning classification may be used only where explicitly shown by the approved Zoning Knowledge source or approved Zone color mapping.
+5. The schematic map may support broad site context and source-shown building-to-Zone/color relationships, but not precise navigation or emergency routing except where separately confirmed by approved operational data such as the Parade ambulance/patient pickup reference.
+6. Do not invent additional buildings, check-in points, Loading Point mappings, aliases, pronunciation mappings, Zone boundaries, or spatial relationships.
 7. This directory does not change emergency SOP workflow, Declaration Authority, command structure, or response responsibilities.
 8. If a Loading Point maps to multiple buildings, retain all source-shown buildings unless incident-specific evidence resolves the location.
-9. New names, aliases, corrections, zoning changes, pronunciation mappings, or spatial/loading relationships require KB Owner approval.
+9. New names, aliases, corrections, zoning changes, Zone/color mappings, pronunciation mappings, or spatial/loading relationships require KB Owner approval.
 
 ## Remaining Knowledge Gaps
 
@@ -158,6 +173,7 @@ Emergency procedures, incident reports, SOC case records, training materials, an
 
 ## Change Log
 
+- v0.7 — 2026-09-08 — Added KB Owner-approved Zone color mapping: Zone 1 = สีฟ้า, Zone 2 = สีเหลือง, Zone 3 = สีส้ม, Zone 4 = สีแดง, Zone 5 = ทางด่วน, Zone 6 = สีเขียว.
 - v0.6 — 2026-09-08 — Corrected approved Parade ambulance/patient pickup wording to: `Parade Loading 1, โค้ง 90 องศา, ประตูทางออกชั้น B1`.
 - v0.5 — 2026-09-08 — Added KB Owner-approved Parade ambulance/patient pickup reference.
 - v0.4 — 2026-09-06 — Added approved Zoning Knowledge classifications and schematic spatial labels; added guardrails against inferring precise routes or distances.
