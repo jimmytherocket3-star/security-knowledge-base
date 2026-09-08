@@ -1,46 +1,53 @@
 ---
 document_id: SEC-KB-INDEX-001
-title: Security Knowledge Base Retrieval Index
-version: 1.2
+title: Skills Hunter — Security Knowledge Base Retrieval Index
+version: 1.3
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
 updated: 2026-09-08
 ---
 
-# Security Knowledge Base Retrieval Index
+# Skills Hunter — Security Knowledge Base Retrieval Index
+
+## Skills Hunter Identity
+
+**Skills Hunter** is the display / conversational name of this Knowledge Base. The technical repository remains `jimmytherocket3-star/security-knowledge-base` and all existing repository paths remain unchanged.
+
+When the user says `Skills Hunter`, `ค้นใน Skills Hunter`, `หาใน Skills Hunter`, `บันทึกเข้า Skills Hunter`, or equivalent wording, treat it as a direct reference to this Knowledge Base and apply the same retrieval, source-priority, and governance rules.
 
 ## Purpose
 
 This file is the primary routing index for AI retrieval in `jimmytherocket3-star/security-knowledge-base`.
 
-When answering a question from this KB, use this index to identify the most relevant source file and fetch/read that file directly. A failed GitHub search alone is not evidence that the KB lacks the information.
+When answering a question from Skills Hunter, use this index to identify the most relevant source file and fetch/read that file directly. A failed GitHub search alone is not evidence that Skills Hunter lacks the information.
 
 ## Mandatory Retrieval Rule
 
-1. Read this index first when the relevant KB file is not already known.
+1. Read this index first when the relevant Skills Hunter file is not already known.
 2. Route the question to the most relevant file below.
 3. Fetch/read the target file directly rather than relying only on repository search.
 4. Prefer the latest Approved/Active material when sources conflict, subject to document-specific status and guardrails.
 5. If search returns no result, check the routed file directly before declaring a Knowledge Gap.
 6. Declare a Knowledge Gap only after the relevant routed source has been checked and does not support the requested fact.
-7. Never invent internal facts or silently replace missing internal KB information with external information.
-8. KB create/edit/delete operations require explicit KB Owner approval before modification.
+7. Never invent internal facts or silently replace missing internal information with external information.
+8. Skills Hunter create/edit/delete operations require explicit KB Owner approval before modification.
 
 ## Answer Source Status Labels
 
-Every factual answer using this Knowledge Base must clearly display the source status to the user.
+Every factual answer using Skills Hunter must clearly display the source status to the user.
 
-- **✅ KB APPROVED** — Use when the answer is supported by information retrieved and verified from the GitHub KB. The answer must follow the status, scope, version, and guardrails of the source document.
-- **⚠️ KNOWLEDGE GAP — ไม่พบข้อมูลใน KB** — Use when the relevant routed KB source has been checked and the requested information is absent or unsupported. Do not guess.
-- **🌐 EXTERNAL — ข้อมูลภายนอก KB** — Use when information comes from outside the GitHub KB. Keep external information clearly separated from KB-derived information.
+- **✅ SKILLS HUNTER — APPROVED** — Use when the answer is supported by information retrieved and verified from the GitHub Knowledge Base. This label is the display-name equivalent of the former `✅ KB APPROVED` label. The answer must follow the status, scope, version, and guardrails of the source document.
+- **⚠️ KNOWLEDGE GAP — ไม่พบข้อมูลใน Skills Hunter** — Use when the relevant routed source has been checked and the requested information is absent or unsupported. Do not guess.
+- **🌐 EXTERNAL — ข้อมูลภายนอก Skills Hunter** — Use when information comes from outside the GitHub Knowledge Base. Keep external information clearly separated from Skills Hunter-derived information.
 
-If an answer combines KB-derived and external information, label the respective portions separately. A GitHub repository search miss alone is not sufficient to use the Knowledge Gap label; the relevant routed source must be checked directly first.
+If an answer combines Skills Hunter-derived and external information, label the respective portions separately. A GitHub repository search miss alone is not sufficient to use the Knowledge Gap label; the relevant routed source must be checked directly first.
 
 ## Routing Table
 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
+| Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. Do not rely on search alone. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
 | จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
@@ -54,11 +61,12 @@ If an answer combines KB-derived and external information, label the respective 
 | Code 3 / Evacuation procedure | `docs/01-emergency-codes/code-3/overview.md` | Use latest approved Code 3 procedure. |
 | Code Sierra / Active Shooter | `docs/01-emergency-codes/code-sierra/overview.md` | Use current stored canonical document; do not silently apply unapproved corrections. |
 | ONE89 Wireless residential fire evacuation drill 2026 | `docs/02-building-procedures/residential/one89-wireless/2026-fire-evacuation-drill.md` | Drill-specific/residential reference; do not generalize to all buildings. |
-| GitHub KB-first retrieval behavior and source priority | `docs/00-system/github-kb-first-retrieval-policy.md` | Governs KB-first retrieval behavior. |
+| GitHub KB-first retrieval behavior and source priority | `docs/00-system/github-kb-first-retrieval-policy.md` | Governs Skills Hunter / KB-first retrieval behavior. |
 | Assistant persona / Kuroro | `docs/00-system/assistant-persona.md` | Persona only; does not alter SOP authority. |
 
 ## Query Routing Examples
 
+- `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `Loading 5 เป็นของอาคารอะไร` → fetch `docs/00-system/location-building-directory.md`
@@ -75,12 +83,13 @@ If an answer combines KB-derived and external information, label the respective 
 
 ## Source Priority
 
-`Latest Approved/Active KB → Approved Reference KB → Knowledge Gap → External source only when explicitly requested or clearly separated`
+`Latest Approved/Active Skills Hunter Knowledge → Approved Reference → Knowledge Gap → External source only when explicitly requested or clearly separated`
 
 A repository search miss does **not** move the answer directly to Knowledge Gap. The routed source file must be checked first.
 
 ## Guardrails
 
+- Skills Hunter is a branding layer over the existing Security Knowledge Base; it does not create new SOP facts.
 - This index routes retrieval; it does not create new SOP facts.
 - File status and document-specific guardrails remain authoritative.
 - Do not infer emergency authority from personnel/location/contact reference files.
@@ -88,10 +97,11 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - Do not generalize drill-specific procedures into Core SOP.
 - Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
 - Fire Truck Parking Points 1–5 must never be interpreted as Assembly Point numbers.
-- Do not modify this index or any routed KB file without explicit KB Owner approval.
+- Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
 
+- v1.3 — 2026-09-08 — Added Skills Hunter as the display / conversational identity of the existing Security Knowledge Base, added direct routing to the Skills Hunter identity document, and updated answer labels while preserving the repository and file paths.
 - v1.2 — 2026-09-08 — Added direct routing for Assembly Point and Fire Truck Parking references and query examples.
 - v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
 - v1.0 — 2026-09-08 — Created as the central AI retrieval/router index to reduce false Knowledge Gaps caused by repository search misses.
