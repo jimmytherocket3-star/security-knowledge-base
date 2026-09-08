@@ -1,12 +1,13 @@
 ---
 document_id: SEC-EMERGENCY-CODE-SIERRA-001
 title: Code Sierra — Active Shooter Emergency Procedure
-version: 1.0
+version: 1.1
 status: Active
 owner: KB Owner
 scope: One Bangkok
 emergency_type: Active Shooter
 canonical_code: Code Sierra
+updated: 2026-09-08
 ---
 
 # Code Sierra — Active Shooter Emergency Procedure
@@ -53,7 +54,7 @@ SOC provides Situation Awareness and coordination through real-time CCTV / Video
 - **Emergency 1** is the primary emergency radio communication channel for relevant internal teams during Code Sierra.
 - The currently confirmed source does not provide a complete team checklist or a confirmed backup radio channel specifically for Code Sierra.
 
-## 7. Life Safety — RUN / HIDE / TELL
+## 7. Life Safety — RUN / HIDE / FIGHT
 ### RUN — หนีเมื่อปลอดภัย
 Use RUN when a safe escape route exists and escape does not create a risk of encountering the attacker.
 - Leave the dangerous area quickly.
@@ -71,13 +72,11 @@ Use HIDE when there is no safe escape route, the route is blocked, or attempting
 - Silence mobile phones completely, including vibration.
 - Stay out of sight and remain quiet.
 
-### TELL — แจ้งเมื่อปลอดภัย
-Report only when it can be done safely. Useful information includes:
-- incident location;
-- attacker description and behavior;
-- number of injured / trapped persons;
-- direction of attacker movement, if observed;
-- information about gunshots heard.
+### FIGHT — ต่อสู้เป็นทางเลือกสุดท้าย
+Use FIGHT only as a last resort when escape and hiding are not possible and there is an immediate threat to life.
+- The objective is immediate personal survival, not pursuit or apprehension of the attacker.
+- Do not leave a safe location to seek confrontation.
+- Security / EOT operational boundaries in Section 10 remain unchanged.
 
 ## 8. Lockdown
 Lockdown is implemented under the decision of **DCC + ERT** after Code Sierra activation.
@@ -101,6 +100,7 @@ Evacuation must not direct occupants toward the attacker. It must consider offic
 Individual life-safety logic:
 - **Safe escape route → RUN**
 - **Unsafe / blocked escape route → HIDE**
+- **Immediate life threat when RUN and HIDE are not possible → FIGHT as a last resort**
 
 ## 10. Security / EOT Safety Boundary
 - Security and EOT are **not tactical engagement or suspect-apprehension units**.
@@ -108,6 +108,7 @@ Individual life-safety logic:
 - Security and EOT must avoid approaching the Hot Zone.
 - EOT supports evacuation, first aid, and casualty movement to a Safe Zone within the confirmed safety conditions.
 - Control, neutralization, and arrest of the attacker are Police responsibilities.
+- The individual **FIGHT** life-safety principle does not authorize Security / EOT to pursue, tactically engage, or apprehend the attacker.
 
 ## 11. Medical Response
 - Code Sierra references **OB-SOP-EP-0007 — แผนบริหารจัดการผู้ป่วยฉุกเฉิน** for detailed medical response.
@@ -151,8 +152,8 @@ The current confirmed knowledge does not establish mandatory Mozart closure fiel
 3. DCC is Declaration Authority; SOC performs the announcement following DCC authorization.
 4. Do not interpret Code Sierra as Fire Code 1 / Code 2 / Code 3.
 5. Code Sierra does not mean automatic evacuation.
-6. Apply RUN / HIDE / TELL according to actual safety conditions.
-7. Security / EOT must not be instructed to tactically engage or apprehend the Active Shooter.
+6. Apply **RUN / HIDE / FIGHT** according to actual safety conditions; FIGHT is a last resort when RUN and HIDE are not possible and there is an immediate threat to life.
+7. Security / EOT must not be instructed to pursue, tactically engage, or apprehend the Active Shooter; the individual FIGHT principle does not change this operational boundary.
 8. Police are responsible for controlling / neutralizing / apprehending the attacker.
 9. After Transfer of Command, One Bangkok teams support Police operations as requested.
 10. AI must not independently declare Code Sierra termination or All Clear.
@@ -177,7 +178,7 @@ The current confirmed knowledge does not establish mandatory Mozart closure fiel
 → **SOC Announces / Mozart Case & Tasks**
 → **Emergency 1**
 → **DCC + ERT Operational Control**
-→ **Lockdown + RUN / HIDE / TELL + Controlled Evacuation as applicable**
+→ **Lockdown + RUN / HIDE / FIGHT + Controlled Evacuation as applicable**
 → **SOC Real-time Intelligence**
 → **Security / EOT Support — No Tactical Engagement**
 → **Police Arrival**
@@ -190,4 +191,5 @@ The current confirmed knowledge does not establish mandatory Mozart closure fiel
 → **SOC Mozart Close Case → DCC Verification**
 
 ## 19. Change Log
+- **v1.1 — 2026-09-08:** KB Owner approved correction from RUN / HIDE / TELL to **RUN / HIDE / FIGHT**. Updated Life Safety, evacuation logic, AI guardrails, and master operational flow while preserving Security / EOT non-tactical-engagement boundaries.
 - **v1.0 — 2026-09-06:** Initial approved Code Sierra knowledge created from KB Owner-reviewed confirmed knowledge. Open knowledge gaps retained explicitly rather than inferred.
