@@ -1,7 +1,7 @@
 ---
 document_id: SEC-SYSTEM-LOCATION-001
 title: One Bangkok Location & Building Directory
-version: 0.5
+version: 0.6
 status: Reference
 owner: KB Owner
 scope: One Bangkok
@@ -120,9 +120,9 @@ When an incident or operational report identifies only a Loading Point, AI may u
 
 ## Parade Ambulance / Patient Pickup Reference
 
-สำหรับการประสานรถพยาบาลเพื่อรับผู้บาดเจ็บหรือผู้ป่วยที่อาคาร **Parade** ให้ใช้อ้างอิงตำแหน่งดังนี้:
+สำหรับการประสานรถพยาบาลเพื่อรับผู้บาดเจ็บหรือผู้ป่วยที่อาคาร **Parade** ให้ใช้อ้างอิงตำแหน่งตามข้อความที่ KB Owner อนุมัติดังนี้:
 
-**Parade → Loading 1 → โค้ง 90 องศา → ประตูทางออกชั้น B1**
+**Parade Loading 1, โค้ง 90 องศา, ประตูทางออกชั้น B1**
 
 ข้อมูล `โค้ง 90 องศา` และ `ประตูทางออกชั้น B1` เป็นรายละเอียดตำแหน่งที่ KB Owner ให้และอนุมัติเมื่อ 2026-09-08
 
@@ -158,7 +158,8 @@ Emergency procedures, incident reports, SOC case records, training materials, an
 
 ## Change Log
 
-- v0.5 — 2026-09-08 — Added KB Owner-approved Parade ambulance/patient pickup reference: Loading 1 → โค้ง 90 องศา → ประตูทางออกชั้น B1.
+- v0.6 — 2026-09-08 — Corrected approved Parade ambulance/patient pickup wording to: `Parade Loading 1, โค้ง 90 องศา, ประตูทางออกชั้น B1`.
+- v0.5 — 2026-09-08 — Added KB Owner-approved Parade ambulance/patient pickup reference.
 - v0.4 — 2026-09-06 — Added approved Zoning Knowledge classifications and schematic spatial labels; added guardrails against inferring precise routes or distances.
 - v0.3 — 2026-09-06 — Added approved Loading 1–8 mappings and multi-building guardrails.
 - v0.2 — 2026-09-06 — Added approved individual location names and source-provided Thai pronunciation/notes.
