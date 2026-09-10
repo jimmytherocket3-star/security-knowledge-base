@@ -1,7 +1,7 @@
 ---
 document_id: SEC-SYSTEM-SOC-ORIENTATION-OPS-001
 title: SOC Orientation Operational Reference — Selective Merge
-version: 1.1
+version: 1.2
 status: Approved Reference
 owner: KB Owner
 scope: One Bangkok SOC Orientation operational knowledge
@@ -13,7 +13,7 @@ updated: 2026-09-10
 
 ## 1. Governance and Precedence
 
-This file contains KB Owner-approved non-conflicting operational knowledge from SOC Orientation and subsequent approved clarification.
+This file contains KB Owner-approved non-conflicting operational knowledge from SOC Orientation and subsequent approved clarifications.
 
 Rules:
 1. Approved non-conflicting information recorded below is available for Skills Hunter use.
@@ -110,40 +110,42 @@ Incident / report received
 This high-level workflow does not replace specific approved emergency-code Mozart workflows, automatic device-created Case behavior, CAT/SLA rules, or closure requirements documented elsewhere.
 
 ### 2.8 Smart City / SOC Operational Systems — Approved Ownership Knowledge
-The approved clarification states that Smart City operational systems and software used by SOC, including:
+The approved clarification states that Smart City operational systems and software used by SOC, including **MOZART, OpsApp & CMS, and SenseStudio**, are developed and maintained/supported by **TCC Technology (TCCT)**. For MOZART, the earlier approved orientation reference also identifies **TCC Technology / CERTIS** in maintenance; do not infer exclusive single-vendor ownership without further evidence.
 
-- **MOZART**
-- **OpsApp & CMS**
-- **SenseStudio**
-
-are developed and maintained/supported by **TCC Technology (TCCT)**.
-
-For **MOZART**, the earlier approved orientation reference also identifies **TCC Technology / CERTIS** in system maintenance. This statement is retained; do not infer an exclusive single-vendor ownership model without further evidence.
-
-#### System Ownership Matrix — Current Confirmed Scope
-| System / Platform | Confirmed developer / maintainer / support | Status |
-|---|---|---|
-| MOZART | TCC Technology (TCCT); orientation reference also identifies CERTIS in maintenance | Confirmed at current approved scope |
-| OpsApp & CMS | TCC Technology (TCCT) | Confirmed at current approved scope |
-| SenseStudio | TCC Technology (TCCT) | Confirmed at current approved scope |
-| Other Vision systems | Not yet sufficiently mapped by specific system | Knowledge Gap |
-| Forward System | Not yet sufficiently mapped | Knowledge Gap |
-| Honeywell systems | Not yet sufficiently mapped | Knowledge Gap |
+#### System Ownership Matrix — Current Approved Scope
+| System / Platform | Vendor / Maintainer | Function / Scope | Approved operational note |
+|---|---|---|---|
+| **MOZART** | **TCC Technology / CERTIS** | Main web application for Case Management and operational coordination | Case is recorded in MOZART for onward coordination with DCC and Security-Ops |
+| **Qognify VMS** | **Vision** | Primary CCTV VMS; CCTV viewing and elevator Intercom | For Type 1 Technical camera issues, create a MOZART case and coordinate **TCC Technology / Vision** |
+| **HikCentral** | **Forward System** | Management of Guidance cameras and Barrier Cameras | Record/open case in MOZART |
+| **EASY 7** | **Frasers (FM)** | Mobile & Temporary CCTV | Record/open case in MOZART |
+| **Dispatcher Hytalk** | **Not confirmed** | Main two-way radio communication application between POC | Vendor remains Knowledge Gap; emergency-channel wording is quarantined under KC-06 |
+| **OpsApp & CMS** | **TCC Technology (TCCT)** | Operational management; Prework equipment/camera checks before shift and case sending/receiving | Supporting confirmation of previously approved TCCT ownership/support |
+| **SenseStudio** | **TCC Technology (TCCT)** | AI backend: Video Analytics, AI Detection, Facial Recognition | Supporting confirmation of previously approved TCCT ownership/support |
+| **DTC GPS** | **DTC** | Golf-cart CCTV viewing and GPS tracking | Record/open case in MOZART |
+| **Honeywell** | **Honeywell / Shinasub** | Access Control operation and monitoring | Record/open case in MOZART |
+| **Security Desk** | **Forward System** | Smart Pole operation and monitoring | Record/open case in MOZART |
 
 Guardrails:
 - **ICT and TCCT must not be treated as the same organizational unit.**
-- Do not infer vendor ownership, first-line support, escalation sequence, contact person, SLA, or technical scope beyond the confirmed statements above.
+- Do not infer exclusive ownership, first-line/second-line support, escalation authority, contact person, SLA, or technical scope beyond the confirmed statements above.
+- For **Honeywell / Shinasub**, the exact division of responsibility between the two parties is not yet confirmed.
+- For **Dispatcher Hytalk**, vendor/maintainer is not confirmed.
 
 ## 3. Supporting Reference — Consistent with Existing Knowledge
-Orientation material supports existing site zoning relationships for overlapping buildings and supports **Code 2 = Real Fire** broadly. Direct Building → Zone answers must use the approved Location & Building Directory; canonical emergency-code definitions remain authoritative.
+- MOZART → TCC Technology / CERTIS is consistent with existing approved orientation knowledge.
+- OpsApp & CMS → TCC Technology is supporting confirmation of existing approved knowledge.
+- SenseStudio → TCC Technology is supporting confirmation of existing approved knowledge.
+- Qognify VMS → Vision is consistent with the existing approved Virtual Patrol Type 1 Technical escalation to TCC Tech / Vision.
+- Orientation material supports overlapping site zoning relationships and broadly supports **Code 2 = Real Fire**; more specific approved sources remain authoritative.
 
 ## 4. Knowledge Conflicts — QUARANTINED / DO NOT OVERRIDE
 
 ### KC-01 — Code 1 Definition
-Orientation wording `CODE 1 (RECEIVE / VERIFY)` does not override canonical **Code 1 = รับรู้/รับแจ้ง (Acknowledge)**. Verification may remain part of procedure where separately approved.
+Orientation wording `CODE 1 (RECEIVE / VERIFY)` does not override canonical **Code 1 = รับรู้/รับแจ้ง (Acknowledge)**.
 
 ### KC-02 — Code 3 Trigger
-Orientation sequence `คุมเพลิงไม่ได้ → Evacuate / Respond` does not override approved Code 3 knowledge. Code 3 does not require waiting until EOT/fire brigade cannot control the fire.
+Orientation sequence `คุมเพลิงไม่ได้ → Evacuate / Respond` does not override approved Code 3 knowledge.
 
 ### KC-03 — EMER_1 / EMER_2 Wording
 Orientation `EMER_1 / EMER_2` notation must not be interpreted as making both channels interchangeable. Specific approved emergency-channel knowledge takes precedence.
@@ -152,14 +154,22 @@ Orientation `EMER_1 / EMER_2` notation must not be interpreted as making both ch
 Orientation wording equivalent to `ขออนุมัติตัดน้ำ (Water Cut Authorization)` conflicts with specific Code 2 knowledge describing electrical isolation before water suppression. It requires clarification before SOP change.
 
 ### KC-05 — CAT1 / CAT2 Orientation Classification
-Orientation describes CAT1 Critical and CAT2 Non-Critical while existing specific Code 1 knowledge states Code 1 = CAT1 with Mozart Acknowledge SLA ≤5 minutes. Do not replace the existing CAT/SLA taxonomy until explicitly reconciled and approved.
+Orientation CAT1/CAT2 wording must not replace existing specific Code 1 CAT/SLA taxonomy until explicitly reconciled and approved.
+
+### KC-06 — Dispatcher Hytalk Emergency Channel Wording
+The System Ownership Matrix source states that for Code 2/3 the radio should be switched to **EMER_1 / EMER_2**. This wording is quarantined and MUST NOT be used to imply that EMER_1 and EMER_2 are interchangeable or equally primary. Existing more specific approved emergency-channel knowledge remains authoritative.
 
 ## 5. Knowledge Gaps — Remain Open
 - **MOZART**: mandatory/required fields, SLA by Priority, real Case Log examples.
 - **Emergency Codes**: other emergency codes and declaration authority for each Code; check specific Sierra reference before declaring repository-wide gap.
 - **SOC SOP / Escalation**: detailed Escalation Matrix, Radio Channel Map, Call Sign, standard radio-message format.
 - **Organization**: confirmed definition, role and authority of **ERT**; complete confirmed Org Chart.
-- **System Ownership / Support Matrix**: detailed mapping for Vision, Forward System, Honeywell; responsible team/person, escalation path, contact and SLA for each system.
+- **System Ownership / Support Matrix**:
+  - individual Contact Persons for TCCT, Vision, Forward System, Honeywell, Shinasub, DTC and other vendors;
+  - Vendor Escalation Matrix / escalation sequence;
+  - System Downtime SLA / response and restoration targets;
+  - confirmed vendor/maintainer for Dispatcher Hytalk;
+  - precise responsibility split between Honeywell and Shinasub.
 - **Site Knowledge within this orientation source**: Assembly Points, Fire Truck Parking, Ambulance Pickup, approved emergency routes; check separate approved references before declaring repository-wide gap.
 
 ## 6. AI Retrieval Rules
@@ -170,5 +180,6 @@ Orientation describes CAT1 Critical and CAT2 Non-Critical while existing specifi
 5. Latest Approved/Active and more specific approved emergency SOP knowledge overrides this orientation-level reference when conflict exists.
 
 ## Change Log
+- v1.2 — 2026-09-10 — KB Owner approved Selective Merge of the System Ownership Matrix: accepted non-conflicting System→Vendor→Function mappings; retained MOZART/OpsApp/SenseStudio as supporting confirmation; added Qognify VMS, HikCentral, EASY 7, DTC GPS, Honeywell and Security Desk mappings; quarantined Dispatcher Hytalk `EMER_1 / EMER_2` wording; retained Contact Persons, Vendor Escalation Matrix, System Downtime SLA and Hytalk vendor as Knowledge Gaps.
 - v1.1 — 2026-09-10 — KB Owner approved ICT definition/role and TCCT support/development knowledge for MOZART, OpsApp & CMS, and SenseStudio; added initial System Ownership Matrix and retained unmapped Vision/Forward System/Honeywell details as Knowledge Gaps.
 - v1.0 — 2026-09-10 — KB Owner approved Selective Merge of non-conflicting SOC Orientation operational knowledge; consistent information retained as Supporting Reference; conflicts quarantined; Knowledge Gaps preserved.
