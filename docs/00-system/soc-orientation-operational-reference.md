@@ -1,7 +1,7 @@
 ---
 document_id: SEC-SYSTEM-SOC-ORIENTATION-OPS-001
 title: SOC Orientation Operational Reference — Selective Merge
-version: 1.2
+version: 1.3
 status: Approved Reference
 owner: KB Owner
 scope: One Bangkok SOC Orientation operational knowledge
@@ -36,19 +36,24 @@ Rules:
 Do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance from the 6,000-person statement unless separately approved.
 
 ### 2.2 SOC Seating / Coverage Structure
-SOC seating is described as **Front Line** and **Back Line**, with a **Command Station** and **Video Wall** controlled by the **SOC Supervisor**.
+SOC Seat Coverage source is identified as the **plan dated 1 July 2026**. SOC seating is described as **Front Line** and **Back Line**, with a **Command Station** and **Video Wall** controlled by the **SOC Supervisor**. The Video Wall supports **Screen Sharing**.
 
-| Seat / Coverage | Responsibility |
+| Seat / Coverage | Source label / Responsibility |
 |---|---|
-| **Z1** | Parade, MRT Link A, Tower 3, Tower 2, Frasers Suite |
-| **Z2** | The Storeys, Tower 4, MRT Link B, Andaz, Pathom House |
-| **Z3** | ONE89 Wireless, EI8HTEEN SEVEN, Tower 5, POST1928, The Ritz-Carlton |
-| **Z4** | Forum, One Power, P5 Parking, One Bangkok Tower, R4, P5 Residential |
-| **TR** | I/O Traffic — Entrance, Loading, Drop-Off |
-| **SE** | Security Coordination / CI — Boundary, Parks, Basement |
-| **A1** | Assets 1 — The PARQ, FYI, Samyan Mitrtown |
+| **SOC Sup. (Supervisor)** | Controls and directs the Command Station and Video Wall; Video Wall supports Screen Sharing |
+| **Z1** | OBK Zone 1 — Residential C1, The Parade; covers Parade, MRT Link A, Tower 3, Tower 2, Frasers Suite |
+| **Z2** | OBK Zone 2 — Retail, OB Hall, The COURT; covers The Storeys, Tower 4, MRT Link B, Andaz, Pathom House |
+| **Z3** | OBK Zone 3 — Hotel Zone, Capella, Banyan Tree; covers ONE89 Wireless, EI8HTEEN SEVEN, Tower 5, POST1928, The Ritz-Carlton |
+| **Z4** | OBK Zone 4-5 — Forum, One Power, P5, C5; covers Forum, One Power, P5 Parking, One Bangkok Tower, R4, P5 Residential; designated as a seat supporting Phase 2 |
+| **TR (OBK Traffic)** | Traffic / Parking barrier control; I/O Traffic — Entrance, Loading, Drop-Off |
+| **SE (OBK CI)** | Security coordination / CI; Boundary, Parks, Basement |
+| **A1 (Assets 1)** | One unified seat operating 24/7 for The PARQ, FYI Center, Samyan Mitrtown |
+| **SS (Screen Sharing / Support)** | System-support and screen-sharing position; TBA pending additional phase opening |
 
-This is SOC Seat Coverage and must not silently redefine approved site Zone boundaries.
+Guardrails:
+- This is **SOC Seat Coverage** and must not silently redefine approved site Zone boundaries.
+- The source labels such as `Residential C1`, `The Parade`, `Retail`, `OB Hall`, `The COURT`, `Hotel Zone`, `Capella`, `Banyan Tree`, `Forum`, `One Power`, `P5`, and `C5` are preserved as seat-plan labels and must not be interpreted as additional building-to-zone mappings unless separately approved.
+- `Phase 2` and `TBA` are source-plan status notes as of 1 July 2026; do not treat them as permanent current status without updated approved information.
 
 ### 2.3 SOC Daily Routine
 - **Prework Checklist** through OpsApp before each shift: equipment, CCTV cameras in assigned zone, software/program systems.
@@ -180,6 +185,7 @@ The System Ownership Matrix source states that for Code 2/3 the radio should be 
 5. Latest Approved/Active and more specific approved emergency SOP knowledge overrides this orientation-level reference when conflict exists.
 
 ## Change Log
+- v1.3 — 2026-09-10 — Added KB Owner-approved SOC Seat Coverage plan details dated 1 July 2026: SOC Supervisor/Command Station/Video Wall, expanded Z1–Z4 source labels, TR barrier-control responsibility, SE coverage, A1 24/7 unified seat, and SS TBA support seat; retained guardrail that Seat Coverage does not redefine site zoning.
 - v1.2 — 2026-09-10 — KB Owner approved Selective Merge of the System Ownership Matrix: accepted non-conflicting System→Vendor→Function mappings; retained MOZART/OpsApp/SenseStudio as supporting confirmation; added Qognify VMS, HikCentral, EASY 7, DTC GPS, Honeywell and Security Desk mappings; quarantined Dispatcher Hytalk `EMER_1 / EMER_2` wording; retained Contact Persons, Vendor Escalation Matrix, System Downtime SLA and Hytalk vendor as Knowledge Gaps.
 - v1.1 — 2026-09-10 — KB Owner approved ICT definition/role and TCCT support/development knowledge for MOZART, OpsApp & CMS, and SenseStudio; added initial System Ownership Matrix and retained unmapped Vision/Forward System/Honeywell details as Knowledge Gaps.
 - v1.0 — 2026-09-10 — KB Owner approved Selective Merge of non-conflicting SOC Orientation operational knowledge; consistent information retained as Supporting Reference; conflicts quarantined; Knowledge Gaps preserved.
