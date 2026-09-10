@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.3
+version: 1.4
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-08
+updated: 2026-09-10
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -50,6 +50,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. Do not rely on search alone. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
+| Multi-Purpose Hall, อาคารอเนกประสงค์, ความจุอาคารอเนกประสงค์, project area/พื้นที่โครงการ, SOC orientation operational facts | `docs/00-system/soc-orientation-operational-reference.md` | Fetch directly for approved Multi-Purpose Hall capacity and SOC orientation operational facts; do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance. |
 | จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
 | จุดจอดรถดับเพลิง, Fire Truck Parking, รถดับเพลิงจอดที่ไหน, จุดจอดรถดับเพลิงของอาคาร | `docs/00-system/fire-truck-parking-reference.md` | Fetch directly for building-specific fire truck parking questions. Numbers 1–5 are fire truck parking points, not Assembly Points. |
 | Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. |
@@ -71,6 +72,9 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `Loading 5 เป็นของอาคารอะไร` → fetch `docs/00-system/location-building-directory.md`
 - `Zone 3 มีอาคารอะไรบ้าง` → fetch `docs/00-system/location-building-directory.md`
+- `อาคารอเนกประสงค์บรรจุได้กี่คน` → fetch `docs/00-system/soc-orientation-operational-reference.md`
+- `Multi-Purpose Hall รองรับได้กี่คน` → fetch `docs/00-system/soc-orientation-operational-reference.md`
+- `One Bangkok มีพื้นที่เท่าไหร่` → fetch `docs/00-system/soc-orientation-operational-reference.md`
 - `จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Assembly Point อยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Tower 5 จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`; if no approved Building → Assembly Point mapping exists, return Knowledge Gap rather than infer from map position
@@ -101,6 +105,7 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 
 ## Change Log
 
+- v1.4 — 2026-09-10 — Added direct routing for Multi-Purpose Hall / อาคารอเนกประสงค์ capacity, One Bangkok project-area questions, and SOC orientation operational facts to `soc-orientation-operational-reference.md`; added query examples to prevent false Knowledge Gaps caused by routing these questions to the location directory.
 - v1.3 — 2026-09-08 — Added Skills Hunter as the display / conversational identity of the existing Security Knowledge Base, added direct routing to the Skills Hunter identity document, and updated answer labels while preserving the repository and file paths.
 - v1.2 — 2026-09-08 — Added direct routing for Assembly Point and Fire Truck Parking references and query examples.
 - v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
