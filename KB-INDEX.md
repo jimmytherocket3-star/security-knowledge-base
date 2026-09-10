@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.4
+version: 1.5
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -53,7 +53,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Multi-Purpose Hall, อาคารอเนกประสงค์, ความจุอาคารอเนกประสงค์, project area/พื้นที่โครงการ, SOC orientation operational facts | `docs/00-system/soc-orientation-operational-reference.md` | Fetch directly for approved Multi-Purpose Hall capacity and SOC orientation operational facts; do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance. |
 | จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
 | จุดจอดรถดับเพลิง, Fire Truck Parking, รถดับเพลิงจอดที่ไหน, จุดจอดรถดับเพลิงของอาคาร | `docs/00-system/fire-truck-parking-reference.md` | Fetch directly for building-specific fire truck parking questions. Numbers 1–5 are fire truck parking points, not Assembly Points. |
-| Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. |
+| โรงพยาบาล, Hospital, โรงพยาบาลนำส่งผู้ป่วย, ส่งฟรี, ค่านำส่ง, โรงพยาบาลภายใน 5 กม., โรงพยาบาลภายใน 10 กม. | `docs/00-system/hospital-transport-reference.md` | Fetch directly for approved hospital transport groups and source-stated transport conditions. “ส่งฟรี” refers to transport condition only, not free medical treatment. Do not recalculate distance or reclassify hospitals. |
+| Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. For hospital transport conditions, route to hospital-transport-reference.md; use this directory for approved phone numbers. |
 | MOD duty schedule for May 2026 | `docs/00-system/mod-duty-schedule/2026-05.md` | Time-bound reference only; do not treat as permanent contact data. |
 | Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For Assembly Point locations, route to assembly-point-reference.md. |
 | Canonical Code 1, Code 2, Code 3 definitions | `docs/01-emergency-codes/code-definitions.md` | Use as primary source for code definitions. |
@@ -80,6 +81,10 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `Tower 5 จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`; if no approved Building → Assembly Point mapping exists, return Knowledge Gap rather than infer from map position
 - `Tower 5 รถดับเพลิงจอดที่ไหน` → fetch `docs/00-system/fire-truck-parking-reference.md`
 - `จุดจอดรถดับเพลิง Tower 3` → fetch `docs/00-system/fire-truck-parking-reference.md`
+- `ขอชื่อโรงพยาบาลที่นำส่งผู้ป่วยแล้วไม่เสียค่าใช้จ่าย` → fetch `docs/00-system/hospital-transport-reference.md`; explain that “ส่งฟรี” is the source-stated transport condition, not free treatment
+- `โรงพยาบาลเอกชนภายใน 5 กม. มีที่ไหนบ้าง` → fetch `docs/00-system/hospital-transport-reference.md`
+- `โรงพยาบาล 6–10 กม. ค่านำส่งเท่าไหร่` → fetch `docs/00-system/hospital-transport-reference.md`
+- `เบอร์ MedPark` → fetch `docs/00-system/emergency-contact-directory.md`; transport-condition questions route to `hospital-transport-reference.md`
 - `เบอร์ SOC` → fetch `docs/00-system/emergency-contact-directory.md`
 - `Code 3 คืออะไร` → fetch `docs/01-emergency-codes/code-definitions.md`, then `docs/01-emergency-codes/code-3/overview.md` if procedural detail is requested
 - `Code Sierra` → fetch `docs/01-emergency-codes/code-sierra/overview.md`
@@ -101,10 +106,12 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - Do not generalize drill-specific procedures into Core SOP.
 - Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
 - Fire Truck Parking Points 1–5 must never be interpreted as Assembly Point numbers.
+- For hospital transport questions, preserve the approved source grouping. Do not infer that free transport means free treatment, and do not recalculate distance to move hospitals between groups.
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
 
+- v1.5 — 2026-09-10 — Added direct routing for hospital transport questions to `hospital-transport-reference.md`, including free-transport, 5 km/10 km, and 6–10 km transport-fee queries; cross-routed hospital phone-number questions to the Emergency Contact Directory and added transport-specific guardrails.
 - v1.4 — 2026-09-10 — Added direct routing for Multi-Purpose Hall / อาคารอเนกประสงค์ capacity, One Bangkok project-area questions, and SOC orientation operational facts to `soc-orientation-operational-reference.md`; added query examples to prevent false Knowledge Gaps caused by routing these questions to the location directory.
 - v1.3 — 2026-09-08 — Added Skills Hunter as the display / conversational identity of the existing Security Knowledge Base, added direct routing to the Skills Hunter identity document, and updated answer labels while preserving the repository and file paths.
 - v1.2 — 2026-09-08 — Added direct routing for Assembly Point and Fire Truck Parking references and query examples.
