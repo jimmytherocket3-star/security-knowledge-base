@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.6
+version: 1.7
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-10
+updated: 2026-09-13
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -52,6 +52,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
 | ทางเข้า-ออกโครงการ, Traffic Knowledge, ทางเข้า One Bangkok, รถยนต์เข้าโครงการ, รถจักรยานยนต์เข้าโครงการ, MRT connection, รถประจำทาง, Helipad | `docs/00-system/traffic-access-reference.md` | Fetch directly for approved project access counts/source roads, motorcycle entrances, public-transport connection, and Tower 4 Helipad. Do not infer unlisted Entrance numbers, routes, traffic direction, or operating hours. |
 | Multi-Purpose Hall, อาคารอเนกประสงค์, ความจุอาคารอเนกประสงค์, project area/พื้นที่โครงการ, SOC orientation operational facts | `docs/00-system/soc-orientation-operational-reference.md` | Fetch directly for approved Multi-Purpose Hall capacity and SOC orientation operational facts; do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance. |
+| กฎหมายเบื้องต้นสำหรับ SOC, SOC legal awareness, ความผิดซึ่งหน้า, การจับ/เชิญตัว, การควบคุมตัว/หน่วงเหนี่ยว, Use of Force, การค้นกระเป๋า/ตรวจค้น/ยึดสิ่งของ, PDPA + CCTV, CCTV Request, LINE และข้อมูล CCTV | `docs/00-system/soc-basic-legal-awareness-reference.md` | Approved Internal Training Reference. Fetch directly and preserve source boundaries/Knowledge Gaps. Do not treat training content as independently verified law; do not infer arrest/search/seizure/detention/use-of-force authority or missing CCTV/PDPA workflow. |
 | จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
 | จุดจอดรถดับเพลิง, Fire Truck Parking, รถดับเพลิงจอดที่ไหน, จุดจอดรถดับเพลิงของอาคาร | `docs/00-system/fire-truck-parking-reference.md` | Fetch directly for building-specific fire truck parking questions. Numbers 1–5 are fire truck parking points, not Assembly Points. |
 | โรงพยาบาล, Hospital, โรงพยาบาลนำส่งผู้ป่วย, ส่งฟรี, ค่านำส่ง, โรงพยาบาลภายใน 5 กม., โรงพยาบาลภายใน 10 กม. | `docs/00-system/hospital-transport-reference.md` | Fetch directly for approved hospital transport groups and source-stated transport conditions. “ส่งฟรี” refers to transport condition only, not free medical treatment. Do not recalculate distance or reclassify hospitals. |
@@ -81,6 +82,11 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `อาคารอเนกประสงค์บรรจุได้กี่คน` → fetch `docs/00-system/soc-orientation-operational-reference.md`
 - `Multi-Purpose Hall รองรับได้กี่คน` → fetch `docs/00-system/soc-orientation-operational-reference.md`
 - `One Bangkok มีพื้นที่เท่าไหร่` → fetch `docs/00-system/soc-orientation-operational-reference.md`
+- `รปภ. บังคับค้นกระเป๋าได้ไหม` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; preserve Internal Training Reference status and source boundary
+- `ความผิดซึ่งหน้า รปภ. ทำอะไรได้บ้าง` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; do not infer authority beyond approved training content
+- `ใช้กำลังกับผู้ก่อเหตุได้แค่ไหน` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; preserve Use-of-Force Knowledge Gaps
+- `ขอภาพ CCTV ต้องทำอย่างไร` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; if requested SOP/form/approver detail is unsupported, return Knowledge Gap
+- `ส่งภาพ CCTV ใน LINE ได้ไหม` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; distinguish approved training guidance from independently verified law
 - `จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Assembly Point อยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Tower 5 จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`; if no approved Building → Assembly Point mapping exists, return Knowledge Gap rather than infer from map position
@@ -113,10 +119,12 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - Fire Truck Parking Points 1–5 must never be interpreted as Assembly Point numbers.
 - For hospital transport questions, preserve the approved source grouping. Do not infer that free transport means free treatment, and do not recalculate distance to move hospitals between groups.
 - For Traffic Knowledge, do not infer Entrance numbers, vehicle routes, traffic direction, opening hours, or access restrictions beyond the approved source. Treat construction status as time-sensitive source information.
+- For SOC legal-awareness questions, route to `soc-basic-legal-awareness-reference.md`, preserve its **Approved Internal Training Reference** status, and do not present source-described legal claims as independently verified law. Missing statutory authority, procedures, forms, approvers, retention rules, or other explicitly open items remain Knowledge Gaps.
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
 
+- v1.7 — 2026-09-13 — Added direct routing for SOC basic legal awareness, caught-in-the-act/custody, Use of Force, search/seizure, detention/restraint, PDPA+CCTV, CCTV Request, and LINE/CCTV-data questions to `soc-basic-legal-awareness-reference.md`; added source-boundary and legal Knowledge-Gap guardrails plus query examples.
 - v1.6 — 2026-09-10 — Added direct routing for Traffic Knowledge / project entrance-exit questions to `traffic-access-reference.md`, including car access, motorcycle access, MRT/public transport, and Helipad queries; added traffic-specific retrieval guardrails.
 - v1.5 — 2026-09-10 — Added direct routing for hospital transport questions to `hospital-transport-reference.md`, including free-transport, 5 km/10 km, and 6–10 km transport-fee queries; cross-routed hospital phone-number questions to the Emergency Contact Directory and added transport-specific guardrails.
 - v1.4 — 2026-09-10 — Added direct routing for Multi-Purpose Hall / อาคารอเนกประสงค์ capacity, One Bangkok project-area questions, and SOC orientation operational facts to `soc-orientation-operational-reference.md`; added query examples to prevent false Knowledge Gaps caused by routing these questions to the location directory.
