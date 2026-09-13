@@ -1,7 +1,7 @@
 ---
 document_id: SEC-SYSTEM-SOC-LEGAL-001
 title: กฎหมายเบื้องต้นสำหรับ Security Operation Center (SOC)
-version: 1.1
+version: 1.2
 status: Approved Internal Training Reference
 owner: KB Owner
 effective_date: 2026-09-13
@@ -55,15 +55,39 @@ Source does not provide detailed statutory sections, retention periods, lawful-b
 
 ### 3.5 Source Boundary — Gap #1
 ข้อมูลข้างต้นเป็นสาระจากการอบรมภายใน ไม่ใช่การยืนยันตัวบทกฎหมายโดย Skills Hunter. แหล่งข้อมูลนี้ยังไม่รองรับ:
-- มาตรา/บทบัญญัติกฎหมายที่ใช้เป็นฐานอำนาจ เช่น รายละเอียดตามประมวลกฎหมายวิธีพิจารณาความอาญา.
+- มาตรา/บทบัญญัติกฎหมายที่ใช้เป็นฐานอำนาจ.
 - กรอบเวลาสูงสุดและมาตรฐานสถานที่/ห้องสำหรับควบคุมหรือเชิญตัวระหว่างรอตำรวจ.
 - ขั้นตอนและแบบฟอร์ม SOC ภายใน เช่น Incident Report หรือแบบฟอร์มส่งมอบตัวขององค์กร.
 
-ดังนั้น Gap #1 มีข้อมูลการปฏิบัติเพิ่มขึ้น แต่ส่วนข้างต้นยังคงเป็น **Knowledge Gap** จนกว่าจะมีแหล่งข้อมูลที่ได้รับอนุมัติเพิ่มเติม.
+---
+
+## 4. การใช้กำลัง (Use of Force)
+
+### 4.1 วัตถุประสงค์และขอบเขต “ไม่เกินกว่าเหตุ”
+ตามเนื้อหาการอบรมที่ได้รับอนุมัติ:
+- การใช้กำลังต้องมีวัตถุประสงค์เพื่อ **“ระงับเหตุ”** และ **“ควบคุมตัว”** (ให้ตึง หยุด นิ่ง) เท่านั้น ไม่ใช่เพื่อปะทะ ชก ต่อย หรือแก้แค้น.
+- ตัวอย่างที่การอบรมระบุว่าไม่เกินกว่าเหตุ คือการใช้ **ไม้ง่าม/ไม้ดามของ EOT** ตรึงผู้ก่อเหตุหรือคนคลั่งให้อยู่กับที่ เพื่อป้องกันไม่ให้ไปทำร้ายผู้อื่น.
+- ตัวอย่างที่การอบรมระบุว่าเกินกว่าเหตุ ได้แก่ **หมัด เข่า ศอก, การใช้กระบองตี, การเตะ/กระทืบ หรือทำร้ายจนคู่กรณีหมดสติ**.
+
+### 4.2 การป้องกันตนเองและผู้อื่น
+- สามารถใช้กำลังตอบโต้เพื่อป้องกันตนเองหรือผู้อื่นได้เมื่อมี **“อันตรายใกล้ตัว”** เกิดขึ้นจริง ตามกรอบที่อธิบายในการอบรม.
+- เมื่อคู่กรณีหยุดกระทำ หยุดตอบโต้ หรือวิ่งหนีไปแล้ว **ห้ามวิ่งไล่ตามไปทำร้ายหรือตอบโต้**.
+- ตามการอบรม หากไล่ตามไปทำร้ายหลังภัยสิ้นสุด จะถือเป็นการใช้กำลังเกินกว่าเหตุ.
+
+### 4.3 จุดเน้นย้ำสำหรับเจ้าหน้าที่ / รปภ.
+- มีข้อห้ามในการใช้กำลังรุนแรงกับลูกค้าหรือผู้ใช้บริการ.
+- การอบรมระบุว่าผู้ต้องหายังได้รับการคุ้มครองสิทธิ และการใช้กำลังเกินกว่าเหตุมีความเสี่ยงต่อการถูกฟ้องร้องดำเนินคดีกลับ.
+- นโยบายที่ถ่ายทอดในการอบรมคือ **“ไม่ต้องการฮีโร่”** แต่ต้องการให้ควบคุมสถานการณ์อย่างปลอดภัยและตรึงเหตุการณ์ไว้เพื่อรอเจ้าหน้าที่.
+
+### 4.4 Source Boundary — Gap #2
+ข้อมูลข้างต้นเป็นสาระจากการอบรมภายใน ไม่ใช่การยืนยันตัวบทกฎหมายโดย Skills Hunter. แหล่งข้อมูลยังไม่รองรับ:
+- **Use of Force Continuum** หรือลำดับขั้นการใช้กำลังตาม SOP/มาตรฐาน.
+- มาตรา/บทบัญญัติกฎหมายอ้างอิงเรื่องการป้องกันตนเองหรือผู้อื่น.
+- ขอบเขตตามกฎหมาย/นโยบายว่า รปภ. ทั่วไปได้รับอนุญาตให้พกหรือใช้อุปกรณ์ชนิดใด เช่น กุญแจมือ สเปรย์พริกไทย หรือกระบอง.
 
 ---
 
-## 4. การกักขัง / หน่วงเหนี่ยว
+## 5. การกักขัง / หน่วงเหนี่ยว
 - การอบรมระบุถึงการ **ห้ามกักขังหรือหน่วงเหนี่ยวบุคคลโดยไม่มีสาเหตุอันควร**.
 - การปฏิบัติของเจ้าหน้าที่ต้องอยู่ภายในขอบเขตหน้าที่และไม่ละเมิดสิทธิของบุคคล.
 
@@ -71,7 +95,7 @@ Source does not establish detailed detention time limits, statutory exceptions, 
 
 ---
 
-## 5. การส่งข้อมูลผ่าน LINE
+## 6. การส่งข้อมูลผ่าน LINE
 - การอบรมอภิปรายความเสี่ยงจากการส่งข้อมูลผ่าน **LINE**.
 - เนื้อหาระบุว่าการส่งข้อมูลผ่าน LINE **อาจถูกตีความว่าเป็นพื้นที่สาธารณะ**.
 - การส่งต่อข้อมูลในลักษณะดังกล่าวอาจส่งผลกระทบต่อมาตรการรักษาความปลอดภัยของข้อมูล.
@@ -80,16 +104,15 @@ Source does not establish detailed detention time limits, statutory exceptions, 
 
 ---
 
-## 6. Operational Training Principle
+## 7. Operational Training Principle
 สาระการอบรมมีเป้าหมายเพื่อเตรียมความพร้อมให้พนักงานสามารถตัดสินใจในสถานการณ์วิกฤตได้อย่างถูกต้อง สอดคล้องกับระเบียบปฏิบัติของบริษัท และปฏิบัติงานอย่างมืออาชีพ.
 
 ---
 
-## 7. Knowledge Gaps
-Knowledge Gaps ที่ยังต้องเติม/ยืนยันเพิ่มเติม:
+## 8. Knowledge Gaps
 - **Gap #1 — การจับ/ควบคุมตัว:** ยังขาดมาตรา/บทบัญญัติกฎหมายอ้างอิง, กรอบเวลาและสถานที่ควบคุมตัว, และแบบฟอร์ม/ขั้นตอน Incident Report หรือการส่งมอบตัวภายในองค์กร.
-- **Gap #2 — การใช้กำลัง:** ขอบเขตของ “ไม่เกินกว่าเหตุ”, การป้องกันตนเอง/ผู้อื่น และข้อห้ามโดยละเอียด.
-- **Gap #3 — การค้นและยึดสิ่งของ:** เงื่อนไขการตรวจค้นบุคคล กระเป๋า รถ หรือการยึดวัตถุ นอกเหนือจากหลักไม่บังคับค้นกระเป๋าเมื่อไม่ยินยอมที่มีใน Gap #1.
+- **Gap #2 — การใช้กำลัง:** มีหลักการจากการอบรมแล้ว แต่ยังขาด Use of Force Continuum, ข้อกฎหมายอ้างอิงเรื่องการป้องกันตัว และขอบเขตอุปกรณ์ที่อนุญาตให้ รปภ. พก/ใช้.
+- **Gap #3 — การค้นและยึดสิ่งของ:** เงื่อนไขการตรวจค้นบุคคล กระเป๋า รถ หรือการยึดวัตถุ นอกเหนือจากหลักไม่บังคับค้นกระเป๋าเมื่อไม่ยินยอม.
 - **Gap #4 — การกักขัง/หน่วงเหนี่ยว:** ระยะเวลา ข้อยกเว้น และขั้นตอนระหว่างรอตำรวจ.
 - **Gap #5 — PDPA/CCTV:** ผู้มีสิทธิ์ดูภาพ, ผู้อนุมัติการเปิดเผย, การส่งให้ตำรวจ/บุคคลภายนอก, การถ่ายภาพจากจอ SOC, retention, lawful basis และ workflow.
 - **Gap #6 — LINE / การส่งข้อมูล:** ประเภทข้อมูลที่ส่งได้/ไม่ได้, ช่องทางที่อนุญาต, กลุ่มภายใน/ภายนอก และการจำแนกประเภทข้อมูล.
@@ -100,24 +123,26 @@ Missing source support = Knowledge Gap. Do not guess.
 
 ---
 
-## 8. AI Guardrails
+## 9. AI Guardrails
 - ใช้เอกสารนี้เป็น **Approved Internal Training Reference** ไม่ใช่ตัวบทกฎหมาย.
 - ห้ามแปลงสาระการอบรมเป็นคำแนะนำหรือคำวินิจฉัยทางกฎหมายเฉพาะกรณีโดยไม่มีหลักฐานเพิ่มเติม.
-- สำหรับการจับผู้กระทำความผิดซึ่งหน้า ให้ตอบตามเกณฑ์และข้อจำกัดที่แหล่งอบรมระบุเท่านั้น; ห้ามสร้างฐานอำนาจหรือข้อยกเว้นเพิ่มเติม.
-- ห้ามสร้างอำนาจจับ ค้น ยึด กักตัว หรือใช้กำลังให้ Security Guard / SOC / พลเรือนจากการอนุมาน.
-- ห้ามระบุว่าการใช้กำลังใดถูกกฎหมายเพียงเพราะเอกสารกล่าวว่าไม่ควรใช้กำลังเกินกว่าเหตุ.
-- ห้ามสรุปว่า LINE ทุกประเภทเป็นพื้นที่สาธารณะ; ให้ระบุว่าเป็นความเสี่ยง/ประเด็นที่ถูกอภิปรายในการอบรม.
+- สำหรับการจับผู้กระทำความผิดซึ่งหน้า ให้ตอบตามเกณฑ์และข้อจำกัดที่แหล่งอบรมระบุเท่านั้น.
+- สำหรับ Use of Force ให้รักษาวัตถุประสงค์ **ระงับเหตุ/ควบคุมตัว** และหลักหยุดใช้กำลังเมื่อภัยสิ้นสุดตามแหล่งอบรม; ห้ามสร้าง Use of Force Continuum เอง.
+- ห้ามสร้างอำนาจจับ ค้น ยึด กักตัว หรือใช้อุปกรณ์ให้ Security Guard / SOC / พลเรือนจากการอนุมาน.
+- ห้ามสรุปว่า LINE ทุกประเภทเป็นพื้นที่สาธารณะ.
 - สำหรับ PDPA/CCTV ให้รักษาขอบเขตเพียงหลักความระมัดระวังเรื่องสิทธิส่วนบุคคลและผลกระทบต่อองค์กร จนกว่าจะมีแหล่งข้อมูลที่ละเอียดกว่า.
 - หากต้องการคำตอบทางกฎหมายที่เกินจากเอกสารนี้ ให้ระบุ Knowledge Gap หรือแยก External Legal Research อย่างชัดเจนเมื่อ KB Owner ขอให้ค้นภายนอก.
 
 ---
 
-## 9. Sources
+## 10. Sources
 - `กฏหมายเบื้องต้นสำหรับsoc.md` — Initial internal SOC training/meeting summary supplied and approved by KB Owner on 2026-09-13.
-- `กฏหมายเบื้องต้นสำหรับsoc0.1.md` — Expanded internal training detail for Knowledge Gap #1 (การจับผู้กระทำความผิดซึ่งหน้า), supplied and approved by KB Owner on 2026-09-13.
+- `กฏหมายเบื้องต้นสำหรับsoc0.1.md` — Expanded internal training detail for Knowledge Gap #1, supplied and approved by KB Owner on 2026-09-13.
+- `กฏหมายเบื้องต้นสำหรับsoc0.2.md` — Expanded internal training detail for Knowledge Gap #2 (Use of Force), supplied and approved by KB Owner on 2026-09-13.
 
 ---
 
-## 10. Change Log
-- **v1.1 — 2026-09-13** — Expanded Knowledge Gap #1 with approved training details covering criteria described as caught-in-the-act situations, later victim reports, consent-based bag inspection, police handover, citizen-arrest record, communication/custody practices, female-security/Cover arrangement, and explicit prohibitions. Preserved unresolved statutory-reference, custody-time/location, and internal-form gaps.
+## 11. Change Log
+- **v1.2 — 2026-09-13** — Added approved Use of Force training guidance: purpose of force, source examples of proportionate/excessive force, immediate-danger principle, prohibition on pursuing and attacking after danger ends, organizational safety emphasis, and remaining Use of Force knowledge gaps.
+- **v1.1 — 2026-09-13** — Expanded Knowledge Gap #1 with approved training details covering caught-in-the-act situations, later victim reports, consent-based bag inspection, police handover, citizen-arrest record, communication/custody practices, female-security/Cover arrangement, and explicit prohibitions.
 - **v1.0 — 2026-09-13** — Created Approved Internal Training Reference covering PDPA/CCTV awareness, source-described principles concerning control of persons caught in the act, prohibition on unjustified detention/restraint, LINE information-sharing risk, and AI legal-scope guardrails.
