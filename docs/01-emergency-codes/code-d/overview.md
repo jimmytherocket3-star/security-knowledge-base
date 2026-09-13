@@ -3,7 +3,7 @@
 **Document ID:** SEC-CODE-D-001  
 **Title:** ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ  
 **Source SOP:** OB-SOP-EP-0039  
-**Version:** 1.2  
+**Version:** 1.3  
 **Status:** Approved Reference  
 **Owner:** KB Owner  
 **Effective Date:** 2026-09-13  
@@ -73,15 +73,19 @@ SOC's Mozart action is not medical authority to determine death.
 
 ---
 
-## 5. Communication — Source-Supported Boundary
-OB-SOP-EP-0039 **does not specify a dedicated Code D radio channel number**.
+## 5. Communication / Radio Channel
+### Approved Operational Knowledge
+**Code D uses EMER1 as the operational emergency radio channel.**
 
-The source identifies incident communication through **SOC or Contact Centre (CC)** and direct external-agency telephone contacts:
+**Authority:** KB Owner operational instruction, approved 2026-09-13.
+
+### Source Boundary
+OB-SOP-EP-0039 itself **does not specify a dedicated Code D radio channel number**. The SOP source identifies incident communication through **SOC or Contact Centre (CC)** and direct external-agency telephone contacts:
 - Lumphini Police Station: `02-255-5994` / `081-172-0239`.
 - Erawan Center: `1669`.
 - Institute of Forensic Medicine, Police General Hospital: `02-207-6108`.
 
-A Code D-specific Radio Channel Plan is therefore **not established by this SOP**. Do not infer EMER1 or any other channel.
+Therefore, **EMER1 is approved KB Owner operational knowledge supplementing the SOP; it must not be represented as a radio-channel value stated in OB-SOP-EP-0039.**
 
 ---
 
@@ -162,9 +166,10 @@ This graphical description supplements the six-phase textual workflow. Preserve 
 ---
 
 ## 12. Remaining Knowledge Gaps
-- **Dedicated Code D Radio Channel:** not specified in OB-SOP-EP-0039. This is a confirmed absence from the supplied SOP, not permission to infer another emergency channel.
 - **Mozart UI / Mandatory Fields / Attachment / Approval Configuration:** not shown or confirmed by the supplied SOP.
 - Any graphical details of the original Swimlane beyond the source-supported nodes, colors, decision diamonds, process rectangles and listed role lanes above remain unsupported unless additional source evidence is supplied.
+
+**Radio Channel is no longer a Knowledge Gap:** KB Owner has approved **EMER1** for Code D operational radio communication.
 
 ---
 
@@ -172,7 +177,8 @@ This graphical description supplements the six-phase textual workflow. Preserve 
 - Forensic Pathologist confirmation is required before treating the incident as officially confirmed death under this source-supported workflow.
 - Do not treat SOC/EOT/Security as medical authority to confirm death.
 - Preserve the initial `Medical Assistance (Major - Ambulance)` → confirmed `Deceased Person Protocol (Code D)` distinction.
-- **Never invent a Code D radio channel.** The SOP does not specify one.
+- **Code D operational radio channel = EMER1**, per approved KB Owner instruction.
+- Do not claim OB-SOP-EP-0039 itself specifies EMER1; it does not specify a dedicated radio channel.
 - Do not invent Mozart UI, mandatory fields, attachment fields or approval workflow.
 - Do not instruct project staff to notify relatives directly; the approved source assigns family notification to Police.
 - Preserve source Swimlane terminology and symbol descriptions without silently reconciling them with other documents.
@@ -183,11 +189,13 @@ This graphical description supplements the six-phase textual workflow. Preserve 
 ## 14. Sources
 - `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ.md` — approved 2026-09-13; high-level SOP overview.
 - `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.1.md` — approved 2026-09-13; detailed workflow and Gap-resolution summary.
-- `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.2.md` — approved 2026-09-13; Radio Channel absence, Mozart evidence boundary and Swimlane graphic/symbol details.
+- `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.2.md` — approved 2026-09-13; confirms SOP does not specify a radio channel, Mozart evidence boundary and Swimlane graphic/symbol details.
+- **KB Owner Operational Instruction — 2026-09-13:** Code D radio channel = `EMER1`.
 
 ---
 
 ## 15. Change Log
 - v1.0 — 2026-09-13 — Initial Approved Reference from high-level source summary.
 - v1.1 — 2026-09-13 — Added six-phase Detailed Swimlane Workflow, authority/handover, notification matrix, scene/evidence control, Mozart workflow, family notification, reporting/closure and media/privacy information.
-- **v1.2 — 2026-09-13** — Confirmed no dedicated Code D radio channel is specified by OB-SOP-EP-0039; refined Mozart Knowledge Gap to UI/Mandatory Fields/Attachment/Approval configuration; added source-supported Swimlane graphical nodes, decision symbols, process boxes and role lanes.
+- v1.2 — 2026-09-13 — Confirmed no dedicated Code D radio channel is specified by OB-SOP-EP-0039; refined Mozart Knowledge Gap; added source-supported Swimlane graphical details.
+- **v1.3 — 2026-09-13** — Added KB Owner-approved operational instruction **Code D Radio Channel = EMER1**; closed Radio Channel Knowledge Gap while preserving the distinction that OB-SOP-EP-0039 itself does not state the channel.
