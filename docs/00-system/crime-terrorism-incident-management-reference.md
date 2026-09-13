@@ -3,7 +3,7 @@
 **Document ID:** SEC-SYSTEM-CRIME-TERROR-001  
 **Title:** แผนบริหารจัดการเหตุการณ์อาชญากรรมและการก่อการร้าย  
 **Source SOP:** OB-SOP-EP-0010 (source summaries include pages 11–19)  
-**Version:** 1.4  
+**Version:** 1.5  
 **Status:** Approved Reference  
 **Owner:** KB Owner  
 **Effective Date:** 2026-09-13  
@@ -11,11 +11,11 @@
 ---
 
 ## 1. Scope
-Approved One Bangkok reference for **Car Plowed** and **Stabbing** incidents. This document strictly separates **Source-Supported Approved Knowledge** from **KB Owner-approved Proposed / Not Source-Confirmed** structures.
+Approved One Bangkok reference for Crime & Terrorism incident-management knowledge. This document strictly separates **Source-Supported Approved Knowledge** from **KB Owner-approved Proposed / Not Source-Confirmed** structures.
 
 ---
 
-## 2. Source-Supported Workflow
+## 2. Source-Supported Workflow — OB-SOP-EP-0010
 ### Car Plowed
 - ผู้พบเห็น/Security Guard แจ้ง SOC; Guard ตรวจสอบและรายงานทะเบียน สี ยี่ห้อ ทิศทาง.
 - SOC ตรวจ CCTV/Video Analytic และเปิด Mozart `Security: Terrorist Attack (Car Plowed)`; แจ้ง DCC/หน่วยงานที่เกี่ยวข้อง.
@@ -66,50 +66,74 @@ The source does not establish which position is the specific DCC Incident Comman
 ---
 
 ## 5. Mozart — Source-Supported Recording Information
-OB-SOP-EP-0010 identifies Mozart as a central service/security/building incident-management system and supports recording/receiving information including incident date/time, reporter, Security Event Category, Car Plowed/Stabbing Event Types, location, suspect/vehicle details, casualty/severity, Danger Zone, PA/action information, barrier/bollard actions, external-agency handover, BMO assessment, evidence, incident report reference, resolution, and IMT reopening approval.
+OB-SOP-EP-0010 supports recording/receiving incident information including incident date/time, reporter, Security Event Category, Car Plowed/Stabbing Event Types, location, suspect/vehicle details, casualty/severity, Danger Zone, PA/action information, barrier/bollard actions, external-agency handover, BMO assessment, evidence, incident report reference, resolution, and IMT reopening approval.
 
-**Important:** OB-SOP-EP-0010 does not provide the complete Mozart screen/form schema. These are source-supported information requirements/references, not confirmation of exact proposed field labels, UI control types, phases, or screen layout.
+**Important:** OB-SOP-EP-0010 does not provide the complete Mozart screen/form schema.
 
 ---
 
 ## 6. Mozart Platform Overview — Approved Source-Supported Reference
-Source: **คู่มือการใช้งาน MOZART** supplied and approved by the KB Owner on 2026-09-13.
+Sources: `คู่มือการใช้งานMozart.md` and `คู่มือการใช้งานMozart0.1.md`, supplied and approved by the KB Owner on 2026-09-13.
 
-The available source summary supports the following platform-level facts:
-- MOZART is a platform used by Security Operations Center personnel.
-- **Case Management** covers the incident lifecycle from receiving/reporting an incident through case/work closure.
-- MOZART acts as a **central information hub** connecting control-center personnel and field operational teams so they can work from a shared situational picture.
-- The guide also covers **video functions**, **personnel/resource management**, and **loading/receiving-parking-area management**.
-- The guide organizes/prioritizes incident content according to **frequency and impact level**, with examples including fire alarms and medical emergencies, to support correct and rapid response to critical situations.
+- MOZART is used by SOC Operator / Security Officer for incident Case Management.
+- Case Management covers the lifecycle from receiving/reporting an incident through case/work closure.
+- MOZART acts as a central information hub connecting control-center personnel and field operational teams.
+- The guide also covers video functions, personnel/resource management, and loading/receiving-parking-area management.
 
-### Evidence Boundary
-The currently approved source material is a one-line high-level summary of the MOZART manual. It does **not** expose or verify:
+### Critical Knowledge Event Types
+The Mozart manual material classifies the following as **Critical Knowledge (เกิดน้อย × รุนแรง: L×H)**:
+- `Active Shooter`
+- `Bomb Threat`
+- `Hostage Situation`
+- `Terrorist Attack : Car Plowed`
+- `Terrorist Attack : Stabbing`
+- `Crime Management : Armed Robbery`
+- `Suspicious Object`
+
+This classification is Mozart-manual knowledge and does not by itself establish automatic equivalence with Code Sierra, Threat Levels, or any other Emergency Code.
+
+### Priority & SLA Response
+The Mozart manual material states response SLA by CAT level:
+- **CAT1 ≤ 5 minutes**
+- **CAT2 ≤ 10 minutes**
+- **CAT3 ≤ 15 minutes**
+
+**Boundary:** These values are recorded as **Mozart CAT Response SLA**. They must not be substituted for the separate Proposed Crime/Terrorism operational SLA values for verification, Mozart opening/escalation, PA/Bollard, or DCC Alignment unless an approved source explicitly establishes that linkage.
+
+### Task / Case Workflow
+The Mozart manual material supports this workflow at platform level:
+`Acknowledge → Assign Task using Task Template → Track Progress/Status → Resolve Case`
+
+---
+
+## 7. Mozart Evidence Boundary
+The approved Mozart manual summaries still do **not** verify:
 - Actual Mozart screen names/layout.
 - Complete form schema.
 - Exact field labels.
 - UI control/data types.
 - Mandatory vs optional fields.
-- Dropdown values/status lists.
+- Complete dropdown/status values.
 - Permissions/workflow configuration.
 
-Therefore this source strengthens the **Mozart Platform Overview** but does **not close the Actual Mozart Form Schema/UI Knowledge Gap**.
+The `คู่มือการใช้งานMozart0.1.md` material also explicitly reports that it does **not** contain numerical meter-based criteria for Hot Zone, Warm Zone, or Safe Zone radii. Therefore the **Danger Zone Radius remains a Knowledge Gap**.
 
 ---
 
-## 7. Proposed / Not Source-Confirmed — Incident Command, DoA, SLA
+## 8. Proposed / Not Source-Confirmed — Incident Command, DoA, Operational SLA
 Approved to retain for future review only:
 - Proposed Tactical IC: DCC Manager.
 - Proposed Strategic Commander: VP - DOFM with IMT.
 - Proposed Tactical DoA: DCC Manager → AVP FPMST → Security Supervisor (Duty Supervisor).
 - Proposed Strategic DoA: VP DOFM → Deputy Director Estate Management → AVP FPMST.
 - Proposed automatic handoff if prior authority unreachable within 3 minutes.
-- Proposed SLA: SOC verification ≤2 min; Mozart opening/escalation ≤3 min; PA/Bollard ≤5 min; DCC Alignment setup ≤10–15 min.
+- Proposed operational SLA: SOC verification ≤2 min; Mozart opening/escalation ≤3 min; PA/Bollard ≤5 min; DCC Alignment setup ≤10–15 min.
 
-None of these proposed role assignments, succession rules, or numeric SLA values are source-confirmed OB-SOP-EP-0010 requirements.
+These proposed operational SLA values are **not the same claim as the source-supported Mozart CAT Response SLA** and remain Not Source-Confirmed for the Crime/Terrorism SOP workflow.
 
 ---
 
-## 8. Proposed Mozart Form Structure — Approved to Retain, NOT System-Confirmed
+## 9. Proposed Mozart Form Structure — Approved to Retain, NOT System-Confirmed
 Approved four-phase operational-design proposal:
 1. Case Creation & Initial Verification.
 2. Emergency Response & Action Log.
@@ -118,17 +142,17 @@ Approved four-phase operational-design proposal:
 
 Proposed fields include Case ID, Incident Date & Time, Reporter Info, Event Category/Type, Location, Threat/Suspect Details, Casualty & Severity, IC, Danger Zone, PA Log, Barrier/Bollard, External Agency Handover, Police Unit, BMO Inspection, Area Safety Clearance, Evidence, Incident Report Reference, Resolution Summary, IMT Re-opening Approval and Case Status.
 
-The phase organization, exact field names, UI control types and `Case Status = Closed` remain **Proposed / Not System-Confirmed** until verified by actual Mozart screen/manual/configuration evidence.
+The phase organization, exact field names, UI control types and `Case Status = Closed` remain **Proposed / Not System-Confirmed**.
 
 ---
 
-## 9. Remaining Knowledge Gaps
+## 10. Remaining Knowledge Gaps
 - Quantitative matrix distinguishing ordinary crime from `Terrorist Attack` classification.
 - Source-confirmed DCC Incident Commander role title.
 - Source-confirmed DoA / Succession Line.
-- Source-confirmed numeric SLA.
-- **Actual Mozart Form Schema/UI**: exact field names, types, mandatory/optional status, phase/screen layout and valid status values remain unconfirmed.
-- Physical radii for Hot/Warm/Safe Zones.
+- Source-confirmed **Crime/Terrorism operational SLA linkage** for verification/escalation/PA/Bollard/DCC Alignment; Mozart CAT Response SLA is known but is not evidence of those individual operational deadlines.
+- **Actual Mozart Form Schema/UI**: exact field names, types, mandatory/optional status, phase/screen layout and complete valid status values remain unconfirmed.
+- **Physical radii for Hot/Warm/Safe Zones**; Mozart manual material explicitly provides no numerical meter-based criteria.
 - Building-specific backup Warm/Safe Zone coordinates.
 - Stabbing offender-control tactics; source says IBT/Guard must not directly confront offender and leaves control to police.
 - AED / First Aid equipment location map.
@@ -138,32 +162,33 @@ The phase organization, exact field names, UI control types and `Case Status = C
 
 ---
 
-## 10. AI Guardrails
+## 11. AI Guardrails
 - Always distinguish Source-Supported facts from Proposed / Not Source-Confirmed material.
-- KB Owner approval to retain a proposal does not convert it into an OB-SOP-EP-0010 or Mozart system requirement.
-- The Mozart manual summary confirms platform-level capabilities only; do not use it to claim exact UI/schema details.
+- Do not equate Mozart CAT Response SLA with the Proposed operational SLA for individual Crime/Terrorism response actions without explicit source linkage.
+- Do not infer Danger Zone radii from the Mozart manual; no numerical radii are provided.
+- KB Owner approval to retain a proposal does not convert it into an SOP/Mozart system requirement.
 - Do not represent proposed Mozart phases, field labels/types or `Closed` option as actual system configuration without system evidence.
-- Do not use proposed IC/DoA/SLA as operational fact without source confirmation.
+- Do not use proposed IC/DoA/operational SLA as operational fact without source confirmation.
 - For Stabbing, never instruct IBT/Security Guard to directly confront, pursue, apprehend or tactically engage the offender.
-- Do not invent offender-control tactics, zone radii, radio channels, PA scripts or missing Mozart fields.
-- Do not automatically equate Car Plowed/Stabbing with Code Sierra or Threat Levels beyond stated Event Types.
-- Do not generalize One Bangkok Park as the universal Assembly Point.
+- Do not automatically equate Critical Knowledge Event Types with Code Sierra or Threat Levels.
 - Missing source support = Knowledge Gap.
 
 ---
 
-## 11. Sources
+## 12. Sources
 - `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย.md` — approved 2026-09-13.
 - `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.1.md` — approved 2026-09-13.
 - `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.2.md` — approved 2026-09-13.
 - `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.3.md` — approved 2026-09-13.
 - `คู่มือการใช้งานMozart.md` — approved 2026-09-13; high-level Mozart platform/manual summary.
+- `คู่มือการใช้งานMozart0.1.md` — approved 2026-09-13; Critical Knowledge Event Types, CAT Response SLA, Task/Case Workflow, and explicit absence of numerical Danger Zone Radius criteria.
 
 ---
 
-## 12. Change Log
+## 13. Change Log
 - v1.0 — Initial Approved Reference.
 - v1.1 — Added Car Plowed/Stabbing workflows and explicit gaps.
 - v1.2 — Added source-supported management positions and Proposed IC/DoA/SLA structure.
 - v1.3 — Added source-supported Mozart recording information and Proposed four-phase form design.
-- **v1.4 — 2026-09-13** — Added approved source-supported Mozart Platform Overview from `คู่มือการใช้งานMozart.md`; retained Actual Mozart Form Schema/UI as Knowledge Gap.
+- v1.4 — Added approved source-supported Mozart Platform Overview.
+- **v1.5 — 2026-09-13** — Added approved Critical Knowledge Event Types, Mozart CAT Response SLA, Task/Case Workflow, and explicit confirmation that numerical Hot/Warm/Safe radii are absent from the supplied Mozart manual material.
