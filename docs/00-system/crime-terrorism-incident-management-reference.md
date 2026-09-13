@@ -2,8 +2,8 @@
 
 **Document ID:** SEC-SYSTEM-CRIME-TERROR-001  
 **Title:** แผนบริหารจัดการเหตุการณ์อาชญากรรมและการก่อการร้าย  
-**Source SOP:** OB-SOP-EP-0010 (source summary: pages 11–19)  
-**Version:** 1.1  
+**Source SOP:** OB-SOP-EP-0010 (source summaries include pages 11–19)  
+**Version:** 1.2  
 **Status:** Approved Reference  
 **Owner:** KB Owner  
 **Effective Date:** 2026-09-13  
@@ -17,11 +17,11 @@ Approved One Bangkok SOP reference for two incident scenarios:
 1. การใช้ยานพาหนะเป็นอาวุธพุ่งชนบุคคล (**Car Plowed**)
 2. การใช้อาวุธมีคมทำร้ายบุคคล (**Stabbing**)
 
-This version incorporates the KB Owner-approved workflow summary derived from OB-SOP-EP-0010 pages 11–19. Preserve source wording/scope; do not fill remaining gaps from general knowledge.
+This reference separates **Source-Supported Approved Knowledge** from **KB Owner-approved Proposed / Not Source-Confirmed operational structure**. Approval to retain a proposal does not mean OB-SOP-EP-0010 itself contains or mandates that proposal.
 
 ---
 
-## 2. Car Plowed Workflow
+## 2. Car Plowed Workflow — Source-Supported
 
 ### 2.1 Notification & Verification
 - ผู้พบเห็นหรือ Security Guard ประจำพื้นที่แจ้ง SOC.
@@ -54,7 +54,7 @@ This version incorporates the KB Owner-approved workflow summary derived from OB
 
 ---
 
-## 3. Stabbing Workflow
+## 3. Stabbing Workflow — Source-Supported
 
 ### 3.1 Notification & Verification
 - ผู้พบเห็นแจ้ง SOC หรือ Security Guard.
@@ -84,7 +84,7 @@ This version incorporates the KB Owner-approved workflow summary derived from OB
 
 ---
 
-## 4. Approved Authority / Roles
+## 4. Source-Supported Authority / Roles
 
 Source summary states:
 - **SOC:** เปิดเคส/ยืนยันผ่าน CCTV/Video Analytic.
@@ -93,13 +93,18 @@ Source summary states:
 - **Police:** takes legal control of incident when on scene.
 - **Incident commander from DCC:** announces incident termination after police confirmation.
 
-Do not infer a specific DCC job title or delegation chain.
+Additional positions referenced by the SOP approval/responsibility sections:
+1. **District Command Center Manager (DCC Manager)**
+2. **Assistant Vice President, Facility Management Command Center Operations (AVP - FPMST)**
+3. **Vice President - District Operations & Facility Management (VP - DOFM)**
+4. **Deputy Director of Estate Management**
+
+**Important:** The source does not establish from this information alone which of these positions is the specific DCC Incident Commander, nor does it provide a Succession Line / DoA Matrix.
 
 ---
 
-## 5. Danger Zones
+## 5. Danger Zones — Source-Supported
 
-Source summary describes:
 - **Hot Zone:** พื้นที่เสี่ยงสูง/ยังมีภัยคุกคาม; access limited to operational personnel as described by source.
 - **Warm Zone:** พื้นที่สนับสนุน/ปฐมพยาบาล/เตรียมพร้อม.
 - **Safe Zone:** พื้นที่ปลอดภัย/จุดอพยพ; source gives One Bangkok Park as an example/route destination in these workflows.
@@ -109,7 +114,7 @@ No physical radius is specified in the source summary.
 
 ---
 
-## 6. Communication & Police Handover
+## 6. Communication & Police Handover — Source-Supported
 
 - Communication mentioned: **POC radio** and **PA**.
 - Incident information includes location and suspect/vehicle details and casualty count as applicable.
@@ -119,11 +124,39 @@ No physical radius is specified in the source summary.
 
 ---
 
-## 7. Remaining Knowledge Gaps
+## 7. Proposed Operational Structure — Approved to Retain, NOT Source-Confirmed
+
+The following content came from the Draft Knowledge Base proposal supplied by the KB Owner. It is retained for future review but **must not be represented as an OB-SOP-EP-0010 requirement** unless separately confirmed by an approved source.
+
+### 7.1 Proposed Incident Command Structure
+- Proposed Tactical Incident Commander: **District Command Center Manager (DCC Manager)** for DCC operational command, PA command, and Bollard/Road Blocker approval.
+- Proposed Strategic Commander: **VP - District Operations & Facility Management**, together with IMT, for escalation/strategic command.
+
+### 7.2 Proposed DoA Matrix
+| Priority | Tactical — DCC Commander | Strategic — IMT Leader |
+|---|---|---|
+| Primary | District Command Center Manager | VP - District Operations & Facility Management |
+| 1st Alternate | AVP - Facility Management Command Center Operations | Deputy Director of Estate Management |
+| 2nd Alternate | Security Supervisor (Duty Supervisor) | AVP - Facility Management Command Center Operations |
+
+Proposed rule: if the preceding authority cannot be contacted within **3 minutes**, emergency decision authority would pass to the next level. **This 3-minute rule is a proposal, not a source-confirmed SOP requirement.**
+
+### 7.3 Proposed SLA
+- SOC Incident Verification: **≤ 2 minutes**.
+- Mozart Case Opening & Escalation: **≤ 3 minutes**.
+- Emergency Action — PA / Bollard: **≤ 5 minutes**.
+- DCC Alignment Command Room Setup: **≤ 10–15 minutes**.
+
+**Source status:** OB-SOP-EP-0010 uses wording equivalent to “ทันที” / “อย่างเร่งด่วน” in the supplied summary but does **not** state these numeric SLA values. Therefore all numeric SLA values above remain proposed only.
+
+---
+
+## 8. Remaining Knowledge Gaps
 
 - Quantitative matrix distinguishing ordinary crime from `Terrorist Attack` classification.
-- Exact DCC Incident Commander role title and **Delegation of Authority (DoA) Matrix**.
-- SLA: CCTV verification time, DCC/IMT command-room arrival time, etc.
+- **Source-confirmed** DCC Incident Commander role title.
+- **Source-confirmed** Delegation of Authority / Succession Line.
+- **Source-confirmed numeric SLA**; source currently supports only urgent/immediate wording without numeric minutes.
 - Mozart Form Template / required fields beyond stated Event Types.
 - Physical radii for Hot/Warm/Safe Zones.
 - Building-specific backup Warm/Safe Zone coordinates.
@@ -135,28 +168,32 @@ No physical radius is specified in the source summary.
 
 ---
 
-## 8. AI Guardrails
+## 9. AI Guardrails
 
+- Always distinguish **Source-Supported Approved Knowledge** from **Proposed / Not Source-Confirmed** content.
+- KB Owner approval of Section 7 authorizes retention of the proposal in Skills Hunter; it does **not** convert the proposal into an OB-SOP-EP-0010 requirement.
+- Do not use proposed DCC Manager authority, DoA succession, 3-minute handoff rule, or numeric SLA as operational fact unless later supported by an approved source.
 - **Stabbing:** never instruct IBT/Security Guard to directly confront, pursue, apprehend, or tactically engage the offender; source explicitly prohibits direct confrontation.
 - Do not invent offender-control tactics; source assigns incident suppression/control to police.
 - Do not automatically equate Car Plowed/Stabbing with **Code Sierra**, other Emergency Codes, or Threat Levels beyond the Mozart Event Types explicitly stated here.
 - Do not import Code Sierra or Threat Response Protocol authority/workflow into this SOP without an Approved linkage.
-- Do not invent Hot/Warm/Safe physical radii.
-- Do not infer radio channel number, PA script, SLA, DoA, or Mozart fields not present in source.
+- Do not invent Hot/Warm/Safe physical radii, radio channel, PA script, Mozart fields, or other missing values.
 - One Bangkok Park is source-supported in these workflows; do not generalize it as the universal Assembly Point for every building/emergency.
 - Preserve source distinction between Car Plowed sub-command at One Power and Stabbing sub-command at the affected building.
-- Where information remains absent, mark **Knowledge Gap**.
+- Where source support remains absent, mark **Knowledge Gap**.
 
 ---
 
-## 9. Sources
+## 10. Sources
 
 - `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย.md` — KB Owner approved 2026-09-13.
-- `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.1.md` — KB Owner approved 2026-09-13; summary derived from OB-SOP-EP-0010 pages 11–19.
+- `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.1.md` — KB Owner approved 2026-09-13; workflow summary derived from OB-SOP-EP-0010 pages 11–19.
+- `แผนการจัดการเหตุอาชญากรรม,ก่อการร้าย0.2.md` — KB Owner approved 2026-09-13; contains source-supported management position references plus explicitly proposed Incident Command / DoA / SLA structure.
 
 ---
 
-## 10. Change Log
+## 11. Change Log
 
 - **v1.0 — 2026-09-13** — Initial Approved Reference from high-level source summary.
 - **v1.1 — 2026-09-13** — Added approved Car Plowed and Stabbing workflows, authority/zone/communication details, police handover, closure workflow, and explicit remaining Knowledge Gaps.
+- **v1.2 — 2026-09-13** — Added source-supported management position references and retained proposed Incident Command / DoA / SLA content under an explicit `Proposed / Not Source-Confirmed` classification.
