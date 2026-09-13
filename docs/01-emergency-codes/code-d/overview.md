@@ -3,7 +3,7 @@
 **Document ID:** SEC-CODE-D-001  
 **Title:** ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ  
 **Source SOP:** OB-SOP-EP-0039  
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** Approved Reference  
 **Owner:** KB Owner  
 **Effective Date:** 2026-09-13  
@@ -31,10 +31,7 @@ Approved One Bangkok reference for management when a deceased person is found wi
 
 ### Phase 3 — Escalation & External Coordination
 7. SOC reports to **DCC** to request approval to coordinate external agencies.
-8. After DCC approval, SOC contacts:
-   - **Lumphini Police Station:** 02-255-5994 / 081-172-0239.
-   - **Erawan Center / 1669**.
-   - **Institute of Forensic Medicine, Police General Hospital:** 02-207-6108.
+8. After DCC approval, SOC contacts **Lumphini Police Station 02-255-5994 / 081-172-0239**, **Erawan Center 1669**, and **Institute of Forensic Medicine, Police General Hospital 02-207-6108**.
 9. **TMT** facilitates traffic/access for police and forensic transport; Security Guard maintains strict cordon control.
 
 ### Phase 4 — Forensic Inspection & Code D Entry
@@ -46,7 +43,7 @@ Approved One Bangkok reference for management when a deceased person is found wi
 15. SOC checks and compiles relevant **CCTV** as evidence.
 
 ### Phase 5 — Body Relocation & Family Contact
-16. **Police are responsible for contacting/notifying the deceased person's relatives.** Project staff do not directly notify relatives under this procedure.
+16. **Police are responsible for contacting/notifying the deceased person's relatives.**
 17. Police and forensic personnel handle body relocation. **EOT and TMT** facilitate the route, service lift and discreet handover area to protect privacy and reduce unauthorized photography.
 
 ### Phase 6 — Cleanup, Reporting & Mozart Closure
@@ -64,7 +61,7 @@ Approved One Bangkok reference for management when a deceased person is found wi
 - **Scene release / return of area:** Police authorize release of the scene.
 - **Case closure:** SOC closes the Mozart case after the documented recovery/reporting sequence.
 
-Do not reinterpret SOC's Mozart action as medical authority to determine death.
+SOC's Mozart action is not medical authority to determine death.
 
 ---
 
@@ -76,7 +73,19 @@ Do not reinterpret SOC's Mozart action as medical authority to determine death.
 
 ---
 
-## 5. Scene Preservation / Evidence
+## 5. Communication — Source-Supported Boundary
+OB-SOP-EP-0039 **does not specify a dedicated Code D radio channel number**.
+
+The source identifies incident communication through **SOC or Contact Centre (CC)** and direct external-agency telephone contacts:
+- Lumphini Police Station: `02-255-5994` / `081-172-0239`.
+- Erawan Center: `1669`.
+- Institute of Forensic Medicine, Police General Hospital: `02-207-6108`.
+
+A Code D-specific Radio Channel Plan is therefore **not established by this SOP**. Do not infer EMER1 or any other channel.
+
+---
+
+## 6. Scene Preservation / Evidence
 - Do not touch or move the body before authorized forensic/police handling.
 - Security Guard uses cordon line and a field tent/cover to preserve privacy and the scene.
 - Police/forensic personnel are responsible for forensic evidence and the deceased person's belongings according to the supplied source summary.
@@ -84,17 +93,26 @@ Do not reinterpret SOC's Mozart action as medical authority to determine death.
 
 ---
 
-## 6. Mozart Workflow for Code D
-- **Initial case:** `Medical Assistance (Major - Ambulance)` while condition/death is not yet officially confirmed.
-- **After forensic confirmation:** new Event Type `Deceased Person Protocol (Code D)`.
-- **Reference:** Code D case records the original case number as `Reference Case Number`.
-- **Closure:** SOC records incident summary and performs `Close Case` after the documented closure conditions/process.
+## 7. Mozart Workflow for Code D
+The SOP confirms three principal Mozart actions:
+1. **Initial Case:** Event Type = `Medical Assistance (Major - Ambulance)`.
+2. **Confirmed Code D:** open a new case with Event Type = `Deceased Person Protocol (Code D)` and enter the original emergency-medical case as the **Reference Case Number**.
+3. **Case Closure:** summarize the incident and perform **Close Case**.
 
-These Event Type names/actions are source-supported from the approved OB-SOP-EP-0039 summary. Do not infer additional Mozart fields or UI configuration.
+### Mozart Knowledge Gap Boundary
+The SOP does **not** show/confirm:
+- UI screenshots / exact screen layout.
+- Complete field schema.
+- Mandatory vs optional fields.
+- Exact location-coordinate fields.
+- Attachment fields for images/forensic documents.
+- System approval-button/workflow configuration.
+
+Do not infer these from the three confirmed Mozart actions.
 
 ---
 
-## 7. Police / Forensic / Family Handover
+## 8. Police / Forensic / Family Handover
 - Police formally control the scene and investigation.
 - Forensic personnel conduct examination and evidence collection; Forensic Pathologist confirms death.
 - Police are responsible for contacting/notifying relatives.
@@ -102,57 +120,74 @@ These Event Type names/actions are source-supported from the approved OB-SOP-EP-
 
 ---
 
-## 8. Incident Report / Closure
+## 9. Incident Report / Closure
 Source summary identifies:
 - Incident Report Form: `OB-FR-LW-0101`.
 - Accident Investigation Form: `OB-FR-LW-0102`.
 - Referenced SOP: `OB-SOP-LW-0001`.
 
-Closure sequence described by the source: police forensic work completed and area released → body relocated → area cleaned → BMO/Safety report/review → SOC closes Mozart case → Post-Incident Review.
+Closure sequence: police forensic work completed and area released → body relocated → area cleaned → BMO/Safety report/review → SOC closes Mozart case → Post-Incident Review.
 
 ---
 
-## 9. Media / Privacy
+## 10. Media / Privacy
 - Security Guard / EOT / TMT use screening/cordon measures during scene and body movement to protect privacy and prevent unauthorized photography.
-- Source summary references PDPA and Criminal Procedure/penal-law context concerning deceased-person privacy/reputation; this KB does not independently verify legal interpretation/current applicability.
+- Source summary references PDPA and legal context concerning deceased-person privacy/reputation; this KB does not independently verify legal interpretation/current applicability.
 - **PR**, together with management and Legal, prepares/handles media information according to the supplied source summary.
 
 ---
 
-## 10. Swimlane Structure
-The source summary states that OB-SOP-EP-0039 pages 13 and 15 contain a detailed Swimlane with 11 lanes:
-**First Person on Scene, SOC, CC, DCC, BMO, Safety, EOT, Security Guard, TMT, Police/Forensic, PR/Legal/IMT**.
+## 11. Swimlane Graphics & Decision Symbols — Source-Supported
+The approved source describes the graphical Swimlane on SOP pages 13 and 15 as follows.
 
-The six-phase workflow above is the approved textual representation supplied from that source.
+### Start / End Nodes
+- **Green circle:** initial Start node for First Person.
+- **Red circle:** Role Start for the beginning of each department/role's action.
+- **Green circle with dark border:** End / Clear node when the area-return and case-closure process is complete.
+
+### Decision Diamonds
+- **Yellow Diamond:** general decision/assessment points, including `Safe?` and `Has sign of life? / Conscious?`.
+- **Red Diamond:** critical decision point for forensic confirmation of death, represented as `Declared dead by Forensic Pathologist? / Dead?`, which transitions the process into formal Code D handling.
+
+### Process Rectangles
+- **White/gray box with black border:** normal operational activity/task.
+- **Orange/red-border box:** critical activity such as emergency escalation and Mozart recording.
+
+### Swimlanes / Role Badges
+The supplied source lists the lanes/roles as:
+**First Person, DCC, CC, SOC, EOT, Police, TMT, BMO Estate, FMC, BMO Component, Nurse/EMT, Reception/Concierge, Retail Operation**.
+
+This graphical description supplements the six-phase textual workflow. Preserve the source terminology rather than reconciling or replacing role labels without additional approved evidence.
 
 ---
 
-## 11. Remaining Knowledge Gaps
-- **Specific radio channel number for Code D:** OB-SOP-EP-0039 source summary does not specify a dedicated radio channel; it emphasizes communication through SOC/DCC/control-center coordination and direct external-agency telephone contact.
-- Exact original graphical Swimlane geometry/decision symbols are not reproduced in the supplied Markdown summary; the textual workflow and lane names are available.
-- Any Mozart fields/UI configuration beyond the explicitly source-supported Event Types, Reference Case Number and Close Case actions remain unconfirmed.
+## 12. Remaining Knowledge Gaps
+- **Dedicated Code D Radio Channel:** not specified in OB-SOP-EP-0039. This is a confirmed absence from the supplied SOP, not permission to infer another emergency channel.
+- **Mozart UI / Mandatory Fields / Attachment / Approval Configuration:** not shown or confirmed by the supplied SOP.
+- Any graphical details of the original Swimlane beyond the source-supported nodes, colors, decision diamonds, process rectangles and listed role lanes above remain unsupported unless additional source evidence is supplied.
 
 ---
 
-## 12. AI Guardrails
+## 13. AI Guardrails
 - Forensic Pathologist confirmation is required before treating the incident as officially confirmed death under this source-supported workflow.
 - Do not treat SOC/EOT/Security as medical authority to confirm death.
 - Preserve the initial `Medical Assistance (Major - Ambulance)` → confirmed `Deceased Person Protocol (Code D)` distinction.
-- Do not invent a Code D radio channel.
-- Do not invent additional Mozart fields/UI configuration.
+- **Never invent a Code D radio channel.** The SOP does not specify one.
+- Do not invent Mozart UI, mandatory fields, attachment fields or approval workflow.
 - Do not instruct project staff to notify relatives directly; the approved source assigns family notification to Police.
-- Scene/body/evidence handling must remain aligned with Police/Forensic control described by the source.
-- Legal references in the supplied summary are recorded as source-derived and are not independent legal verification.
+- Preserve source Swimlane terminology and symbol descriptions without silently reconciling them with other documents.
 - Missing source support = Knowledge Gap.
 
 ---
 
-## 13. Sources
+## 14. Sources
 - `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ.md` — approved 2026-09-13; high-level SOP overview.
-- `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.1.md` — approved 2026-09-13; detailed OB-SOP-EP-0039 workflow and Gap-resolution summary.
+- `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.1.md` — approved 2026-09-13; detailed workflow and Gap-resolution summary.
+- `ระเบียบปฏิบัติมาตรการพบผู้เสียชีวิตในโครงการ0.2.md` — approved 2026-09-13; Radio Channel absence, Mozart evidence boundary and Swimlane graphic/symbol details.
 
 ---
 
-## 14. Change Log
+## 15. Change Log
 - v1.0 — 2026-09-13 — Initial Approved Reference from high-level source summary.
-- **v1.1 — 2026-09-13** — Added approved six-phase Detailed Swimlane Workflow, authority/handover, notification matrix, scene/evidence control, Mozart Code D workflow, family notification, reporting/closure and media/privacy information; retained dedicated radio channel and unsupported Mozart UI details as Knowledge Gaps.
+- v1.1 — 2026-09-13 — Added six-phase Detailed Swimlane Workflow, authority/handover, notification matrix, scene/evidence control, Mozart workflow, family notification, reporting/closure and media/privacy information.
+- **v1.2 — 2026-09-13** — Confirmed no dedicated Code D radio channel is specified by OB-SOP-EP-0039; refined Mozart Knowledge Gap to UI/Mandatory Fields/Attachment/Approval configuration; added source-supported Swimlane graphical nodes, decision symbols, process boxes and role lanes.
