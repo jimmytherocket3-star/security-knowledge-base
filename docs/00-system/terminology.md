@@ -2,7 +2,7 @@
 
 **Document ID:** KB-SYS-003  
 **Title:** Canonical Terminology  
-**Version:** 1.7  
+**Version:** 1.8  
 **Status:** Active  
 **Owner:** KB Owner  
 **Primary AI Operator:** ChatGPT  
@@ -23,7 +23,7 @@ AI โดยเฉพาะ ChatGPT ต้องยึดคำจำกัด�
 | Term | Full Name | คำจำกัดความมาตรฐาน |
 |---|---|---|
 | **SS** | Security Supervisor | Security Supervisor ผู้รับผิดชอบงานในบทบาท Security Supervisor |
-| **SOC** | Security Operation Center | ทีมที่คอยบริหารจัดการเหตุด้าน Security ผ่าน CCTV |
+| **SOC** | Security Operation Center | ศูนย์รักษาความปลอดภัยของโครงการ One Bangkok หรือศูนย์ปฏิบัติการด้านความมั่นคงปลอดภัยทางกายภาพหรือทางไซเบอร์ ทำหน้าที่เฝ้าระวัง ตรวจสอบ วิเคราะห์ และตอบสนองต่อภัยคุกคามด้านความปลอดภัยตลอด 24 ชั่วโมง โดยภายในศูนย์ฯ จะมีทีมเจ้าหน้าที่ผู้เชี่ยวชาญด้านความปลอดภัยที่ใช้เทคโนโลยีและเครื่องมือเฉพาะทางในการติดตาม วิเคราะห์ และจัดการเหตุการณ์ด้านความปลอดภัยที่อาจเกิดขึ้น |
 | **FCC** | Fire Command Center | ทีม Fire Command Center ประกอบด้วยทีม รปภ. และ Fireman ที่อยู่ตามพื้นที่ Retail |
 | **EOT** | Emergency Operation Team | ทีมสำหรับเผชิญเหตุฉุกเฉินที่เกี่ยวข้องกับ Security |
 | **ERT** | Emergency Response Team | ทีมผู้บริหารหรือผู้มีอำนาจตัดสินใจระดับปฏิบัติการของ One Bangkok ซึ่งถูกแต่งตั้งให้รับผิดชอบในการบริหารจัดการเหตุฉุกเฉินเมื่อเกิดเหตุขึ้นจริง โดยทำหน้าที่ประเมินสถานการณ์ อนุมัติการดำเนินการที่เกี่ยวข้องกับความปลอดภัย การอพยพ การปิดอาคาร การจัดสรรทรัพยากร และสนับสนุนการสั่งการของ DCC ภายใต้กรอบนโยบายขององค์กร |
@@ -135,6 +135,11 @@ BMO = **Building Management Operation / ฝ่ายบริหารอาค�
 ### 3.17 TMT / SMT
 TMT = **Traffic Management Team**. SMT = **Security Manage Traffic Team** ตาม Canonical เดิม. ทั้งสองคำต้องเก็บแยกกัน และห้าม AI สรุปว่าเป็นชื่อเดียวกัน หน่วยเดียวกัน หรือใช้แทนกัน จนกว่าจะมีข้อมูลที่ KB Owner อนุมัติเพิ่มเติมเกี่ยวกับความสัมพันธ์และขอบเขตหน้าที่.
 
+### 3.18 SOC
+SOC = **Security Operation Center** และให้ใช้นิยาม Canonical ตามตารางในหัวข้อ 2 ซึ่งครอบคลุมศูนย์รักษาความปลอดภัยของ One Bangkok ทั้งด้านความมั่นคงปลอดภัยทางกายภาพและทางไซเบอร์ การเฝ้าระวัง ตรวจสอบ วิเคราะห์ และตอบสนองต่อภัยคุกคามตลอด 24 ชั่วโมง โดยมีทีมผู้เชี่ยวชาญและใช้เทคโนโลยี/เครื่องมือเฉพาะทางในการติดตาม วิเคราะห์ และจัดการเหตุการณ์ด้านความปลอดภัย.
+
+นิยามนี้ใช้แทนนิยามเดิมที่ระบุเพียงว่า SOC บริหารจัดการเหตุด้าน Security ผ่าน CCTV.
+
 ---
 
 ## 4. Terminology Conflicts / Pending Reconciliation
@@ -142,14 +147,13 @@ TMT = **Traffic Management Team**. SMT = **Security Manage Traffic Team** ตา
 ข้อมูลต่อไปนี้จากเอกสารคำศัพท์/คำจำกัดความที่ได้รับเมื่อ 2026-09-13 **ไม่ได้ใช้แทน Canonical Terms ปัจจุบัน** และต้องรอการ reconcile/approval แยกต่างหาก:
 
 1. **IMT CAT1/CAT2 scope** — source ใหม่ผูก IMT กับเหตุ CAT 1/CAT 2; ยังไม่ใช้แทน Canonical IMT membership/authority ปัจจุบัน.
-2. **SOC scope expansion** — source ใหม่ขยาย SOC ไปถึง physical/cyber security 24/7; Canonical SOC ปัจจุบันยังคงนิยามเดิมจนกว่าจะอนุมัติการเปลี่ยนแปลงโดยตรง.
-3. **Code Sierra spelling / definition scope** — `Code Seirra` ไม่ใช่ Canonical spelling; ให้ใช้ **Code Sierra** และเอกสาร Code Sierra Active เป็นแหล่งหลัก. Lockdown/evacuation/authority ต้องใช้ Code Sierra SOP ไม่ใช่นิยามสั้นจาก source ใหม่.
-4. **PA operational capability** — source ใหม่ระบุการควบคุมประกาศจาก FMC และ SOC; ยังไม่ใช้สร้าง authority/capability ใหม่จนกว่าจะ reconcile กับ SOP ที่เกี่ยวข้อง.
-5. **Black Threat response action** — source ใหม่ระบุ DCC ใช้มาตรการความปลอดภัยขั้นสูงสุด; ยังไม่เพิ่มเป็น Canonical response action จนกว่าจะได้รับการอนุมัติแยก.
-6. **Code M expanded clinical definition** — source ใหม่ให้รายละเอียดเรื่องสัญญาณชีพ/อาการ; Canonical ยังคง **Code M = Medical Emergency** จนกว่าจะ reconcile กับ Code M procedure.
-7. **CI expanded area list** — source ใหม่ระบุ Carpark, External Area, One Bangkok Park, Wireless Park และ Loading Dock; Canonical CI ยังไม่ขยายรายการพื้นที่จนกว่าจะตรวจเทียบกับ Location/Zone references.
-8. **FS / Forward System expanded role** — source ใหม่ระบุ Forward System / Carpark Operations; ใช้เป็น supporting candidate เท่านั้น และห้ามเหมารวม ownership ของทุกระบบ.
-9. **Picture / Video retention = 90 days** — เป็นข้อมูลใหม่จาก source แต่ยังไม่ถูกยกระดับเป็น Canonical retention policy; ต้องตรวจ/อนุมัติเป็น policy/reference แยกก่อนใช้เป็นข้อกำหนดทั่วไป.
+2. **Code Sierra spelling / definition scope** — `Code Seirra` ไม่ใช่ Canonical spelling; ให้ใช้ **Code Sierra** และเอกสาร Code Sierra Active เป็นแหล่งหลัก. Lockdown/evacuation/authority ต้องใช้ Code Sierra SOP ไม่ใช่นิยามสั้นจาก source ใหม่.
+3. **PA operational capability** — source ใหม่ระบุการควบคุมประกาศจาก FMC และ SOC; ยังไม่ใช้สร้าง authority/capability ใหม่จนกว่าจะ reconcile กับ SOP ที่เกี่ยวข้อง.
+4. **Black Threat response action** — source ใหม่ระบุ DCC ใช้มาตรการความปลอดภัยขั้นสูงสุด; ยังไม่เพิ่มเป็น Canonical response action จนกว่าจะได้รับการอนุมัติแยก.
+5. **Code M expanded clinical definition** — source ใหม่ให้รายละเอียดเรื่องสัญญาณชีพ/อาการ; Canonical ยังคง **Code M = Medical Emergency** จนกว่าจะ reconcile กับ Code M procedure.
+6. **CI expanded area list** — source ใหม่ระบุ Carpark, External Area, One Bangkok Park, Wireless Park และ Loading Dock; Canonical CI ยังไม่ขยายรายการพื้นที่จนกว่าจะตรวจเทียบกับ Location/Zone references.
+7. **FS / Forward System expanded role** — source ใหม่ระบุ Forward System / Carpark Operations; ใช้เป็น supporting candidate เท่านั้น และห้ามเหมารวม ownership ของทุกระบบ.
+8. **Picture / Video retention = 90 days** — เป็นข้อมูลใหม่จาก source แต่ยังไม่ถูกยกระดับเป็น Canonical retention policy; ต้องตรวจ/อนุมัติเป็น policy/reference แยกก่อนใช้เป็นข้อกำหนดทั่วไป.
 
 ---
 
@@ -166,6 +170,7 @@ TMT = **Traffic Management Team**. SMT = **Security Manage Traffic Team** ตา
 ---
 
 ## 7. Change Log
+- **v1.8 — 2026-09-13** — KB Owner confirmed that the supplied expanded definition is the approved definition of **SOC = Security Operation Center**. Replaced the previous CCTV-only Canonical definition and removed SOC scope expansion from Pending Reconciliation.
 - **v1.7 — 2026-09-13** — KB Owner confirmed **TMT = Traffic Management Team**. Added TMT as a Canonical Term, removed TMT/SMT from Pending Reconciliation, and retained TMT and SMT as separate terms pending any future approved clarification of their relationship or detailed scope.
 - **v1.6 — 2026-09-13** — KB Owner confirmed **BMO = Building Management Operation / ฝ่ายบริหารอาคาร**. Replaced the previous incorrect canonical expansion `BMO = Building Manager`, removed BMO from Pending Reconciliation, and retained Building Manager as a separate role/title for code-specific authority references.
 - **v1.5 — 2026-09-13** — KB Owner approved Selective Merge from the uploaded terminology/definitions source. Added ERT, CMT, DCC Alignment, Code D, and IBT as approved canonical terms; preserved existing Canonical BMO/SMT/IMT/SOC/Code M definitions; quarantined conflicting or scope-expanding claims for separate reconciliation, including BMO, TMT/SMT, IMT CAT scope, SOC scope, Code Sierra wording, PA authority, Black Threat response, CI expansion, FS role, and 90-day Picture/Video retention.
