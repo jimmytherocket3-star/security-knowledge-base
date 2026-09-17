@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.9
+version: 2.0
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -49,7 +49,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
-| Registered source conflicts / conflict tracking / `KB-CONFLICT-001` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel or operational facts. |
+| Registered source conflicts / conflict tracking / `KB-CONFLICT-001`, `KB-CONFLICT-002` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel, terminology, or operational facts. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read both original sources, including `docs/08-reference/one-bangkok-executive-callsigns.md`. Report both labels and the unresolved identity; do not select a winner. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
 | Parade ambulance / patient pickup or drop-off points, รถพยาบาลรับผู้ป่วยที่ Parade | `docs/00-system/location-building-directory.md` | Primary current pickup-location reference; cross-check `docs/08-reference/one-bangkok-ambulance-pickup-dropoff-points.md`, which retains an older approved list. The directory adds Loading 1 ชั้น B1. Preserve both sources' status; do not mark the older page Superseded or infer a preferred point, priority, or route. |
@@ -63,11 +63,12 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | โรงพยาบาล, Hospital, โรงพยาบาลนำส่งผู้ป่วย, ส่งฟรี, ค่านำส่ง, โรงพยาบาลภายใน 5 กม., โรงพยาบาลภายใน 10 กม. | `docs/00-system/hospital-transport-reference.md` | Fetch directly for approved hospital transport groups and source-stated transport conditions. “ส่งฟรี” refers to transport condition only, not free medical treatment. Do not recalculate distance or reclassify hospitals. |
 | Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. For hospital transport conditions, route to hospital-transport-reference.md; use this directory for approved phone numbers. |
 | MOD duty schedule for May 2026 | `docs/00-system/mod-duty-schedule/2026-05.md` | Time-bound reference only; do not treat as permanent contact data. |
-| Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For Assembly Point locations, route to assembly-point-reference.md. |
+| Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For FCC in Code M context, also check `KB-CONFLICT-002`; do not silently replace the canonical expansion while reconciliation is pending. For Assembly Point locations, route to assembly-point-reference.md. |
 | Canonical Code 1 and Code 2 definitions | `docs/01-emergency-codes/code-definitions.md` | Active canonical source for Code 1 and Code 2 definitions only; it does not define Code 3. |
 | Code 1 detailed workflow/reference | `docs/01-emergency-codes/code-1/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 2 detailed workflow/reference | `docs/01-emergency-codes/code-2/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 3 definition / Evacuation / การอพยพ and procedure questions | `docs/01-emergency-codes/code-3/overview.md` | Status: Draft. Identify its definition and procedural content as Draft; do not present it as an Approved/Active operational procedure. `code-definitions.md` covers Code 1 and Code 2 only. |
+| Code M / Medical Emergency / เหตุฉุกเฉินทางการแพทย์ / ขั้นตอน Code M | `docs/01-emergency-codes/code-m/overview.md` | Status: Approved Reference. Primary route for Code M operational procedure. Preserve its explicit Knowledge Gaps. For hospital transport and pickup-location details, follow its cross-references. Check `KB-CONFLICT-002` for the unresolved FCC expansion disagreement. |
 | Code Sierra / Active Shooter | `docs/01-emergency-codes/code-sierra/overview.md` | Use current stored canonical document; do not silently apply unapproved corrections. |
 | Code D, Deceased Person, พบผู้เสียชีวิต, การจัดการเหตุพบผู้เสียชีวิต | `docs/01-emergency-codes/code-d/overview.md` | Status: Approved Reference. Preserve its source scope and guardrails; do not promote it to an Active SOP or infer unsupported system configuration or authority. |
 | Threat Level, Threat Response, ระดับภัยคุกคาม, การประกาศระดับภัยคุกคาม; Green, Yellow, Orange, Red, Black when threat context is clear | `docs/00-system/threat-response-procedure-reference.md` | Status: Approved Reference. Preserve the Yellow source conflict. Declaration, escalation, reduction, and cancellation authority remain a Knowledge Gap. Do not equate Threat Levels with Emergency Codes; disambiguate color-only queries. |
@@ -109,6 +110,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `เบอร์ MedPark` → fetch `docs/00-system/emergency-contact-directory.md`; transport-condition questions route to `hospital-transport-reference.md`
 - `เบอร์ SOC` → fetch `docs/00-system/emergency-contact-directory.md`
 - `Code 3 คืออะไร` → fetch `docs/01-emergency-codes/code-3/overview.md`; clearly label its status Draft and do not treat its content as an Approved operational procedure
+- `Code M คืออะไร` → fetch `docs/01-emergency-codes/code-m/overview.md`; preserve Approved Reference status, explicit Knowledge Gaps, and `KB-CONFLICT-002` FCC terminology handling
+- `ใครยืนยัน Code M` → fetch `docs/01-emergency-codes/code-m/overview.md`; return the explicit declaration/confirmation-authority Knowledge Gap rather than infer from nurse/EOT hospital-transfer confirmation
 - `Code Sierra` → fetch `docs/01-emergency-codes/code-sierra/overview.md`
 - `Code D คืออะไร` → fetch `docs/01-emergency-codes/code-d/overview.md`; preserve Approved Reference status
 - `ใครมีอำนาจประกาศ Threat Level` → fetch `docs/00-system/threat-response-procedure-reference.md`; return the explicit authority Knowledge Gap
@@ -130,6 +133,7 @@ This generic priority does not automatically settle an explicitly registered con
 - Do not infer emergency authority from personnel/location/contact reference files.
 - Do not normalize source spellings or aliases unless explicitly approved.
 - For One05, check `KB-CONFLICT-001`, read both original personnel references, and report their conflicting labels; do not infer a correct identity or full name. `source-conflict-register.md` tracks the disagreement and is not a factual replacement for either source.
+- For Code M, route operational procedure questions to `docs/01-emergency-codes/code-m/overview.md`; preserve its explicit gaps, do not infer Code M trigger or declaration authority from UCEP or hospital-transfer confirmation, and check `KB-CONFLICT-002` for the unresolved FCC expansion disagreement.
 - For Parade ambulance pickup, use the later approved location directory as the primary pickup-location reference and retain the older approved page as a cross-check; do not infer point priority or change either source's status.
 - Do not generalize drill-specific procedures into Core SOP.
 - Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
@@ -137,11 +141,12 @@ This generic priority does not automatically settle an explicitly registered con
 - For hospital transport questions, preserve the approved source grouping. Do not infer that free transport means free treatment, and do not recalculate distance to move hospitals between groups.
 - For Traffic Knowledge, do not infer Entrance numbers, vehicle routes, traffic direction, opening hours, or access restrictions beyond the approved source. Treat construction status as time-sensitive source information.
 - For SOC legal-awareness questions, route to `soc-basic-legal-awareness-reference.md`, preserve its **Approved Internal Training Reference** status, and do not present source-described legal claims as independently verified law. Its missing statutory authority, procedures, forms, approvers, retention period, or other explicitly open items remain gaps within that source; check a relevant routed source before declaring a Skills Hunter-wide Knowledge Gap. The 90-day Picture / Video Retention term is from `terminology.md`, not SOC Legal Awareness.
-- For Code 3, preserve the routed overview's Draft status. For Code D and Threat Response, preserve Approved Reference status. Do not infer Threat Level declaration, escalation, reduction, or cancellation authority from Emergency Codes.
+- For Code 3, preserve the routed overview's Draft status. For Code M, Code D and Threat Response, preserve Approved Reference status. Do not infer Threat Level declaration, escalation, reduction, or cancellation authority from Emergency Codes.
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
 
+- v2.0 — 2026-09-17 — KB Owner-approved Code M gap closure routing: added the Approved Reference Code M procedure route, explicit Knowledge Gap handling, hospital/pickup cross-routing, and `KB-CONFLICT-002` FCC terminology cross-check.
 - v1.9 — 2026-09-17 — Phase 4B KB Owner-approved conflict-management routing: added mandatory matching-register checks, the conflict-register route, and `KB-CONFLICT-001` cross-check for One05; clarified unresolved-conflict handling while preserving canonical precedence, status boundaries, and original-source provenance.
 - v1.8 — 2026-09-17 — Phase 4A KB Owner-approved routing update: corrected Code 1/2 and Draft Code 3 routes/status wording; added Code D and Threat Response direct routes; separated source-specific and KB-wide CCTV retention provenance; added One05 conflict cross-check and Parade ambulance pickup source ordering/guardrails. No source knowledge document was changed.
 - v1.7 — 2026-09-13 — Added direct routing for SOC basic legal awareness, caught-in-the-act/custody, Use of Force, search/seizure, detention/restraint, PDPA+CCTV, CCTV Request, and LINE/CCTV-data questions to `soc-basic-legal-awareness-reference.md`; added source-boundary and legal Knowledge-Gap guardrails plus query examples.
