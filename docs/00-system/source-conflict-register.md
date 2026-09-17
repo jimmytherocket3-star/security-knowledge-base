@@ -1,7 +1,7 @@
 ---
 document_id: KB-SYS-004
 title: Skills Hunter Source Conflict Register
-version: 1.0
+version: 1.1
 status: Active
 owner: KB Owner
 scope: Conflict Tracking / AI Retrieval Control
@@ -56,8 +56,35 @@ An issue is not created merely because a Draft differs from an Active canonical 
 |---|---|---|
 | 2026-09-17 | Created the first conflict record from the two existing One05 source claims. | KB Owner approved Phase 4B implementation; issue state is Pending Reconciliation. No canonical-source or identity decision was made. |
 
+## KB-CONFLICT-002 — FCC expansion in Code M
+
+| Field | Recorded evidence / state |
+|---|---|
+| Conflict ID | `KB-CONFLICT-002` |
+| Topic | FCC acronym expansion in Code M context |
+| Conflict Type | Terminology / organizational label |
+| Detected Date | 2026-09-17 — identified during Code M Knowledge Gap closure and reconciliation review |
+| Issue State | Pending Reconciliation |
+| Source A | `docs/00-system/terminology.md`; document ID `KB-SYS-003`; version `1.9`; source-declared status `Active`; Canonical Terms table, FCC row |
+| Source A Claim | `FCC = Fire Command Center` |
+| Source B | `docs/01-emergency-codes/code-m/overview.md`; document ID `SEC-CODE-M-001`; version `1.0`; source-declared status `Approved Reference`; §4 FCC source-boundary note |
+| Source B Claim | The Code M source supplied by the KB Owner labels `FCC = Facility Control Center` while attributing Code M coordination actions to FCC. |
+| Canonical Source | Undetermined for reconciliation of the Code M source wording; the existing canonical terminology remains unchanged pending a KB Owner decision. |
+| KB Owner Decision | Conflict registration approved; terminology reconciliation not yet decided. |
+| Decision Date | 2026-09-17 for conflict registration only |
+| Decision Evidence / Resolution Notes | KB Owner approved the Code M change proposal on 2026-09-17. No decision was made to replace `Fire Command Center` or to adopt `Facility Control Center` as canonical. |
+| Affected Routes | `KB-INDEX.md` — terminology route and Code M procedure route |
+| AI Retrieval Rule | For general canonical terminology, read `docs/00-system/terminology.md`. For Code M, read `docs/01-emergency-codes/code-m/overview.md` and disclose that its supplied source used `Facility Control Center`. Do not silently change the canonical FCC expansion or reinterpret the Code M operational actions while reconciliation is pending. |
+
+### Issue History
+
+| Date | Event | Approval / result |
+|---|---|---|
+| 2026-09-17 | Registered the FCC expansion disagreement discovered during Code M Knowledge Gap closure. | KB Owner approved registration as part of the Code M change proposal; issue state Pending Reconciliation. No terminology winner selected. |
+
 ## Change Log
 
 | Version | Date | Change | Approved By |
 |---|---|---|---|
 | 1.0 | 2026-09-17 | Created the conflict-tracking mechanism and unresolved `KB-CONFLICT-001`, preserving both One05 claims and their provenance. | KB Owner — Phase 4B implementation approval |
+| 1.1 | 2026-09-17 | Added `KB-CONFLICT-002` for the unresolved FCC expansion disagreement in Code M; no canonical terminology decision made. | KB Owner — Code M change proposal approval |
