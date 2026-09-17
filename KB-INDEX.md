@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.7
+version: 1.8
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-13
+updated: 2026-09-17
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -48,22 +48,27 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
-| One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. Do not rely on search alone. |
+| One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, also read `docs/08-reference/one-bangkok-executive-callsigns.md`: the two references conflict. Report both source labels and the unresolved identity; do not select a winner. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
+| Parade ambulance / patient pickup or drop-off points, รถพยาบาลรับผู้ป่วยที่ Parade | `docs/00-system/location-building-directory.md` | Primary current pickup-location reference; cross-check `docs/08-reference/one-bangkok-ambulance-pickup-dropoff-points.md`, which retains an older approved list. The directory adds Loading 1 ชั้น B1. Preserve both sources' status; do not mark the older page Superseded or infer a preferred point, priority, or route. |
 | ทางเข้า-ออกโครงการ, Traffic Knowledge, ทางเข้า One Bangkok, รถยนต์เข้าโครงการ, รถจักรยานยนต์เข้าโครงการ, MRT connection, รถประจำทาง, Helipad | `docs/00-system/traffic-access-reference.md` | Fetch directly for approved project access counts/source roads, motorcycle entrances, public-transport connection, and Tower 4 Helipad. Do not infer unlisted Entrance numbers, routes, traffic direction, or operating hours. |
 | Multi-Purpose Hall, อาคารอเนกประสงค์, ความจุอาคารอเนกประสงค์, project area/พื้นที่โครงการ, SOC orientation operational facts | `docs/00-system/soc-orientation-operational-reference.md` | Fetch directly for approved Multi-Purpose Hall capacity and SOC orientation operational facts; do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance. |
 | กฎหมายเบื้องต้นสำหรับ SOC, SOC legal awareness, ความผิดซึ่งหน้า, การจับ/เชิญตัว, การควบคุมตัว/หน่วงเหนี่ยว, Use of Force, การค้นกระเป๋า/ตรวจค้น/ยึดสิ่งของ, PDPA + CCTV, CCTV Request, LINE และข้อมูล CCTV | `docs/00-system/soc-basic-legal-awareness-reference.md` | Approved Internal Training Reference. Fetch directly and preserve source boundaries/Knowledge Gaps. Do not treat training content as independently verified law; do not infer arrest/search/seizure/detention/use-of-force authority or missing CCTV/PDPA workflow. |
+| SOC Legal Awareness source-specific CCTV / Picture / Video Retention Period questions | `docs/00-system/soc-basic-legal-awareness-reference.md` | This training reference does not state a Retention Period. If useful, separately cross-check `docs/00-system/terminology.md`; never attribute its 90-day value to SOC Legal Awareness. |
+| Skills Hunter-wide CCTV / Picture / Video Retention Period questions | `docs/00-system/terminology.md` | Active canonical terminology states 90 days for Picture / Video from CCTV in the project's area and care. Cross-check `docs/00-system/soc-basic-legal-awareness-reference.md` when source provenance matters; that training reference does not supply this value. Do not infer legal retention duties or a CCTV Request workflow. |
 | จุดรวมพล, Assembly Point, จุดอพยพ/พื้นที่รวมพล | `docs/00-system/assembly-point-reference.md` | Fetch directly for Assembly Point location questions. Do not infer Building → Assembly Point mapping unless explicitly supported. |
 | จุดจอดรถดับเพลิง, Fire Truck Parking, รถดับเพลิงจอดที่ไหน, จุดจอดรถดับเพลิงของอาคาร | `docs/00-system/fire-truck-parking-reference.md` | Fetch directly for building-specific fire truck parking questions. Numbers 1–5 are fire truck parking points, not Assembly Points. |
 | โรงพยาบาล, Hospital, โรงพยาบาลนำส่งผู้ป่วย, ส่งฟรี, ค่านำส่ง, โรงพยาบาลภายใน 5 กม., โรงพยาบาลภายใน 10 กม. | `docs/00-system/hospital-transport-reference.md` | Fetch directly for approved hospital transport groups and source-stated transport conditions. “ส่งฟรี” refers to transport condition only, not free medical treatment. Do not recalculate distance or reclassify hospitals. |
 | Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. For hospital transport conditions, route to hospital-transport-reference.md; use this directory for approved phone numbers. |
 | MOD duty schedule for May 2026 | `docs/00-system/mod-duty-schedule/2026-05.md` | Time-bound reference only; do not treat as permanent contact data. |
 | Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For Assembly Point locations, route to assembly-point-reference.md. |
-| Canonical Code 1, Code 2, Code 3 definitions | `docs/01-emergency-codes/code-definitions.md` | Use as primary source for code definitions. |
+| Canonical Code 1 and Code 2 definitions | `docs/01-emergency-codes/code-definitions.md` | Active canonical source for Code 1 and Code 2 definitions only; it does not define Code 3. |
 | Code 1 detailed workflow/reference | `docs/01-emergency-codes/code-1/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 2 detailed workflow/reference | `docs/01-emergency-codes/code-2/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
-| Code 3 / Evacuation procedure | `docs/01-emergency-codes/code-3/overview.md` | Use latest approved Code 3 procedure. |
+| Code 3 definition / Evacuation / การอพยพ and procedure questions | `docs/01-emergency-codes/code-3/overview.md` | Status: Draft. Identify its definition and procedural content as Draft; do not present it as an Approved/Active operational procedure. `code-definitions.md` covers Code 1 and Code 2 only. |
 | Code Sierra / Active Shooter | `docs/01-emergency-codes/code-sierra/overview.md` | Use current stored canonical document; do not silently apply unapproved corrections. |
+| Code D, Deceased Person, พบผู้เสียชีวิต, การจัดการเหตุพบผู้เสียชีวิต | `docs/01-emergency-codes/code-d/overview.md` | Status: Approved Reference. Preserve its source scope and guardrails; do not promote it to an Active SOP or infer unsupported system configuration or authority. |
+| Threat Level, Threat Response, ระดับภัยคุกคาม, การประกาศระดับภัยคุกคาม; Green, Yellow, Orange, Red, Black when threat context is clear | `docs/00-system/threat-response-procedure-reference.md` | Status: Approved Reference. Preserve the Yellow source conflict. Declaration, escalation, reduction, and cancellation authority remain a Knowledge Gap. Do not equate Threat Levels with Emergency Codes; disambiguate color-only queries. |
 | ONE89 Wireless residential fire evacuation drill 2026 | `docs/02-building-procedures/residential/one89-wireless/2026-fire-evacuation-drill.md` | Drill-specific/residential reference; do not generalize to all buildings. |
 | GitHub KB-first retrieval behavior and source priority | `docs/00-system/github-kb-first-retrieval-policy.md` | Governs Skills Hunter / KB-first retrieval behavior. |
 | Assistant persona / Kuroro | `docs/00-system/assistant-persona.md` | Persona only; does not alter SOP authority. |
@@ -73,7 +78,9 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
+- `One05 คือใคร` → fetch `docs/00-system/management-personnel-reference.md`, then cross-check `docs/08-reference/one-bangkok-executive-callsigns.md`; report the unresolved conflict without choosing an identity
 - `Loading 5 เป็นของอาคารอะไร` → fetch `docs/00-system/location-building-directory.md`
+- `รถพยาบาลรับผู้ป่วยที่ Parade จุดไหน` → fetch `docs/00-system/location-building-directory.md`, then cross-check `docs/08-reference/one-bangkok-ambulance-pickup-dropoff-points.md`; include the later approved Loading 1 ชั้น B1 addition without assigning priority
 - `Zone 3 มีอาคารอะไรบ้าง` → fetch `docs/00-system/location-building-directory.md`
 - `ทางเข้า-ออกโครงการมีกี่ทาง` → fetch `docs/00-system/traffic-access-reference.md`
 - `รถยนต์เข้า One Bangkok ได้กี่ทาง` → fetch `docs/00-system/traffic-access-reference.md`
@@ -87,6 +94,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `ใช้กำลังกับผู้ก่อเหตุได้แค่ไหน` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; preserve Use-of-Force Knowledge Gaps
 - `ขอภาพ CCTV ต้องทำอย่างไร` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; if requested SOP/form/approver detail is unsupported, return Knowledge Gap
 - `ส่งภาพ CCTV ใน LINE ได้ไหม` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; distinguish approved training guidance from independently verified law
+- `SOC Legal Awareness ระบุ Retention Period เท่าไร` → fetch `docs/00-system/soc-basic-legal-awareness-reference.md`; state that this source does not specify it, without attributing terminology's 90-day value to training
+- `Skills Hunter มีข้อมูล CCTV Retention Period หรือไม่` → fetch `docs/00-system/terminology.md`; attribute the 90-day Picture / Video Retention term to that Active source and distinguish the SOC Legal Awareness source gap
 - `จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Assembly Point อยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`
 - `Tower 5 จุดรวมพลอยู่ที่ไหน` → fetch `docs/00-system/assembly-point-reference.md`; if no approved Building → Assembly Point mapping exists, return Knowledge Gap rather than infer from map position
@@ -97,8 +106,10 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `โรงพยาบาล 6–10 กม. ค่านำส่งเท่าไหร่` → fetch `docs/00-system/hospital-transport-reference.md`
 - `เบอร์ MedPark` → fetch `docs/00-system/emergency-contact-directory.md`; transport-condition questions route to `hospital-transport-reference.md`
 - `เบอร์ SOC` → fetch `docs/00-system/emergency-contact-directory.md`
-- `Code 3 คืออะไร` → fetch `docs/01-emergency-codes/code-definitions.md`, then `docs/01-emergency-codes/code-3/overview.md` if procedural detail is requested
+- `Code 3 คืออะไร` → fetch `docs/01-emergency-codes/code-3/overview.md`; clearly label its status Draft and do not treat its content as an Approved operational procedure
 - `Code Sierra` → fetch `docs/01-emergency-codes/code-sierra/overview.md`
+- `Code D คืออะไร` → fetch `docs/01-emergency-codes/code-d/overview.md`; preserve Approved Reference status
+- `ใครมีอำนาจประกาศ Threat Level` → fetch `docs/00-system/threat-response-procedure-reference.md`; return the explicit authority Knowledge Gap
 - `จุดรวมพล ONE89 ตามแผนซ้อม` → fetch `docs/02-building-procedures/residential/one89-wireless/2026-fire-evacuation-drill.md`
 
 ## Source Priority
@@ -114,16 +125,20 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - File status and document-specific guardrails remain authoritative.
 - Do not infer emergency authority from personnel/location/contact reference files.
 - Do not normalize source spellings or aliases unless explicitly approved.
+- For One05, cross-check both personnel references and report their conflicting labels; do not infer a correct identity or full name.
+- For Parade ambulance pickup, use the later approved location directory as the primary pickup-location reference and retain the older approved page as a cross-check; do not infer point priority or change either source's status.
 - Do not generalize drill-specific procedures into Core SOP.
 - Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
 - Fire Truck Parking Points 1–5 must never be interpreted as Assembly Point numbers.
 - For hospital transport questions, preserve the approved source grouping. Do not infer that free transport means free treatment, and do not recalculate distance to move hospitals between groups.
 - For Traffic Knowledge, do not infer Entrance numbers, vehicle routes, traffic direction, opening hours, or access restrictions beyond the approved source. Treat construction status as time-sensitive source information.
-- For SOC legal-awareness questions, route to `soc-basic-legal-awareness-reference.md`, preserve its **Approved Internal Training Reference** status, and do not present source-described legal claims as independently verified law. Missing statutory authority, procedures, forms, approvers, retention rules, or other explicitly open items remain Knowledge Gaps.
+- For SOC legal-awareness questions, route to `soc-basic-legal-awareness-reference.md`, preserve its **Approved Internal Training Reference** status, and do not present source-described legal claims as independently verified law. Its missing statutory authority, procedures, forms, approvers, retention period, or other explicitly open items remain gaps within that source; check a relevant routed source before declaring a Skills Hunter-wide Knowledge Gap. The 90-day Picture / Video Retention term is from `terminology.md`, not SOC Legal Awareness.
+- For Code 3, preserve the routed overview's Draft status. For Code D and Threat Response, preserve Approved Reference status. Do not infer Threat Level declaration, escalation, reduction, or cancellation authority from Emergency Codes.
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
 
+- v1.8 — 2026-09-17 — Phase 4A KB Owner-approved routing update: corrected Code 1/2 and Draft Code 3 routes/status wording; added Code D and Threat Response direct routes; separated source-specific and KB-wide CCTV retention provenance; added One05 conflict cross-check and Parade ambulance pickup source ordering/guardrails. No source knowledge document was changed.
 - v1.7 — 2026-09-13 — Added direct routing for SOC basic legal awareness, caught-in-the-act/custody, Use of Force, search/seizure, detention/restraint, PDPA+CCTV, CCTV Request, and LINE/CCTV-data questions to `soc-basic-legal-awareness-reference.md`; added source-boundary and legal Knowledge-Gap guardrails plus query examples.
 - v1.6 — 2026-09-10 — Added direct routing for Traffic Knowledge / project entrance-exit questions to `traffic-access-reference.md`, including car access, motorcycle access, MRT/public transport, and Helipad queries; added traffic-specific retrieval guardrails.
 - v1.5 — 2026-09-10 — Added direct routing for hospital transport questions to `hospital-transport-reference.md`, including free-transport, 5 km/10 km, and 6–10 km transport-fee queries; cross-routed hospital phone-number questions to the Emergency Contact Directory and added transport-specific guardrails.
