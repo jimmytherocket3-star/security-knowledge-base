@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 1.8
+version: 1.9
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -27,11 +27,12 @@ When answering a question from Skills Hunter, use this index to identify the mos
 1. Read this index first when the relevant Skills Hunter file is not already known.
 2. Route the question to the most relevant file below.
 3. Fetch/read the target file directly rather than relying only on repository search.
-4. Prefer the latest Approved/Active material when sources conflict, subject to document-specific status and guardrails.
-5. If search returns no result, check the routed file directly before declaring a Knowledge Gap.
-6. Declare a Knowledge Gap only after the relevant routed source has been checked and does not support the requested fact.
-7. Never invent internal facts or silently replace missing internal information with external information.
-8. Skills Hunter create/edit/delete operations require explicit KB Owner approval before modification.
+4. After reading the primary source, check `docs/00-system/source-conflict-register.md` for a matching registered conflict. If one exists, read every original source listed in its record directly and report each conflicting claim with provenance; the register does not replace those sources or select a winner.
+5. Prefer the latest Approved/Active material where established source priority applies, subject to document-specific status and guardrails. Generic source priority does not resolve an explicitly registered conflict between applicable sources; preserve approved canonical precedence and Draft/Active and External/Internal boundaries.
+6. If search returns no result, check the routed file directly before declaring a Knowledge Gap.
+7. Declare a Knowledge Gap only after the relevant routed source and any required conflict/cross-check sources have been checked and do not support the requested fact.
+8. Never invent internal facts or silently replace missing internal information with external information.
+9. Skills Hunter create/edit/delete operations require explicit KB Owner approval before modification.
 
 ## Answer Source Status Labels
 
@@ -48,7 +49,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
-| One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, also read `docs/08-reference/one-bangkok-executive-callsigns.md`: the two references conflict. Report both source labels and the unresolved identity; do not select a winner. |
+| Registered source conflicts / conflict tracking / `KB-CONFLICT-001` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel or operational facts. |
+| One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read both original sources, including `docs/08-reference/one-bangkok-executive-callsigns.md`. Report both labels and the unresolved identity; do not select a winner. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
 | Parade ambulance / patient pickup or drop-off points, รถพยาบาลรับผู้ป่วยที่ Parade | `docs/00-system/location-building-directory.md` | Primary current pickup-location reference; cross-check `docs/08-reference/one-bangkok-ambulance-pickup-dropoff-points.md`, which retains an older approved list. The directory adds Loading 1 ชั้น B1. Preserve both sources' status; do not mark the older page Superseded or infer a preferred point, priority, or route. |
 | ทางเข้า-ออกโครงการ, Traffic Knowledge, ทางเข้า One Bangkok, รถยนต์เข้าโครงการ, รถจักรยานยนต์เข้าโครงการ, MRT connection, รถประจำทาง, Helipad | `docs/00-system/traffic-access-reference.md` | Fetch directly for approved project access counts/source roads, motorcycle entrances, public-transport connection, and Tower 4 Helipad. Do not infer unlisted Entrance numbers, routes, traffic direction, or operating hours. |
@@ -78,7 +80,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
-- `One05 คือใคร` → fetch `docs/00-system/management-personnel-reference.md`, then cross-check `docs/08-reference/one-bangkok-executive-callsigns.md`; report the unresolved conflict without choosing an identity
+- `One05 คือใคร` → fetch `docs/00-system/management-personnel-reference.md`, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read `docs/08-reference/one-bangkok-executive-callsigns.md`; report the unresolved conflict without choosing an identity
 - `Loading 5 เป็นของอาคารอะไร` → fetch `docs/00-system/location-building-directory.md`
 - `รถพยาบาลรับผู้ป่วยที่ Parade จุดไหน` → fetch `docs/00-system/location-building-directory.md`, then cross-check `docs/08-reference/one-bangkok-ambulance-pickup-dropoff-points.md`; include the later approved Loading 1 ชั้น B1 addition without assigning priority
 - `Zone 3 มีอาคารอะไรบ้าง` → fetch `docs/00-system/location-building-directory.md`
@@ -118,6 +120,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 
 A repository search miss does **not** move the answer directly to Knowledge Gap. The routed source file must be checked first.
 
+This generic priority does not automatically settle an explicitly registered conflict between applicable sources. Follow the conflict record's direct-source checks while retaining established canonical precedence, document status, and internal/external source boundaries.
+
 ## Guardrails
 
 - Skills Hunter is a branding layer over the existing Security Knowledge Base; it does not create new SOP facts.
@@ -125,7 +129,7 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 - File status and document-specific guardrails remain authoritative.
 - Do not infer emergency authority from personnel/location/contact reference files.
 - Do not normalize source spellings or aliases unless explicitly approved.
-- For One05, cross-check both personnel references and report their conflicting labels; do not infer a correct identity or full name.
+- For One05, check `KB-CONFLICT-001`, read both original personnel references, and report their conflicting labels; do not infer a correct identity or full name. `source-conflict-register.md` tracks the disagreement and is not a factual replacement for either source.
 - For Parade ambulance pickup, use the later approved location directory as the primary pickup-location reference and retain the older approved page as a cross-check; do not infer point priority or change either source's status.
 - Do not generalize drill-specific procedures into Core SOP.
 - Do not infer Building → Assembly Point mapping from visual proximity on a map unless an approved source explicitly maps them.
@@ -138,6 +142,7 @@ A repository search miss does **not** move the answer directly to Knowledge Gap.
 
 ## Change Log
 
+- v1.9 — 2026-09-17 — Phase 4B KB Owner-approved conflict-management routing: added mandatory matching-register checks, the conflict-register route, and `KB-CONFLICT-001` cross-check for One05; clarified unresolved-conflict handling while preserving canonical precedence, status boundaries, and original-source provenance.
 - v1.8 — 2026-09-17 — Phase 4A KB Owner-approved routing update: corrected Code 1/2 and Draft Code 3 routes/status wording; added Code D and Threat Response direct routes; separated source-specific and KB-wide CCTV retention provenance; added One05 conflict cross-check and Parade ambulance pickup source ordering/guardrails. No source knowledge document was changed.
 - v1.7 — 2026-09-13 — Added direct routing for SOC basic legal awareness, caught-in-the-act/custody, Use of Force, search/seizure, detention/restraint, PDPA+CCTV, CCTV Request, and LINE/CCTV-data questions to `soc-basic-legal-awareness-reference.md`; added source-boundary and legal Knowledge-Gap guardrails plus query examples.
 - v1.6 — 2026-09-10 — Added direct routing for Traffic Knowledge / project entrance-exit questions to `traffic-access-reference.md`, including car access, motorcycle access, MRT/public transport, and Helipad queries; added traffic-specific retrieval guardrails.
