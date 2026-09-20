@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-GUARD-TOUR-EMAIL-001
 title: Guard Tour Email Drafting Standard
-version: 1.1
+version: 1.2
 status: Approved
 owner: KB Owner
 scope: AI Drafting / Guard Tour Reporting
@@ -239,7 +239,35 @@ Mail : sittipong.h@senses.co.th
 
 ต้องคงชื่อ ตำแหน่ง บริษัท หมายเลขโทรศัพท์ และอีเมลตามข้อมูลที่อนุมัตินี้ และห้ามเปลี่ยนเป็นข้อมูลจากลายเซ็นของบุคคลอื่นหรืออีเมลต้นแบบ
 
-## 15. Existing Draft Handling
+
+## 15. Company Signature Banner
+
+หลังบรรทัด Mobile / Mail ต้องแสดง **แบนเนอร์โลโก้ Senses Property Management Company Limited** แบบเดียวกับมาตรฐานอีเมล Contact Center ที่ผู้ใช้อนุมัติ
+
+องค์ประกอบของแบนเนอร์ต้นแบบประกอบด้วย:
+
+- โลโก้ `SENSES PROPERTY MANAGEMENT`
+- ข้อความ `Senses Property Management Company Limited`
+- ที่อยู่บริษัท
+- หมายเลข `+66 2643 7595`
+- เว็บไซต์ `www.senses.co.th`
+
+### Banner Rendering Rule
+
+- ใน Gmail Draft ให้ใช้รูปภาพจริงแบบ **inline image** ใต้ข้อมูล Mobile / Mail
+- ห้ามใช้ข้อความ placeholder เช่น `[SENSES PROPERTY MANAGEMENT — Company Signature Banner]` แทนรูปภาพเมื่อมีไฟล์ภาพต้นฉบับพร้อมใช้งาน
+- ใช้ไฟล์แบนเนอร์เดียวกับมาตรฐาน Contact Center ที่ผู้ใช้อนุมัติ
+- หากไฟล์ภาพต้นฉบับไม่สามารถเข้าถึงได้ในบริบทปัจจุบัน ต้องแจ้งผู้ใช้ก่อน และห้ามอ้างว่าใส่โลโก้จริงแล้ว
+- ห้ามเปลี่ยนดีไซน์ สี ข้อความ หรือครอปภาพโดยไม่ได้รับอนุมัติ
+
+ลำดับท้ายอีเมลต้องเป็น:
+
+1. Best Regards
+2. ชื่อ / ตำแหน่ง / บริษัท
+3. Mobile / Mail
+4. Company Signature Banner
+
+## 16. Existing Draft Handling
 
 เมื่อผู้ใช้ต้องการสร้าง Draft ใหม่
 
@@ -249,7 +277,7 @@ Mail : sittipong.h@senses.co.th
 
 หากมีหลาย Version ควรรักษาฉบับก่อนหน้าไว้เพื่อให้ผู้ใช้เปรียบเทียบได้
 
-## 16. Writing Style
+## 17. Writing Style
 
 ใช้รูปแบบอีเมลทางการของ SOC
 
@@ -263,7 +291,7 @@ Mail : sittipong.h@senses.co.th
 - ความผิดปกติต้องระบุจุดและข้อมูลอ้างอิงเท่าที่มี
 - หากไม่พบข้อมูล ให้บอกว่าไม่พบ แทนการคาดเดา
 
-## 17. Final Verification Checklist
+## 18. Final Verification Checklist
 
 ก่อนสร้าง Gmail Draft ต้องตรวจสอบว่า
 
@@ -282,9 +310,10 @@ Mail : sittipong.h@senses.co.th
 13. แนบ Guard Tour Report ครบทุกรอบ
 14. To / CC เป็นไปตามคำสั่งผู้ใช้
 15. ลายเซ็นและข้อมูลติดต่อกลับตรงกับข้อมูลผู้ใช้ที่อนุมัติ
-16. ไม่ได้ลบหรือเขียนทับ Draft เก่าโดยไม่ได้รับคำสั่ง
+16. แบนเนอร์ Senses แสดงเป็น inline image จริงเมื่อมีไฟล์ต้นฉบับ
+17. ไม่ได้ลบหรือเขียนทับ Draft เก่าโดยไม่ได้รับคำสั่ง
 
-## 18. AI Decision Rule
+## 19. AI Decision Rule
 
 หลักสำคัญที่สุด:
 
