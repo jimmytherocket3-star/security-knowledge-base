@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.0
+version: 2.1
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-17
+updated: 2026-09-20
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -49,6 +49,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
+| Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
 | Registered source conflicts / conflict tracking / `KB-CONFLICT-001`, `KB-CONFLICT-002` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel, terminology, or operational facts. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read both original sources, including `docs/08-reference/one-bangkok-executive-callsigns.md`. Report both labels and the unresolved identity; do not select a winner. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
@@ -79,6 +80,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 ## Query Routing Examples
 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
+- `ร่างอีเมล Guard Tour ให้หน่อย` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; verify all source reports, Remarks, Skip reasons, and building emails as required before drafting
+- `Guard Tour มี Skip แต่ไม่มีสาเหตุ` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; do not infer a reason, cross-check related building emails, and explicitly state when no cancellation/skip instruction is found
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One05 คือใคร` → fetch `docs/00-system/management-personnel-reference.md`, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read `docs/08-reference/one-bangkok-executive-callsigns.md`; report the unresolved conflict without choosing an identity
@@ -128,6 +131,7 @@ This generic priority does not automatically settle an explicitly registered con
 ## Guardrails
 
 - Skills Hunter is a branding layer over the existing Security Knowledge Base; it does not create new SOP facts.
+- For Guard Tour email drafting, route to `docs/00-system/guard-tour-email-drafting-standard.md`; keep results traceable to the Daily Guard Tour Report and related emails, verify Remarks/Skip/cancellation evidence, and never invent or assume a Skip reason.
 - This index routes retrieval; it does not create new SOP facts.
 - File status and document-specific guardrails remain authoritative.
 - Do not infer emergency authority from personnel/location/contact reference files.
@@ -146,6 +150,7 @@ This generic priority does not automatically settle an explicitly registered con
 
 ## Change Log
 
+- v2.1 — 2026-09-20 — KB Owner-approved Guard Tour email drafting route: added the Approved Guard Tour email drafting standard, Skip-reason verification, building-email cancellation cross-checks, attachment/recipient/draft handling, query examples, and no-inference guardrail.
 - v2.0 — 2026-09-17 — KB Owner-approved Code M gap closure routing: added the Approved Reference Code M procedure route, explicit Knowledge Gap handling, hospital/pickup cross-routing, and `KB-CONFLICT-002` FCC terminology cross-check.
 - v1.9 — 2026-09-17 — Phase 4B KB Owner-approved conflict-management routing: added mandatory matching-register checks, the conflict-register route, and `KB-CONFLICT-001` cross-check for One05; clarified unresolved-conflict handling while preserving canonical precedence, status boundaries, and original-source provenance.
 - v1.8 — 2026-09-17 — Phase 4A KB Owner-approved routing update: corrected Code 1/2 and Draft Code 3 routes/status wording; added Code D and Threat Response direct routes; separated source-specific and KB-wide CCTV retention provenance; added One05 conflict cross-check and Parade ambulance pickup source ordering/guardrails. No source knowledge document was changed.
