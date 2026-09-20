@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.1
+version: 2.2
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -50,6 +50,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
+| Contact Center email drafting, รายงานการโอนสายเวลานอกเวลา, Contact Centre มายัง SOC, Case/Inquiry table, Contact Center Gmail Draft | `docs/00-system/contact-center-email-drafting-standard.md` | Status: Approved. Use for the approved Contact Center email layout, 9-column Case/Inquiry table, no recipient-contact footer, SOC follow-up contact line, approved Sittipong signature, and Senses company banner as a real inline image when the approved source image is available. Never invent missing case details. |
 | Registered source conflicts / conflict tracking / `KB-CONFLICT-001`, `KB-CONFLICT-002` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel, terminology, or operational facts. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read both original sources, including `docs/08-reference/one-bangkok-executive-callsigns.md`. Report both labels and the unresolved identity; do not select a winner. |
 | Building names, locations, Zone/Zoning, Loading 1–8, site labels | `docs/00-system/location-building-directory.md` | Use for approved location/building/loading mappings. |
@@ -81,6 +82,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
 - `ร่างอีเมล Guard Tour ให้หน่อย` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; verify all source reports, Remarks, Skip reasons, and building emails as required before drafting
+- `ร่างอีเมลรายงาน Contact Center ให้หน่อย` → fetch `docs/00-system/contact-center-email-drafting-standard.md`; use the approved 9-column table, omit recipient-contact footer, preserve source facts, use the approved Sittipong signature, and render the Senses banner as a real inline image when the source image is available
 - `Guard Tour มี Skip แต่ไม่มีสาเหตุ` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; do not infer a reason, cross-check related building emails, and explicitly state when no cancellation/skip instruction is found
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
@@ -132,6 +134,7 @@ This generic priority does not automatically settle an explicitly registered con
 
 - Skills Hunter is a branding layer over the existing Security Knowledge Base; it does not create new SOP facts.
 - For Guard Tour email drafting, route to `docs/00-system/guard-tour-email-drafting-standard.md`; keep results traceable to the Daily Guard Tour Report and related emails, verify Remarks/Skip/cancellation evidence, and never invent or assume a Skip reason.
+- For Contact Center email drafting, route to `docs/00-system/contact-center-email-drafting-standard.md`; preserve the approved 9-column Case/Inquiry structure and source facts, do not add recipient-contact footer data, do not invent missing Case No. or actions, and use the approved Senses company banner as a real inline image when the source image is available.
 - This index routes retrieval; it does not create new SOP facts.
 - File status and document-specific guardrails remain authoritative.
 - Do not infer emergency authority from personnel/location/contact reference files.
@@ -150,6 +153,7 @@ This generic priority does not automatically settle an explicitly registered con
 
 ## Change Log
 
+- v2.2 — 2026-09-20 — KB Owner-approved Contact Center email drafting route: added the Approved Contact Center email standard, 9-column Case/Inquiry table, recipient-contact exclusion rule, SOC follow-up contact line, approved Sittipong signature, and Senses company-banner inline-image requirement.
 - v2.1 — 2026-09-20 — KB Owner-approved Guard Tour email drafting route: added the Approved Guard Tour email drafting standard, Skip-reason verification, building-email cancellation cross-checks, attachment/recipient/draft handling, query examples, and no-inference guardrail.
 - v2.0 — 2026-09-17 — KB Owner-approved Code M gap closure routing: added the Approved Reference Code M procedure route, explicit Knowledge Gap handling, hospital/pickup cross-routing, and `KB-CONFLICT-002` FCC terminology cross-check.
 - v1.9 — 2026-09-17 — Phase 4B KB Owner-approved conflict-management routing: added mandatory matching-register checks, the conflict-register route, and `KB-CONFLICT-001` cross-check for One05; clarified unresolved-conflict handling while preserving canonical precedence, status boundaries, and original-source provenance.
