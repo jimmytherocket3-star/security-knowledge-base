@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-GUARD-TOUR-EMAIL-001
 title: Guard Tour Email Drafting Standard
-version: 1.0
+version: 1.1
 status: Approved
 owner: KB Owner
 scope: AI Drafting / Guard Tour Reporting
@@ -222,7 +222,24 @@ AI ต้องตรวจสอบ Remark เพิ่มเติมเสม
 
 ห้ามเดารายชื่อผู้รับเองจากอีเมลเก่า เว้นแต่ผู้ใช้สั่งให้ใช้รายชื่อดังกล่าว
 
-## 14. Existing Draft Handling
+## 14. Sender Signature / Contact Information
+
+สำหรับอีเมล Guard Tour ที่ร่างในนามผู้ใช้ ให้ใส่ลายเซ็นและข้อมูลติดต่อกลับดังนี้ เว้นแต่ผู้ใช้จะสั่งให้ใช้ข้อมูลอื่นในงานนั้น
+
+```text
+Best Regards,
+
+Sittipong Homjai l สิทธิพงษ์ หอมใจ
+SOC Operator - Security Operation Centre (SOC)
+Senses Property Management Company Limited
+
+Mobile : 085-112-8002
+Mail : sittipong.h@senses.co.th
+```
+
+ต้องคงชื่อ ตำแหน่ง บริษัท หมายเลขโทรศัพท์ และอีเมลตามข้อมูลที่อนุมัตินี้ และห้ามเปลี่ยนเป็นข้อมูลจากลายเซ็นของบุคคลอื่นหรืออีเมลต้นแบบ
+
+## 15. Existing Draft Handling
 
 เมื่อผู้ใช้ต้องการสร้าง Draft ใหม่
 
@@ -232,7 +249,7 @@ AI ต้องตรวจสอบ Remark เพิ่มเติมเสม
 
 หากมีหลาย Version ควรรักษาฉบับก่อนหน้าไว้เพื่อให้ผู้ใช้เปรียบเทียบได้
 
-## 15. Writing Style
+## 16. Writing Style
 
 ใช้รูปแบบอีเมลทางการของ SOC
 
@@ -246,7 +263,7 @@ AI ต้องตรวจสอบ Remark เพิ่มเติมเสม
 - ความผิดปกติต้องระบุจุดและข้อมูลอ้างอิงเท่าที่มี
 - หากไม่พบข้อมูล ให้บอกว่าไม่พบ แทนการคาดเดา
 
-## 16. Final Verification Checklist
+## 17. Final Verification Checklist
 
 ก่อนสร้าง Gmail Draft ต้องตรวจสอบว่า
 
@@ -264,9 +281,10 @@ AI ต้องตรวจสอบ Remark เพิ่มเติมเสม
 12. ความผิดปกติของอุปกรณ์ถูกสรุปครบ
 13. แนบ Guard Tour Report ครบทุกรอบ
 14. To / CC เป็นไปตามคำสั่งผู้ใช้
-15. ไม่ได้ลบหรือเขียนทับ Draft เก่าโดยไม่ได้รับคำสั่ง
+15. ลายเซ็นและข้อมูลติดต่อกลับตรงกับข้อมูลผู้ใช้ที่อนุมัติ
+16. ไม่ได้ลบหรือเขียนทับ Draft เก่าโดยไม่ได้รับคำสั่ง
 
-## 17. AI Decision Rule
+## 18. AI Decision Rule
 
 หลักสำคัญที่สุด:
 
