@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-GUARD-TOUR-EMAIL-001
 title: Guard Tour Email Drafting Standard
-version: 1.3
+version: 1.4
 status: Approved
 owner: KB Owner
 scope: AI Drafting / Guard Tour Reporting
@@ -417,3 +417,16 @@ Mail : sittipong.h@senses.co.th
 **รอบเวลา → Status → จำนวน Skip → สาเหตุ → รายชื่อจุด Skip → QR Code ของแต่ละจุด → สรุปยอดรวม → แนบ Report**
 
 เป้าหมายคือให้ผู้รับสามารถตรวจย้อนกลับได้ทันทีว่าแต่ละรอบข้ามจุดใด รหัสใด และด้วยเหตุผลใด โดยไม่ต้องเปิดไฟล์แนบทุกไฟล์เพื่อค้นหาข้อมูลพื้นฐาน
+
+
+## 21. Global Email Signature and Banner Standard
+
+สำหรับอีเมล Guard Tour ทุกฉบับ ให้ใช้ลายเซ็นและ Company Banner ตาม `docs/00-system/email-signature-banner-standard.md`
+
+กติกาหลัก:
+- หลัง `Mobile : 085-112-8002` และ `Mail : sittipong.h@senses.co.th` ต้องแสดงแบนเนอร์ Senses ที่ผู้ใช้อนุมัติ
+- Approved source image: `SENSES Rev (3).jpg`
+- ต้องเป็นรูปภาพจริงแบบ inline image
+- ห้ามใช้ placeholder หากไฟล์ต้นฉบับพร้อมใช้งาน
+- ห้ามอ้างว่าใส่โลโก้แล้วถ้ายังไม่ได้แทรกภาพจริง
+- กฎนี้ใช้ร่วมกับ Section 15 และให้ถือมาตรฐานกลางดังกล่าวเป็นแหล่งอ้างอิงสำหรับภาพแบนเนอร์ที่อนุมัติ
