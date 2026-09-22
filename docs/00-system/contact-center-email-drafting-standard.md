@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-EMAIL-CONTACT-CENTER-001
 title: Contact Center Email Drafting Standard
-version: 1.0
+version: 1.1
 status: Approved
 owner: KB Owner
 scope: SOC Email Drafting / Contact Center Handover
-updated: 2026-09-20
+updated: 2026-09-22
 ---
 
 # Contact Center Email Drafting Standard
@@ -173,3 +173,14 @@ Mail : sittipong.h@senses.co.th
 ## Approval Record
 
 รูปแบบนี้ได้รับการตรวจสอบจากผู้ใช้ผ่าน Draft Gmail และได้รับอนุมัติให้นำไปบันทึกใน Skills Hunter เมื่อวันที่ 2026-09-20.
+
+
+## Global Email Signature and Banner Standard
+
+สำหรับอีเมล Contact Center ทุกฉบับ ให้ใช้ลายเซ็นและ Company Banner ตาม `docs/00-system/email-signature-banner-standard.md`
+
+- Approved source image: `SENSES Rev (3).jpg`
+- วางแบนเนอร์ทันทีหลัง Mobile / Mail
+- ใช้รูปภาพจริงแบบ inline image
+- ห้ามใช้ placeholder หากไฟล์ต้นฉบับพร้อมใช้งาน
+- ห้ามอ้างว่าได้ใส่โลโก้แล้วหากยังไม่ได้แทรกภาพจริง
