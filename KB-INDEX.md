@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.2
+version: 2.3
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-20
+updated: 2026-09-22
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -49,6 +49,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
+| Email signature, ลายเซ็นอีเมล, company banner, โลโก้บริษัทในอีเมล, ทุกอีเมลของผู้ใช้ | `docs/00-system/email-signature-banner-standard.md` | Status: Approved. Global rule for all user email drafting: approved Sittipong signature followed immediately by the approved Senses company banner image. Never claim the banner is present unless the actual image has been inserted. |
 | Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
 | Contact Center email drafting, รายงานการโอนสายเวลานอกเวลา, Contact Centre มายัง SOC, Case/Inquiry table, Contact Center Gmail Draft | `docs/00-system/contact-center-email-drafting-standard.md` | Status: Approved. Use for the approved Contact Center email layout, 9-column Case/Inquiry table, no recipient-contact footer, SOC follow-up contact line, approved Sittipong signature, and Senses company banner as a real inline image when the approved source image is available. Never invent missing case details. |
 | Registered source conflicts / conflict tracking / `KB-CONFLICT-001`, `KB-CONFLICT-002` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel, terminology, or operational facts. |
@@ -81,6 +82,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 ## Query Routing Examples
 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
+- `ใส่โลโก้บริษัทท้ายอีเมล` → fetch `docs/00-system/email-signature-banner-standard.md`; use the approved Sittipong signature and insert the approved Senses banner immediately after Mobile / Mail when the source image is available
 - `ร่างอีเมล Guard Tour ให้หน่อย` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; verify all source reports, Remarks, Skip reasons, and building emails as required before drafting
 - `ร่างอีเมลรายงาน Contact Center ให้หน่อย` → fetch `docs/00-system/contact-center-email-drafting-standard.md`; use the approved 9-column table, omit recipient-contact footer, preserve source facts, use the approved Sittipong signature, and render the Senses banner as a real inline image when the source image is available
 - `Guard Tour มี Skip แต่ไม่มีสาเหตุ` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; do not infer a reason, cross-check related building emails, and explicitly state when no cancellation/skip instruction is found
