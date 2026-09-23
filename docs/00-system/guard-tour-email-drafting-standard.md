@@ -1,12 +1,12 @@
 ---
 document_id: SEC-KB-GUARD-TOUR-EMAIL-001
 title: Guard Tour Email Drafting Standard
-version: 1.4
+version: 1.5
 status: Approved
 owner: KB Owner
 scope: AI Drafting / Guard Tour Reporting
-approved: 2026-09-20
-updated: 2026-09-22
+approved: 2026-09-23
+updated: 2026-09-23
 ---
 
 # Guard Tour Email Drafting Standard
@@ -430,3 +430,249 @@ Mail : sittipong.h@senses.co.th
 - ห้ามใช้ placeholder หากไฟล์ต้นฉบับพร้อมใช้งาน
 - ห้ามอ้างว่าใส่โลโก้แล้วถ้ายังไม่ได้แทรกภาพจริง
 - กฎนี้ใช้ร่วมกับ Section 15 และให้ถือมาตรฐานกลางดังกล่าวเป็นแหล่งอ้างอิงสำหรับภาพแบนเนอร์ที่อนุมัติ
+
+## 22. Skip Point Name Presentation Standard
+
+เมื่อ Guard Tour Report พบรายการ Skip การร่างอีเมลต้องแสดง **ชื่อจุดที่ข้าม (Skip Point Name)** ของแต่ละรอบอย่างชัดเจน
+
+ห้ามรายงานเพียงจำนวน Skip โดยไม่แสดงว่าข้ามจุดใด เมื่อ Source มีข้อมูลชื่อจุดให้ตรวจสอบได้
+
+รูปแบบมาตรฐาน:
+
+```text
+รอบเวลา 05.00 – 06.00 น.
+- Status: Completed
+- Skip: 27 จุด
+- สาเหตุ: เนื่องจากมีการดำเนินการ Set up บริเวณชั้น 3–4
+
+ชื่อจุดที่ข้าม (Skip Point Name):
+
+- ชื่อจุด: Chang Forum (FRM), ฝั่ง EXAT - ตู้ FHC-05 ชั้น 4
+  QR Code: L1001911
+
+- ชื่อจุด: Chang Forum (FRM), ฝั่งบ่อนไก่ - ตู้ FHC-04 ชั้น 4
+  QR Code: L1001912
+```
+
+## 23. Mandatory Fields for Each Skip Point
+
+รายการ Skip แต่ละจุดต้องแสดงข้อมูลอย่างน้อยดังนี้:
+
+1. ชื่อจุด
+2. ฝั่ง / พื้นที่
+3. ชั้น
+4. ชื่ออุปกรณ์หรือประเภทพื้นที่ ตามที่ Source ระบุ
+5. QR Code หากมี
+
+รูปแบบ:
+
+```text
+- ชื่อจุด: [ชื่อจุดจาก Daily Guard Tour Report]
+  QR Code: [QR Code]
+```
+
+หาก Source ไม่มี QR Code ให้ใช้:
+
+```text
+QR Code: -
+```
+
+ห้ามสร้าง QR Code ขึ้นเอง
+
+## 24. Source Fidelity for Skip Point Names
+
+ชื่อจุดที่ข้ามต้องดึงจาก Daily Guard Tour Report ของรอบนั้นโดยตรง
+
+ต้องรักษาข้อมูลต่อไปนี้ให้ตรงกับ Source มากที่สุด:
+
+- ชื่ออาคาร
+- ฝั่งอาคาร
+- ชื่อพื้นที่
+- ชั้น
+- ตู้ FHC
+- ถังดับเพลิง
+- โถงลิฟท์
+- บันไดเลื่อน
+- ประตู
+- หรืออุปกรณ์ / พื้นที่อื่นตามที่ Source ระบุ
+
+ห้ามใช้ชื่อจุดจากรอบอื่นมาแทน แม้ QR Code หรือพื้นที่จะดูใกล้เคียงกัน
+
+## 25. Per-Round Verification Rule
+
+ก่อนจัดทำอีเมล AI ต้องตรวจแต่ละ Daily Guard Tour Report แยกจากกันทีละรอบ
+
+สำหรับแต่ละรอบต้องตรวจสอบ:
+
+1. เวลา
+2. Status
+3. จำนวน Skip
+4. Remark / Cause / Note
+5. ชื่อจุดที่ Skip
+6. QR Code
+7. จุดที่ไม่มี QR Code
+8. จุดที่ไม่มีสาเหตุระบุ
+9. ความผิดปกติอื่นที่พบใน Remark
+
+ห้าม Copy รายชื่อ Skip จากรอบหนึ่งไปใช้กับอีกรอบโดยไม่ได้ตรวจ Source ของรอบนั้น
+
+## 26. User-Confirmed Correction Rule
+
+หาก KB Owner ตรวจสอบข้อมูลแล้วและยืนยันว่า จำนวน Skip หรือสาเหตุของรอบใดต้องแก้ไข ให้ใช้ข้อมูลที่ KB Owner ยืนยันล่าสุดสำหรับ Draft นั้น
+
+ตัวอย่าง:
+
+```text
+ข้อมูลเดิม:
+- Skip: 22 จุด
+
+KB Owner ยืนยัน:
+- Skip: 27 จุด
+- สาเหตุ: เนื่องจากมีการดำเนินการ Set up บริเวณชั้น 3–4
+
+รูปแบบที่ต้องใช้:
+- Skip: 27 จุด
+- สาเหตุ: เนื่องจากมีการดำเนินการ Set up บริเวณชั้น 3–4
+```
+
+เมื่อจำนวน Skip ถูกแก้ไข ต้องคำนวณยอดรวมของทุกรอบใหม่ทุกครั้ง
+
+ห้ามแก้รายชื่อจุดหรือสร้างจุดเพิ่มเติมเพียงเพื่อให้จำนวนตรงกัน หากไม่มี Source หรือคำยืนยันจาก KB Owner รองรับ
+
+## 27. Mismatch Between Confirmed Count and Point List
+
+หาก KB Owner ยืนยันจำนวน Skip แต่รายชื่อจุดที่สามารถตรวจสอบจาก Source มีจำนวนไม่เท่ากัน:
+
+- ให้ใช้จำนวน Skip ตามที่ KB Owner ยืนยัน
+- รายชื่อจุดให้แสดงเฉพาะจุดที่ตรวจสอบจาก Source ได้
+- ห้ามสร้างชื่อจุดเพิ่มเพื่อให้ครบจำนวน
+- ห้ามคัดลอกจุดจากรอบอื่นมาเติม
+- ควรระบุความแตกต่างไว้ในการตรวจสอบภายในของ AI
+
+หลักการ:
+
+**Confirmed Count ≠ Permission to Invent Point Names**
+
+## 28. Approved Detailed Guard Tour Email Order
+
+สำหรับอีเมล Guard Tour แบบละเอียด แต่ละรอบต้องเรียงข้อมูลดังนี้:
+
+1. รอบเวลา
+2. Status
+3. จำนวน Skip
+4. สาเหตุของ Skip
+5. ชื่อจุดที่ข้าม (Skip Point Name)
+6. QR Code ของแต่ละจุด
+7. หมายเหตุเฉพาะจุด หากจำเป็น
+
+หลังจากจบรายละเอียดทุกรอบ ให้แสดง:
+
+8. สรุปจำนวน Skip แยกตามรอบ
+9. จำนวน Skip รวมทั้งหมด
+10. ข้อความแจ้งไฟล์แนบ
+11. Best Regards
+12. ชื่อ / ตำแหน่ง / บริษัท
+13. Mobile / Mail
+14. Company Signature Banner แบบ inline image
+
+## 29. Skip Summary Recalculation Rule
+
+ยอดรวม Skip ต้องคำนวณจากจำนวนที่ใช้อยู่จริงในแต่ละรอบของ Draft ล่าสุดเสมอ
+
+ตัวอย่าง:
+
+```text
+- 08.00 น. = 14 จุด
+- 13.00 น. = 13 จุด
+- 17.00 น. = 15 จุด
+- 20.00 น. = 22 จุด
+- 23.00 น. = 23 จุด
+- 02.00 น. = 27 จุด
+- 05.00 น. = 27 จุด
+
+รวมทั้งหมด = 141 จุด Skip
+```
+
+หากมีการแก้ไขรอบใดรอบหนึ่ง AI ต้องคำนวณยอดรวมใหม่ ห้ามใช้ยอดรวมจาก Draft ก่อนหน้าโดยอัตโนมัติ
+
+## 30. Approved Output Template
+
+รูปแบบหลักที่ AI ต้องใช้:
+
+```text
+รอบเวลา [เวลา]
+- Status: [Status]
+- Skip: [จำนวน] จุด
+- สาเหตุ: [สาเหตุจาก Source หรือ KB Owner]
+
+ชื่อจุดที่ข้าม (Skip Point Name):
+
+- ชื่อจุด: [ชื่อจุด]
+  QR Code: [รหัส]
+
+- ชื่อจุด: [ชื่อจุด]
+  QR Code: [รหัส]
+
+[หมายเหตุ หากมี]
+
+---
+
+สรุปจำนวน Skip ทุกรอบ
+
+- [รอบ] = [จำนวน] จุด
+- [รอบ] = [จำนวน] จุด
+
+รวมทั้งหมด [จำนวน] จุด Skip
+
+ทั้งนี้ ได้แนบ Daily Guard Tour Report ของทุกรอบที่ใช้ประกอบการสรุปมาพร้อมอีเมลฉบับนี้ เพื่อประกอบการตรวจสอบและอ้างอิง
+```
+
+## 31. Final AI Rule
+
+เป้าหมายของอีเมล Guard Tour คือให้ผู้รับสามารถทราบได้ทันทีว่า:
+
+- รอบใดมี Skip
+- Skip กี่จุด
+- Skip เพราะเหตุใด
+- จุดใดถูกข้าม
+- QR Code อะไร
+- ข้อมูลใดมี Source รองรับ
+- ข้อมูลใดได้รับการยืนยันจาก KB Owner
+
+หลักสำคัญ:
+
+**Report the confirmed count.  
+List only verified point names.  
+Never invent a missing Skip Point.  
+Recalculate the total after every correction.**
+
+## 32. Mandatory Company Signature Banner Placement
+
+สำหรับอีเมล Guard Tour ทุกฉบับ หลังข้อมูลติดต่อของผู้ใช้ ต้องแสดงโลโก้ / Company Signature Banner ของ **Senses Property Management Company Limited** ทันที
+
+ลำดับท้ายอีเมลที่ถูกต้องต้องเป็น:
+
+1. Best Regards
+2. Sittipong Homjai l สิทธิพงษ์ หอมใจ
+3. SOC Operator - Security Operation Centre (SOC)
+4. Senses Property Management Company Limited
+5. Mobile : 085-112-8002
+6. Mail : sittipong.h@senses.co.th
+7. Company Signature Banner
+
+### Banner Requirement
+
+- ต้องใช้รูปภาพจริงแบบ inline image
+- ต้องวางต่อจากบรรทัด Mobile / Mail โดยตรง
+- ใช้ Company Signature Banner ของ Senses Property Management Company Limited
+- Approved source image: `SENSES Rev (3).jpg`
+- ห้ามใช้ข้อความ placeholder แทนรูปภาพ หากไฟล์ต้นฉบับสามารถเข้าถึงได้
+- ห้ามสร้างโลโก้ใหม่ เลียนแบบ ปรับสี ครอป หรือแก้ไขดีไซน์โดยไม่ได้รับอนุมัติ
+- หากไม่สามารถเข้าถึงไฟล์ภาพต้นฉบับได้ ต้องแจ้ง KB Owner ก่อนสร้าง Draft และห้ามอ้างว่าได้ใส่โลโก้แล้ว
+
+หลักการ:
+
+**Contact Information → Company Signature Banner**
+
+ห้ามจบอีเมล Guard Tour ที่บรรทัด Mail โดยไม่มี Company Signature Banner เว้นแต่ KB Owner จะสั่งเป็นกรณีพิเศษ
+
