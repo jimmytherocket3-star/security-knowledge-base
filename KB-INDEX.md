@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.3
+version: 2.4
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-22
+updated: 2026-09-23
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -50,7 +50,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | Email signature, ลายเซ็นอีเมล, company banner, โลโก้บริษัทในอีเมล, ทุกอีเมลของผู้ใช้ | `docs/00-system/email-signature-banner-standard.md` | Status: Approved. Global rule for all user email drafting: approved Sittipong signature followed immediately by the approved Senses company banner image. Never claim the banner is present unless the actual image has been inserted. |
-| Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
+| Tower 5 CCTV status report, CCTV Tower 5, กล้องออฟไลน์ Tower 5, กล้องถูกถอด Tower 5, CASE-260724-232148649852 | `docs/02-security-operations/security-control-room/tower-5-cctv-status-report-2026-07-24-25.md` | User-supplied source report for the 24–25 July 2026 Tower 5 CCTV case. Read this file directly; preserve its reported facts, camera IDs, counts, observations, and recommendations without silently correcting or generalizing them. |\n| Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
 | Contact Center email drafting, รายงานการโอนสายเวลานอกเวลา, Contact Centre มายัง SOC, Case/Inquiry table, Contact Center Gmail Draft | `docs/00-system/contact-center-email-drafting-standard.md` | Status: Approved. Use for the approved Contact Center email layout, 9-column Case/Inquiry table, no recipient-contact footer, SOC follow-up contact line, approved Sittipong signature, and Senses company banner as a real inline image when the approved source image is available. Never invent missing case details. |
 | Registered source conflicts / conflict tracking / `KB-CONFLICT-001`, `KB-CONFLICT-002` | `docs/00-system/source-conflict-register.md` | Retrieval-control record only; read all original sources listed in a matching record. The register does not establish new personnel, terminology, or operational facts. |
 | One00, One01, One02, One03, One04, One05; management personnel names/nicknames | `docs/00-system/management-personnel-reference.md` | Fetch directly for One00–One05 questions. For One05, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read both original sources, including `docs/08-reference/one-bangkok-executive-callsigns.md`. Report both labels and the unresolved identity; do not select a winner. |
@@ -85,7 +85,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 - `ใส่โลโก้บริษัทท้ายอีเมล` → fetch `docs/00-system/email-signature-banner-standard.md`; use the approved Sittipong signature and insert the approved Senses banner immediately after Mobile / Mail when the source image is available
 - `ร่างอีเมล Guard Tour ให้หน่อย` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; verify all source reports, Remarks, Skip reasons, and building emails as required before drafting
 - `ร่างอีเมลรายงาน Contact Center ให้หน่อย` → fetch `docs/00-system/contact-center-email-drafting-standard.md`; use the approved 9-column table, omit recipient-contact footer, preserve source facts, use the approved Sittipong signature, and render the Senses banner as a real inline image when the source image is available
-- `Guard Tour มี Skip แต่ไม่มีสาเหตุ` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; do not infer a reason, cross-check related building emails, and explicitly state when no cancellation/skip instruction is found
+- `CCTV Tower 5 มีปัญหาอะไรบ้าง` → fetch `docs/02-security-operations/security-control-room/tower-5-cctv-status-report-2026-07-24-25.md`; use the report as a dated source for CASE-260724-232148649852 and do not generalize its findings to other buildings or dates\n- `Guard Tour มี Skip แต่ไม่มีสาเหตุ` → fetch `docs/00-system/guard-tour-email-drafting-standard.md`; do not infer a reason, cross-check related building emails, and explicitly state when no cancellation/skip instruction is found
 - `One 04 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One 00 ชื่ออะไร` → fetch `docs/00-system/management-personnel-reference.md`
 - `One05 คือใคร` → fetch `docs/00-system/management-personnel-reference.md`, check `KB-CONFLICT-001` in `docs/00-system/source-conflict-register.md`, then read `docs/08-reference/one-bangkok-executive-callsigns.md`; report the unresolved conflict without choosing an identity
