@@ -1,12 +1,12 @@
 ---
 document_id: SEC-KB-EMAIL-SIGNATURE-001
 title: Global Email Signature and Company Banner Standard
-version: 1.0
+version: 1.1
 status: Approved
 owner: KB Owner
 scope: All User Email Drafting / Signature / Company Banner
 approved: 2026-09-22
-updated: 2026-09-22
+updated: 2026-09-24
 ---
 
 # Global Email Signature and Company Banner Standard
@@ -97,3 +97,36 @@ Approved source image supplied by KB Owner:
 ## 9. AI Decision Rule
 
 **Every user email must end with the approved Sittipong signature followed immediately by the approved Senses company banner, unless the user explicitly instructs otherwise for that email. Never claim the banner is present unless the actual image has been inserted.**
+
+
+## 10. Gmail Inline Banner Verification — Approved 2026-09-24
+
+เมื่อ AI แทรก Company Banner ลงใน Gmail Draft ต้องถือว่างานสำเร็จต่อเมื่อสามารถตรวจสอบได้ว่ารูปถูกฝังเป็น **inline image จริง** ใต้บรรทัด Mobile / Mail
+
+แนวทางที่ผ่านการตรวจสอบกับ Draft จริง:
+- ใช้ภาพแบนเนอร์ Senses ที่ผู้ใช้อนุมัติ
+- วางภาพใน HTML body ด้วย CID reference
+- ภาพต้องมีสถานะ MIME เป็น `Content-Disposition: inline`
+- HTML ต้องอ้างภาพด้วย `cid:...`
+- หลังแก้ Draft ให้ตรวจสอบอีกครั้งว่า Draft มีรายการ `inline_images` และภาพอยู่หลังข้อมูลติดต่อ
+- ถ้ายังตรวจสอบไม่ได้ ห้ามบอกผู้ใช้ว่าใส่โลโก้แล้ว
+
+### Verified Display Order
+
+```text
+Best Regards,
+
+Sittipong Homjai | สิทธิพงษ์ หอมใจ
+SOC Operator - Security Operation Centre (SOC)
+Senses Property Management Company Limited
+
+Mobile : 085-112-8002
+Mail : sittipong.h@senses.co.th
+
+[Approved Senses Company Banner — inline image]
+```
+
+## Change Log
+
+- v1.1 — 2026-09-24 — KB Owner approved verified Gmail inline-banner implementation and verification rule after successful Contact Center Draft test.
+- v1.0 — 2026-09-22 — Initial approved global email signature and company banner standard.
