@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-EMAIL-CONTACT-CENTER-001
 title: Contact Center Email Drafting Standard
-version: 1.2
+version: 1.3
 status: Approved
 owner: KB Owner
 scope: SOC Email Drafting / Contact Center Handover
@@ -55,6 +55,37 @@ updated: 2026-09-24
 
 | No. | Date/Time | Caller Name | Contact No. | Type (case/Inquiry) | Topic | Case No. | Case Description | Action Required / Remark |
 |---|---|---|---|---|---|---|---|---|
+
+### Approved Table Visual Style — Approved 2026-09-24
+
+เมื่อมี Case หรือ Inquiry ให้จัดตาราง 9 คอลัมน์ใน Gmail Draft ตามรูปแบบที่ KB Owner ตรวจสอบและอนุมัติแล้ว:
+
+- Header row ใช้ **พื้นสีดำ**
+- ตัวอักษรใน Header ใช้ **สีขาว ตัวหนา**
+- Header จัดกึ่งกลางทั้งแนวนอนและแนวตั้ง
+- ตารางมีเส้นกรอบสีเทาชัดเจนทุกช่อง
+- แถวข้อมูลใช้พื้นสีขาว ตัวอักษรสีเข้ม
+- คอลัมน์ No., Date/Time, Caller Name, Contact No., Type (case/Inquiry), Case No. ให้จัดกึ่งกลางเพื่อให้อ่านง่าย
+- คอลัมน์ Topic, Case Description และ Action Required / Remark จัดข้อความให้อ่านต่อเนื่อง
+- ให้ Case Description เป็นคอลัมน์กว้างที่สุดสำหรับรายละเอียดเหตุ
+- ให้ Action Required / Remark มีความกว้างเพียงพอสำหรับรายละเอียดการดำเนินการ
+- ใช้ fixed table layout หรือสัดส่วนความกว้างที่ใกล้เคียง เพื่อไม่ให้คอลัมน์แคบบิดเบี้ยวเมื่อข้อความยาว
+- รูปแบบนี้ใช้กับ Gmail Draft ที่มี Case/Inquiry ตั้งแต่ 1 รายการขึ้นไป
+- ห้ามเปลี่ยนเป็นตารางรูปแบบอื่นโดยอัตโนมัติ หากผู้ใช้ไม่ได้สั่งให้เปลี่ยน
+
+แนวสัดส่วนความกว้างที่ผ่านการทดสอบ:
+
+| Column | Approx. Width |
+|---|---:|
+| No. | 4% |
+| Date/Time | 9% |
+| Caller Name | 7% |
+| Contact No. | 8% |
+| Type (case/Inquiry) | 10% |
+| Topic | 11% |
+| Case No. | 10% |
+| Case Description | 27% |
+| Action Required / Remark | 14% |
 
 ### Column Rules
 
@@ -173,6 +204,8 @@ Mail : sittipong.h@senses.co.th
 - [ ] Greeting ถูกต้อง
 - [ ] Case / Inquiry definition ครบ
 - [ ] ถ้ามี Case/Inquiry: ตารางมี 9 คอลัมน์และเรียงถูกต้อง
+- [ ] ถ้ามี Case/Inquiry: Header ตารางพื้นดำ ตัวอักษรขาว ตัวหนา และเส้นกรอบตารางสีเทา
+- [ ] สัดส่วนคอลัมน์ทำให้ Case Description และ Action Required / Remark อ่านได้ชัดเจน
 - [ ] ถ้าไม่มีสาย/ไม่มี Case/Inquiry: ใช้ Zero-Activity result statement และไม่แสดงตารางว่าง
 - [ ] Date/Time ถูกต้อง
 - [ ] Caller Name ถูกต้อง
@@ -218,6 +251,7 @@ Mail : sittipong.h@senses.co.th
 
 ## Change Log
 
+- v1.3 — 2026-09-24 — KB Owner approved Contact Center table visual style from verified Gmail Draft: black header, bold white text, grey borders, centered compact columns, and wider Case Description / Action Required columns.
 - v1.2 — 2026-09-24 — KB Owner approved Zero-Activity / No-Call reporting exception, omission of empty 9-column table when no calls exist, and verified inline Senses banner check in Gmail Draft.
 - v1.1 — 2026-09-22 — Added global signature/banner linkage and approved image reference.
 - v1.0 — 2026-09-20 — Initial approved Contact Center email drafting standard.
