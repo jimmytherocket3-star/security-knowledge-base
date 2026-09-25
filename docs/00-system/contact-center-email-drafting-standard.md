@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-EMAIL-CONTACT-CENTER-001
 title: Contact Center Email Drafting Standard
-version: 1.3
+version: 1.4
 status: Approved
 owner: KB Owner
 scope: SOC Email Drafting / Contact Center Handover
-updated: 2026-09-24
+updated: 2026-09-25
 ---
 
 # Contact Center Email Drafting Standard
@@ -23,6 +23,15 @@ updated: 2026-09-24
 `รายงานการโอนสายเวลานอกเวลา จาก Contact Centre มายัง SOC`
 
 หากเป็นการทดสอบ ให้ใส่ `[TEST]` นำหน้าหัวเรื่องเมื่อผู้ใช้ร้องขอเท่านั้น
+
+## Approved Recipients
+
+สำหรับร่างอีเมล Contact Center ตามรูปแบบที่ผู้ใช้อนุมัติ ให้กำหนดผู้รับดังนี้ เว้นแต่ผู้ใช้สั่งเป็นอย่างอื่นโดยชัดเจน:
+
+- **To:** `contactcenter@onebangkok.com`
+- **CC:** `soc@senses.co.th` — _SENSES SOC Team
+
+เมื่อต้องสร้าง Gmail Draft สำหรับ Contact Center ให้ใส่ To และ CC นี้โดยอัตโนมัติ และห้ามเว้นช่องผู้รับว่าง หากผู้ใช้ไม่ได้สั่งให้เปลี่ยนปลายทาง
 
 ## Greeting
 
@@ -181,7 +190,7 @@ Mail : sittipong.h@senses.co.th
 ลำดับส่วนของอีเมลต้องเป็น:
 
 1. Subject
-2. Recipient / CC ตามคำสั่ง
+2. Recipient / CC — ใช้ค่ามาตรฐาน `contactcenter@onebangkok.com` และ `soc@senses.co.th` เว้นแต่ผู้ใช้สั่งเป็นอย่างอื่น
 3. Greeting
 4. Opening paragraph
 5. Case / Inquiry definitions
@@ -200,6 +209,8 @@ Mail : sittipong.h@senses.co.th
 ก่อนถือว่า Draft พร้อมให้ผู้ใช้ตรวจ ให้ตรวจอย่างน้อย:
 
 - [ ] Subject ถูกต้อง
+- [ ] To = `contactcenter@onebangkok.com` เว้นแต่ผู้ใช้สั่งเป็นอย่างอื่น
+- [ ] CC = `soc@senses.co.th` (_SENSES SOC Team) เว้นแต่ผู้ใช้สั่งเป็นอย่างอื่น
 - [ ] วันที่ตรงกับข้อมูลรายงาน
 - [ ] Greeting ถูกต้อง
 - [ ] Case / Inquiry definition ครบ
@@ -251,6 +262,7 @@ Mail : sittipong.h@senses.co.th
 
 ## Change Log
 
+- v1.4 — 2026-09-25 — KB Owner approved default Contact Center recipients from the verified email layout: To `contactcenter@onebangkok.com`; CC `_SENSES SOC Team (soc@senses.co.th)`. Gmail Drafts should use these recipients automatically unless the user explicitly instructs otherwise.
 - v1.3 — 2026-09-24 — KB Owner approved Contact Center table visual style from verified Gmail Draft: black header, bold white text, grey borders, centered compact columns, and wider Case Description / Action Required columns.
 - v1.2 — 2026-09-24 — KB Owner approved Zero-Activity / No-Call reporting exception, omission of empty 9-column table when no calls exist, and verified inline Senses banner check in Gmail Draft.
 - v1.1 — 2026-09-22 — Added global signature/banner linkage and approved image reference.
