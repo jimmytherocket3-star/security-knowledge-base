@@ -1,7 +1,7 @@
 ---
 document_id: KB-SYS-CONTACT-CENTER-EMAIL-001
 title: Contact Center Email Writing Standard
-version: 1.0
+version: 1.1
 status: Active
 owner: KB Owner
 approved: 2026-09-28
@@ -13,30 +13,33 @@ approved: 2026-09-28
 
 Define the approved format for emails reporting after-hours Contact Centre calls handled by the Security Operation Centre (SOC).
 
-This standard is **separate from the Guard Tour Email Writing Standard**. Do not merge or substitute the Guard Tour email format.
+This standard is separate from the Guard Tour Email Writing Standard. Do not merge or substitute the Guard Tour email format.
 
-Guard Tour standard:
-`docs/00-system/guard-tour-email-standard.md`
+## 2. Primary Reference
 
-## 2. Approved Email Routing
+The primary format reference is the KB Owner supplied file **รายงานการโอนสายเวลานอกเวลา.md** on 2026-09-28.
+
+When drafting a new Contact Center email, preserve this reference's structure, terminology, order, and level of detail. Operational facts for each new email must come from the applicable case/source material. Do not copy historical case facts into a new report.
+
+## 3. Approved Email Routing
 
 **From:** Sittipong Homjai <sittipong.h@senses.co.th>  
 **To:** contactcenter@onebangkok.com  
 **CC:** _SENSES SOC Team <soc@senses.co.th>
 
-## 3. Subject
+## 4. Subject
 
-Use:
+Use exactly:
 
 **รายงานการโอนสายเวลานอกเวลา จาก Contact Centre มายัง SOC**
 
-## 4. Opening Structure
+## 5. Opening Structure
 
 Use:
 
 **เรียน ทีม Contact Center**
 
-Then report the after-hours calls received by SOC using the established wording:
+Then:
 
 **ขอเรียนแจ้งสรุปรายการสายที่เข้ามายังศูนย์ความมั่นคงและความปลอดภัย (SOC) นอกเวลาทำการของ Contact Centre (22:30 – 08:00 น.) วันที่ [วันที่/ช่วงวันที่]**
 
@@ -45,53 +48,58 @@ Then define:
 **Case:** รายการที่มีการบันทึกและเปิดเคสในระบบ Mozart เพื่อดำเนินการติดตาม  
 **Inquiry:** การสอบถามทั่วไป ไม่มีการเปิดเคส
 
-## 5. Required Case Table
+## 6. Required Case Table
 
-Operational information must be presented as a table. Do **not** replace the approved table with a plain-text vertical field list.
+Operational information must be presented in a table. Do not replace the table with a plain-text vertical field list.
 
-The table contains these 9 columns in this order:
+Use these 9 columns in this exact order:
 
 | No. | Date/Time | Caller Name | Contact No. | Type (case/Inquiry) | Topic | Case No. | Case Description | Action Required / Remark |
 |---|---|---|---|---|---|---|---|---|
 
-### Table visual format
+Each Case or Inquiry is one row.
 
-The approved reference uses:
-- Black header background
-- White header text
-- Visible cell borders
-- One case/inquiry per row
-- Case Description and Action Required / Remark as narrative cells
+Preserve source-supported narrative detail in **Case Description** and **Action Required / Remark**. Do not shorten away operationally relevant information merely to make the table smaller.
 
-When creating an HTML Gmail Draft, preserve this table structure and visual hierarchy as closely as the drafting tool supports.
+### Visual format
 
-## 6. Content Rules
+The approved visual reference uses:
+- black table header background,
+- white header text,
+- visible borders,
+- case/inquiry information arranged horizontally across the 9 columns.
 
-Use only information supported by the case/source material.
+When creating an HTML Gmail Draft, reproduce this structure and visual hierarchy as closely as the tool supports.
 
-Do not invent:
-- Caller details
+## 7. Content Fidelity Rules
+
+Use only information supported by the applicable source/case material.
+
+Do not invent or silently infer:
+- Date/time
+- Caller name
 - Contact number
+- Case/Inquiry classification
+- Topic
 - Case number
-- Incident location
+- Incident/location details
 - Actions taken
 - Follow-up status
 - Resolution
-- Times
 
-Keep operational terms such as SOC, FCC Retail, Mozart, Case, Inquiry, Location, and other established terms where supported by the source.
+Preserve established operational terminology such as SOC, FCC Retail, Mozart, Case, Inquiry, Location, and other terms when they appear in the source.
 
-If required information is unavailable, do not silently create it.
+If information is missing, preserve the gap rather than manufacturing a value.
 
-## 7. Contact Line After Table
+## 8. Contact Line After Table
 
-After the table, use:
+After the table, use exactly:
 
 **หากต้องการข้อมูลเพิ่มเติม สามารถติดต่อศูนย์ความมั่นคงและความปลอดภัย 02-483-5519 ได้ตลอด 24 ชั่วโมง**
 
-## 8. Approved Signature Structure
+## 9. Approved Closing and Signature Structure
 
-After the contact line, use the approved full signature:
+Use:
 
 **Best Regards,**
 
@@ -102,57 +110,68 @@ Senses Property Management Company Limited
 Mobile : 085-112-8002  
 Mail :
 
-[Approved Senses Property Management signature image]
+Then place the approved Senses Property Management signature image according to the Full Email Signature Standard.
 
-sittipong.h@senses.co.th
+Do not insert placeholder text such as `[ข้อมูลการติดต่อ]` or `[โลโก้บริษัท]` into the actual email.
 
-The approved company signature image is positioned after the personal/company contact information and before the final email link/address, matching the KB Owner's reference email.
+## 10. Inline Signature Image Limitation
 
-Do not insert placeholders such as `[ข้อมูลการติดต่อ]` or `[โลโก้บริษัท]` into the actual email.
+If the connected Gmail drafting tool cannot insert the approved company signature image inline:
+- do not claim it was inserted,
+- do not substitute placeholder text,
+- the KB Owner handles the inline signature image separately.
 
-## 9. Gmail Drafting Limitation
+This limitation does not change the approved email format.
 
-If the connected Gmail drafting tool cannot reproduce the approved inline company signature image, do not claim that the image has been inserted.
+## 11. Draft Creation Rules
 
-The KB Owner currently handles the inline signature image separately.
+When the KB Owner requests a Contact Center Draft:
 
-This tool limitation does not change the approved Contact Center email layout.
+1. Read the applicable case/source information completely enough to populate the required fields.
+2. Set To = `contactcenter@onebangkok.com`.
+3. Set CC = `soc@senses.co.th`.
+4. Use the approved subject exactly.
+5. Use the approved opening and Case / Inquiry definitions.
+6. Render all records in the approved 9-column table, preferably HTML.
+7. Preserve source-supported Case Description and Action Required / Remark detail.
+8. Add the SOC 24-hour contact line.
+9. Add the approved closing and signature structure.
+10. Do not send unless the KB Owner explicitly instructs sending.
+11. Leave inline company signature-image handling to the KB Owner when the tool cannot insert it.
 
-## 10. Draft Creation Rules
+## 12. Quality Check Before Draft Creation
 
-When the KB Owner requests a Contact Center email Draft:
+Confirm:
+- To and CC are populated correctly
+- Subject matches the approved subject
+- Reporting date/period is correct
+- Case/Inquiry definitions are present
+- Table contains exactly the approved 9 columns in the approved order
+- Each record is represented as one table row
+- Case details match the source
+- Action Required / Remark matches the source
+- No unsupported facts have been added
+- SOC 24-hour contact line is present
+- Signature structure is correct
+- Email remains distinct from the Guard Tour template
 
-1. Set To = `contactcenter@onebangkok.com`.
-2. Set CC = `soc@senses.co.th`.
-3. Use the approved subject.
-4. Use the approved opening and Case / Inquiry definitions.
-5. Render case data in the approved 9-column table, preferably HTML.
-6. Preserve the Case Description and Action Required / Remark information from the source.
-7. Add the SOC 24-hour contact line.
-8. Add the approved full signature structure.
-9. Do not send unless the KB Owner explicitly instructs sending.
-10. Leave the inline Senses signature image for the KB Owner when the drafting tool cannot insert it.
+## 13. Source and Approval
 
-## 11. Approved Reference
+Primary reference: **รายงานการโอนสายเวลานอกเวลา.md**, supplied and approved by the KB Owner on 2026-09-28.
 
-Primary visual reference: Contact Center email example supplied by the KB Owner on 2026-09-28.
+The reference establishes:
+- the subject,
+- sender/recipient pattern,
+- opening,
+- after-hours window,
+- Case and Inquiry definitions,
+- 9-column case table,
+- SOC contact line,
+- closing and signature structure.
 
-The reference shows:
-- Subject: `รายงานการโอนสายเวลานอกเวลา จาก Contact Centre มายัง SOC`
-- To: Contact Center
-- CC: SENSES SOC
-- Introductory after-hours reporting text
-- Case and Inquiry definitions
-- Black-header 9-column case table
-- SOC contact line
-- Full personal/company signature
-- Inline Senses Property Management signature artwork
-- Final email address
-
-This Contact Center standard must remain distinct from the Guard Tour Email Writing Standard.
-
-## 12. Revision History
+## 14. Revision History
 
 | Version | Status | Change |
 |---|---|---|
-| 1.0 | Active | Initial approved Contact Center Email Writing Standard based on KB Owner visual reference. |
+| 1.0 | Superseded | Initial Contact Center Email Writing Standard based on visual reference. |
+| 1.1 | Active | Established รายงานการโอนสายเวลานอกเวลา.md as Primary Reference and tightened source fidelity, table structure, signature order, and pre-draft quality checks. |
