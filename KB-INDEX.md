@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.4
+version: 2.5
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-09-23
+updated: 2026-09-29
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -66,6 +66,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | โรงพยาบาล, Hospital, โรงพยาบาลนำส่งผู้ป่วย, ส่งฟรี, ค่านำส่ง, โรงพยาบาลภายใน 5 กม., โรงพยาบาลภายใน 10 กม. | `docs/00-system/hospital-transport-reference.md` | Fetch directly for approved hospital transport groups and source-stated transport conditions. “ส่งฟรี” refers to transport condition only, not free medical treatment. Do not recalculate distance or reclassify hospitals. |
 | Internal/external emergency contacts, BMO, SOC, DCC, FMC, hotel contacts, First Aid | `docs/00-system/emergency-contact-directory.md` | Blank/unconfirmed values must not be guessed. For hospital transport conditions, route to hospital-transport-reference.md; use this directory for approved phone numbers. |
 | MOD duty schedule for May 2026 | `docs/00-system/mod-duty-schedule/2026-05.md` | Time-bound reference only; do not treat as permanent contact data. |
+| DCC Relocation, BCP DCC, Secondary DCC, ย้าย DCC, ศูนย์สำรอง DCC, Secondary Site | `docs/02-security-operations/dcc-relocation/overview.md` | Status: Draft Operational Reference. Use for DCC relocation trigger, authority, participating units, Secondary Sites, equipment/systems, communication, return to Primary Site, deactivation, and explicit Knowledge Gaps. Do not equate PB1/P1B1, Engineering Room, FCC with the canonical SOC BCP Room unless an approved source establishes the relationship. |
 | Terminology, abbreviations, roles, EMER_1/EMER_2, BMO, DCC, IMT, EOT, SOC, FCC, General Alarm, Assembly Point definition | `docs/00-system/terminology.md` | Use canonical terminology definitions. For FCC in Code M context, also check `KB-CONFLICT-002`; do not silently replace the canonical expansion while reconciliation is pending. For Assembly Point locations, route to assembly-point-reference.md. |
 | Canonical Code 1 and Code 2 definitions | `docs/01-emergency-codes/code-definitions.md` | Active canonical source for Code 1 and Code 2 definitions only; it does not define Code 3. |
 | Code 1 detailed workflow/reference | `docs/01-emergency-codes/code-1/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
