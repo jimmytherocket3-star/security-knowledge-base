@@ -1,7 +1,7 @@
 ---
 document_id: SEC-DCC-RELOCATION-001
 title: DCC Relocation — Business Continuity Operational Reference
-version: 0.1
+version: 0.2
 status: Draft
 owner: KB Owner
 scope: DCC Relocation / Business Continuity / Secondary Site
@@ -19,7 +19,7 @@ Provide a controlled operational reference for relocating One Bangkok control an
 ## 3. Scope
 Participating units associated with Mozart operations: DCC, SOC, FMC, BMO, CC, NOC, and One Bangkok System Support (L1).
 
-The source does not establish which personnel, if any, must remain at the Primary Site during relocation.
+At initial relocation, the source directs all participating units to move all personnel and equipment to the Secondary Site. It does not separately identify any officer assigned to remain or stand watch at the Primary DCC during Secondary Site operation.
 
 ## 4. Trigger / Activation
 DCC Relocation may be activated when the DCC area cannot be used normally, including:
@@ -80,22 +80,33 @@ Access Card is not identified as required equipment. The source states that the 
 ## 9. Systems / Pre-Relocation Check
 **Pre-Relocation System Check Form: OB-SOP-FR-DCC-0302**
 
-Systems identified include:
-- CCTV Application
-- Mozart
-- Dispatcher Hytalk
-- Telephone / radio communication
-- Internet / WIFI
+The form is a **Pre-Relocation Check**, performed before relocation from the Primary Site.
 
-The detailed startup/testing/validation sequence and Secondary Site acceptance criteria are not established.
+Systems identified include:
+- **SOC Operating System:** CCTV Application; Mozart (Case Management / Virtual Patrol); Dispatcher Hytalk
+- **Communication System:** Landline; mobile signal; radio communication test; telephone system; CRM
+- **Network / ICT:** Internet connectivity; WIFI
+
+Verification is performed by representatives of five units:
+- DCC
+- FMC
+- SOC
+- ICT/NOC
+- CC
+
+The form includes a **Verified By** sign-off field.
+
+The source does not establish the detailed before/after sequence, deep Acceptance Criteria, or a Post-Arrival Check form for system acceptance after arrival at the Secondary Site.
 
 ## 10. Relocation Procedure — Source-Supported Flow
 1. A relocation trigger occurs and the DCC area cannot be used normally, or relocation is required for testing/necessary maintenance.
 2. DCC Manager or an authorized decision-maker activates BCP – DCC Relocation through POC.
 3. DCC sends Email Notification to relevant units with incident/relocation information and schedule.
-4. Participating units relocate personnel and required equipment to their designated Secondary Site.
-5. Required systems are checked using the applicable readiness process and OB-SOP-FR-DCC-0302.
-6. Units operate from the Secondary Site.
+4. Before relocation, the applicable systems are checked using **OB-SOP-FR-DCC-0302 — Pre-Relocation System Check Form**, with verification by representatives of DCC, FMC, SOC, ICT/NOC, and CC.
+5. Participating units move personnel and required equipment to their designated Secondary Site. The source states that all participating units move all personnel and equipment during initial relocation.
+6. Units begin operating from the Secondary Site.
+
+**Important boundary:** OB-SOP-FR-DCC-0302 is a **Pre-Relocation Check**. It must not be represented as a Post-Arrival system acceptance check.
 
 **Knowledge Gap:** formal declaration authority and detailed criteria for declaring the Secondary Site Operational are not established.
 
@@ -118,8 +129,10 @@ Established:
 ## 13. Records and Forms
 Established:
 - **OB-SOP-FR-DCC-0302 — Pre-Relocation System Check Form**
+- Verification representatives: DCC, FMC, SOC, ICT/NOC, and CC
+- Form includes a **Verified By** sign-off field
 
-The underlying SOP is described as including an evaluation form and formal document approvers, but fields, mandatory evidence, retention requirements, and approval workflow are not established in the supplied detailed summary.
+The underlying SOP is described as including an evaluation form and formal document approvers, but mandatory evidence, retention requirements, detailed approval workflow, and any Post-Arrival system acceptance form are not established in the supplied detailed summary.
 
 ## 14. Termination / Handover
 Operational return is supported when the first returning staff confirm systems are online and report readiness to DCC Manager and IMT. DCC Manager then announces **Deactivate DCC Relocation**, after which remaining personnel return to normal operations.
@@ -127,10 +140,10 @@ Operational return is supported when the first returning staff confirm systems a
 No separate case-closure workflow is established by this source.
 
 ## 15. Knowledge Gaps
-1. **Primary Site Staffing** — who, if anyone, remains at the Primary Site during relocation.
+1. **Primary Site Staffing** — source directs all participating units to move all personnel/equipment at initial relocation, but does not separately state whether any officer must remain/stand watch at the Primary DCC.
 2. **Radio Channel** — specific radio channel/name used during DCC Relocation.
 3. **Secondary Operational Declaration Authority** — who formally declares the Secondary Site Operational and the criteria.
-4. **Secondary Site System Check Sequence** — detailed order and acceptance criteria.
+4. **Secondary Site Post-Arrival System Check** — detailed sequence, Acceptance Criteria, and a Post-Arrival Check form are not established. OB-SOP-FR-DCC-0302 is confirmed as Pre-Relocation only.
 5. Definition and authority scope of an “authorized decision-maker” other than DCC Manager.
 6. Exact mapping of each participating unit to PB1/P1B1, Engineering Room, or FCC beyond supplied examples.
 7. Relationship, if any, between PB1/P1B1, Engineering Room, FCC and the canonical SOC BCP Room.
@@ -155,4 +168,5 @@ Canonical cross-check:
 ## 18. Revision History
 | Version | Status | Change |
 |---|---|---|
+| 0.2 | Draft | Clarified initial all-personnel/equipment relocation; confirmed OB-SOP-FR-DCC-0302 as Pre-Relocation only; added system categories, five verifying units, Verified By sign-off, and preserved Post-Arrival/Acceptance Criteria gaps. |
 | 0.1 | Draft | Initial DCC Relocation Operational Reference created from KB Owner-approved source input and gap analysis. |
