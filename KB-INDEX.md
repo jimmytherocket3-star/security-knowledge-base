@@ -1,7 +1,7 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.7
+version: 2.8
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
@@ -59,6 +59,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | ทางเข้า-ออกโครงการ, Traffic Knowledge, ทางเข้า One Bangkok, รถยนต์เข้าโครงการ, รถจักรยานยนต์เข้าโครงการ, MRT connection, รถประจำทาง, Helipad | `docs/00-system/traffic-access-reference.md` | Fetch directly for approved project access counts/source roads, motorcycle entrances, public-transport connection, and Tower 4 Helipad. Do not infer unlisted Entrance numbers, routes, traffic direction, or operating hours. |
 | Multi-Purpose Hall, อาคารอเนกประสงค์, ความจุอาคารอเนกประสงค์, project area/พื้นที่โครงการ, SOC orientation operational facts | `docs/00-system/soc-orientation-operational-reference.md` | Fetch directly for approved Multi-Purpose Hall capacity and SOC orientation operational facts; do not infer event-specific safe occupancy, evacuation capacity, fire-code occupant load, or permitted attendance. |
 | กฎหมายการบริหารอาคาร, Building Management Legal Reference, พ.ร.บ.ควบคุมอาคาร, กฎหมายอาคารสูง, กฎหมายอาคารชุด, กฎหมายโรงแรม, ตรวจสอบอาคาร | `docs/00-system/building-management-legal-reference.md` | Status: Draft Legal Research Reference. Owner-supplied source summary, not independently verified law or operational SOP. Verify statutes, regulations, case law, current versions, and building-specific applicability from official sources before legal/compliance claims. Keep separate from SOC legal-awareness training. |
+| พ.ร.บ.ธุรกิจรักษาความปลอดภัย พ.ศ. 2558, Private Security Business Act, ใบอนุญาต รปภ., หน้าที่ รปภ. มาตรา 41, มาตรฐานบริษัทรักษาความปลอดภัย, Security legal measures | `docs/00-system/security-business-legal-reference.md` | Status: Draft Legal Research Reference, based on owner-supplied summary only. Not verified statutory law or Security SOP. Verify current law, scope, powers, penalties, and implementing rules with official sources. Keep separate from approved SOC training. |
 | กฎหมายเบื้องต้นสำหรับ SOC, SOC legal awareness, ความผิดซึ่งหน้า, การจับ/เชิญตัว, การควบคุมตัว/หน่วงเหนี่ยว, Use of Force, การค้นกระเป๋า/ตรวจค้น/ยึดสิ่งของ, PDPA + CCTV, CCTV Request, LINE และข้อมูล CCTV | `docs/00-system/soc-basic-legal-awareness-reference.md` | Approved Internal Training Reference. Fetch directly and preserve source boundaries/Knowledge Gaps. Do not treat training content as independently verified law; do not infer arrest/search/seizure/detention/use-of-force authority or missing CCTV/PDPA workflow. |
 | SOC Legal Awareness source-specific CCTV / Picture / Video Retention Period questions | `docs/00-system/soc-basic-legal-awareness-reference.md` | This training reference does not state a Retention Period. If useful, separately cross-check `docs/00-system/terminology.md`; never attribute its 90-day value to SOC Legal Awareness. |
 | Skills Hunter-wide CCTV / Picture / Video Retention Period questions | `docs/00-system/terminology.md` | Active canonical terminology states 90 days for Picture / Video from CCTV in the project's area and care. Cross-check `docs/00-system/soc-basic-legal-awareness-reference.md` when source provenance matters; that training reference does not supply this value. Do not infer legal retention duties or a CCTV Request workflow. |
@@ -157,6 +158,8 @@ This generic priority does not automatically settle an explicitly registered con
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
+
+- v2.8 — 2026-10-11 — KB Owner-approved Draft Private Security Business Act B.E. 2558 legal research reference route; retains unverified statutory claims and Security authority guardrails.
 
 - v2.7 — 2026-10-11 — KB Owner-approved Draft Building Management Legal Reference route; preserves legal-source verification gaps and separation from SOC legal-awareness training.
 
