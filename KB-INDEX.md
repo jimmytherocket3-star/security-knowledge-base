@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.8
+version: 2.9
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-10-11
+updated: 2026-10-15
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -75,6 +75,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Code 1 detailed workflow/reference | `docs/01-emergency-codes/code-1/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 2 detailed workflow/reference | `docs/01-emergency-codes/code-2/overview.md` | Check status/version and defer to canonical definitions where conflicting. |
 | Code 3 definition / Evacuation / การอพยพ and procedure questions | `docs/01-emergency-codes/code-3/overview.md` | Status: Draft. Identify its definition and procedural content as Draft; do not present it as an Approved/Active operational procedure. `code-definitions.md` covers Code 1 and Code 2 only. |
+| Code F / CODE FOXTROT / Flood Management / น้ำท่วม / อุทกภัย / Stop Log / District Flooding / 0.1 m / +1.35 MSL | `docs/01-emergency-codes/code-f/overview.md` | **Draft Knowledge Reference**, based on OB-SOP-EP-0005 Rev.01 Markdown. Contains five Knowledge Gaps and proposals, not approved SOP modifications. Owner's additional full-SOP assertions pending verification. Do not invent cancellation authority, water measurement, point 12 assignment or Safety Sign-off. |
 | Code M / Medical Emergency / เหตุฉุกเฉินทางการแพทย์ / ขั้นตอน Code M | `docs/01-emergency-codes/code-m/overview.md` | Status: Approved Reference. Primary route for Code M operational procedure. Preserve its explicit Knowledge Gaps. For hospital transport and pickup-location details, follow its cross-references. Check `KB-CONFLICT-002` for the unresolved FCC expansion disagreement. |
 | Code Sierra / Active Shooter | `docs/01-emergency-codes/code-sierra/overview.md` | Use current stored canonical document; do not silently apply unapproved corrections. |
 | Code D, Deceased Person, พบผู้เสียชีวิต, การจัดการเหตุพบผู้เสียชีวิต | `docs/01-emergency-codes/code-d/overview.md` | Status: Approved Reference. Preserve its source scope and guardrails; do not promote it to an Active SOP or infer unsupported system configuration or authority. |
@@ -158,6 +159,8 @@ This generic priority does not automatically settle an explicitly registered con
 - Do not modify this index or any routed file without explicit KB Owner approval.
 
 ## Change Log
+
+- v2.9 — 2026-10-15 — Routed Code F Flood Management Draft reference with five knowledge gaps, source boundary and safety guardrails.
 
 - v2.8 — 2026-10-11 — KB Owner-approved Draft Private Security Business Act B.E. 2558 legal research reference route; retains unverified statutory claims and Security authority guardrails.
 
