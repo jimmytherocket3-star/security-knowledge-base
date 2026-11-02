@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-EMAIL-CONTACT-CENTER-001
 title: Contact Center Email Drafting Standard
-version: 1.4
+version: 1.5
 status: Approved
 owner: KB Owner
 scope: SOC Email Drafting / Contact Center Handover
-updated: 2026-09-25
+updated: 2026-11-02
 ---
 
 # Contact Center Email Drafting Standard
@@ -260,7 +260,24 @@ Mail : sittipong.h@senses.co.th
 - ภาพอยู่ต่อจากข้อมูล Mobile / Mail
 - ห้ามใช้ placeholder หรืออ้างว่าใส่โลโก้แล้วหากตรวจสอบไม่พบภาพจริง
 
+
+## Owner-Approved Short No-Transfer Email Format — 2026-11-02
+
+**Status: Approved by KB Owner on 2026-11-02 from screenshot example and revised draft.** For a report where the user confirms **no calls were transferred from Contact Centre to SOC**, prefer this concise format over the generic Zero-Activity / No-Call Report. This is a *no-transfer* statement only: do not infer there were no direct incoming calls to SOC or no other Case/Inquiry.
+
+- Retain the standard subject, To and CC from this document.
+- Greeting exactly: `เรียน ทีม Contact Center`.
+- Opening: `ขอเรียนแจ้งว่า ในช่วงนอกเวลาทำการของ Contact Centre (22:30 – 08:00 น.) วันที่ DD/MM/YYYY-DD/MM/YYYY` with actual reporting dates.
+- Body: `ศูนย์ความมั่นคงและความปลอดภัย (SOC) ไม่พบรายการโอนสายจาก Contact Centre มายัง SOC หากต้องการข้อมูลเพิ่มเติม สามารถติดต่อศูนย์ความมั่นคงและความปลอดภัย 02-4835519 ได้ตลอด 24 ชั่วโมง`.
+- Place `--` on a new line, then `Best Regards,` and the **approved sender's own signature**. Do not copy the example employee's name or contact details. When drafting for Sittipong use the Sittipong signature in the global email standard.
+- Place the **original approved Senses banner as a real inline image immediately after Mobile / Mail**; if the real banner is unavailable, disclose that it has not been inserted and do not claim full visual fidelity.
+- Do **not** add Case / Inquiry definitions, a 9-column table, zero-activity boilerplate, or other sections for this no-transfer format.
+- The screenshot provided 2026-11-02 is a *layout example*, dated 26/10/2026-27/10/2026 and signed by Wichuta Dechburam. Its date and sender are not the current report's facts.
+- This specifically approved short format supersedes the generic Zero-Activity layout **only when reporting no transfers**. Preserve the 9-column layout for actual Case/Inquiry and the existing generic Zero-Activity rule for confirmed no-call reports unless the owner directs otherwise.
+
 ## Change Log
+
+- v1.5 — 2026-11-02 — KB Owner approved concise no-transfer Contact Centre email format based on screenshot, preserving separate rules for Case/Inquiry and other no-call reporting.
 
 - v1.4 — 2026-09-25 — KB Owner approved default Contact Center recipients from the verified email layout: To `contactcenter@onebangkok.com`; CC `_SENSES SOC Team (soc@senses.co.th)`. Gmail Drafts should use these recipients automatically unless the user explicitly instructs otherwise.
 - v1.3 — 2026-09-24 — KB Owner approved Contact Center table visual style from verified Gmail Draft: black header, bold white text, grey borders, centered compact columns, and wider Case Description / Action Required columns.
