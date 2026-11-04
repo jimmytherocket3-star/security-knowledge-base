@@ -46,6 +46,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 
 ## Routing Table
 
+| LPR Blacklist Dashboard, SOC LPR Knowledge Assessment, ข้อสอบ LPR, Blacklist Match, Whitelist, OCR, LPR Alert, Critical Error, Vital Knowledge | `docs/02-security-operations/security-control-room/lpr-blacklist-assessment-review-draft.md` | **Draft assessment review and practice pack**, based on two user-supplied summaries; not a verified LPR SOP or original 60-item examination. Confirm Contact Matrix, case closure, data access, and certification rules from approved originals. |
+
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
