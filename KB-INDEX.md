@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: 2.9
+version: '2.10'
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-10-15
+updated: 2026-11-24
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -50,6 +50,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
+| Operational Problem Decomposition, Mission Readiness Under Uncertainty, Information Confidence, UAT, Solution Acceptance, Instructor SOC methodologies | `docs/00-system/instructor-operational-methodologies.md` | Draft Instructor-Provided Knowledge; public-screened general training extract, not approved site SOP. Site-specific details omitted. |
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | Email signature, ลายเซ็นอีเมล, company banner, โลโก้บริษัทในอีเมล, ทุกอีเมลของผู้ใช้ | `docs/00-system/email-signature-banner-standard.md` | Status: Approved. Global rule for all user email drafting: approved Sittipong signature followed immediately by the approved Senses company banner image. Never claim the banner is present unless the actual image has been inserted. |
 | Tower 5 CCTV status report, CCTV Tower 5, กล้องออฟไลน์ Tower 5, กล้องถูกถอด Tower 5, CASE-260724-232148649852 | `docs/02-security-operations/security-control-room/tower-5-cctv-status-report-2026-07-24-25.md` | User-supplied source report for the 24–25 July 2026 Tower 5 CCTV case. Read this file directly; preserve its reported facts, camera IDs, counts, observations, and recommendations without silently correcting or generalizing them. |\n| Guard Tour email drafting, ร่างอีเมล Guard Tour, Daily Guard Tour Report summary, Skip reason verification, ตรวจอีเมลฝ่ายอาคารกรณี Skip/ยกเลิกสแกน | `docs/00-system/guard-tour-email-drafting-standard.md` | Status: Approved. Use this standard for Guard Tour email structure, per-round reporting, Skip verification, building-email cross-checks, cancellation verification, abnormal equipment findings, attachments, recipients, and draft-version handling. Never invent a Skip reason. |
@@ -184,3 +185,4 @@ This generic priority does not automatically settle an explicitly registered con
 - v1.2 — 2026-09-08 — Added direct routing for Assembly Point and Fire Truck Parking references and query examples.
 - v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
 - v1.0 — 2026-09-08 — Created as the central AI retrieval/router index to reduce false Knowledge Gaps caused by repository search misses.
+- v2.10 — 2026-11-24 — Added KB Owner-authorized Draft instructor methodologies route; public-screened extract only.
