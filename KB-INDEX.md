@@ -1,11 +1,11 @@
 ---
 document_id: SEC-KB-INDEX-001
 title: Skills Hunter — Security Knowledge Base Retrieval Index
-version: '2.10'
+version: '2.11'
 status: Active
 owner: KB Owner
 scope: AI Retrieval / Repository Routing
-updated: 2026-11-24
+updated: 2026-11-25
 ---
 
 # Skills Hunter — Security Knowledge Base Retrieval Index
@@ -50,6 +50,7 @@ If an answer combines Skills Hunter-derived and external information, label the 
 
 | Question / Topic | Primary KB File | Retrieval Note |
 |---|---|---|
+| CAT1, CAT2, CAT3, CAT 1/2/3, Priority, Category, CAT Classification, SLA | `docs/00-system/cat-classification-priority.md` | Approved owner-supplied classification definitions; SLA values from Code 1 v0.4 (Draft). Preserve Code 1-specific SLA start/stop and historical KC-05 quarantine; do not infer other case mappings or SLA conditions. |
 | Operational Problem Decomposition, Mission Readiness Under Uncertainty, Information Confidence, UAT, Solution Acceptance, Instructor SOC methodologies | `docs/00-system/instructor-operational-methodologies.md` | Draft Instructor-Provided Knowledge; public-screened general training extract, not approved site SOP. Site-specific details omitted. |
 | Skills Hunter identity / Knowledge Base branding | `docs/00-system/skills-hunter.md` | Skills Hunter is the display name of this Knowledge Base; repository and paths remain unchanged. |
 | Email signature, ลายเซ็นอีเมล, company banner, โลโก้บริษัทในอีเมล, ทุกอีเมลของผู้ใช้ | `docs/00-system/email-signature-banner-standard.md` | Status: Approved. Global rule for all user email drafting: approved Sittipong signature followed immediately by the approved Senses company banner image. Never claim the banner is present unless the actual image has been inserted. |
@@ -89,6 +90,8 @@ If an answer combines Skills Hunter-derived and external information, label the 
 | Assistant persona / Kuroro | `docs/00-system/assistant-persona.md` | Persona only; does not alter SOP authority. |
 
 ## Query Routing Examples
+
+- `CAT 1 / CAT 2 / CAT 3 คืออะไร` → fetch `docs/00-system/cat-classification-priority.md`; distinguish approved definitions from Code 1-specific SLA interpretation.
 
 - `Skills Hunter คืออะไร` → fetch `docs/00-system/skills-hunter.md`
 - `ใส่โลโก้บริษัทท้ายอีเมล` → fetch `docs/00-system/email-signature-banner-standard.md`; use the approved Sittipong signature and insert the approved Senses banner immediately after Mobile / Mail when the source image is available
@@ -186,3 +189,5 @@ This generic priority does not automatically settle an explicitly registered con
 - v1.1 — 2026-09-08 — Added mandatory answer source status labels: KB APPROVED, KNOWLEDGE GAP, and EXTERNAL.
 - v1.0 — 2026-09-08 — Created as the central AI retrieval/router index to reduce false Knowledge Gaps caused by repository search misses.
 - v2.10 — 2026-11-24 — Added KB Owner-authorized Draft instructor methodologies route; public-screened extract only.
+
+- v2.11 — 2026-11-25 — Added KB Owner-approved CAT Classification & Priority route and source boundaries.
